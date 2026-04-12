@@ -7,20 +7,20 @@
   <meta name="description" content="M&A Books provides bookkeeping, payroll support, and GST/QST support for small businesses in Montreal and across Quebec." />
   <style>
     :root {
-      --bg: #08110d;
-      --bg-soft: #0d1813;
-      --surface: #101a15;
-      --surface-2: #15231c;
-      --surface-3: #1c2d24;
-      --text: #edf3ee;
-      --muted: #9aaea3;
-      --line: rgba(255,255,255,0.08);
-      --accent: #7fb38b;
-      --accent-strong: #96c7a1;
-      --accent-deep: #20382c;
+      --bg: #07162a;
+      --bg-soft: #0b1f38;
+      --surface: #0f2642;
+      --surface-2: #133154;
+      --surface-3: #173d66;
+      --text: #f4f8fc;
+      --muted: #aac0d8;
+      --line: rgba(255,255,255,0.1);
+      --accent: #2aa8e2;
+      --accent-strong: #67c2ef;
+      --accent-deep: #0b3c5d;
       --max: 1180px;
       --radius: 20px;
-      --shadow: 0 16px 40px rgba(0, 0, 0, 0.32);
+      --shadow: 0 16px 40px rgba(2, 18, 39, 0.35);
     }
 
     * { box-sizing: border-box; }
@@ -29,8 +29,8 @@
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       background:
-        radial-gradient(circle at top right, rgba(127,179,139,0.08), transparent 28%),
-        linear-gradient(180deg, #07100c 0%, #0a1410 100%);
+        radial-gradient(circle at top right, rgba(103,194,239,0.12), transparent 28%),
+        linear-gradient(180deg, #061221 0%, #0b1d33 55%, #0f2743 100%);
       color: var(--text);
       line-height: 1.6;
     }
@@ -55,11 +55,11 @@
     }
 
     .section-alt {
-      background: linear-gradient(180deg, rgba(21,35,28,0.75), rgba(10,16,12,0));
+      background: linear-gradient(180deg, rgba(19,49,84,0.8), rgba(8,20,36,0.12));
     }
 
     .top-strip {
-      background: #173126;
+      background: #0d2b49;
       border-bottom: 1px solid rgba(255,255,255,0.08);
       font-size: 0.92rem;
     }
@@ -77,12 +77,12 @@
     .top-strip-right {
       display: flex;
       gap: 1.2rem;
-      color: #d9e6dc;
+      color: #dce8f5;
       flex-wrap: wrap;
     }
 
     .topbar {
-      background: rgba(10, 16, 12, 0.94);
+      background: rgba(7, 18, 33, 0.94);
       border-bottom: 1px solid var(--line);
       position: sticky;
       top: 0;
@@ -102,6 +102,7 @@
       font-size: 1.45rem;
       font-weight: 700;
       letter-spacing: 0.02em;
+      color: #f5fbff;
     }
 
     .brand small {
@@ -120,7 +121,7 @@
     }
 
     .nav-links a {
-      color: #dbe6df;
+      color: #dbe9f7;
       font-size: 0.9rem;
       font-weight: 700;
       text-transform: uppercase;
@@ -142,29 +143,29 @@
     }
 
     .btn-primary {
-      background: var(--accent);
-      color: #0a140f;
+      background: linear-gradient(135deg, #33b3ea, #1d7fbe);
+      color: #ffffff;
       box-shadow: var(--shadow);
     }
 
-    .btn-primary:hover { background: var(--accent-strong); }
+    .btn-primary:hover { filter: brightness(1.06); }
 
     .btn-secondary {
-      border: 1px solid rgba(127,179,139,0.42);
-      color: #e6efe9;
+      border: 1px solid rgba(103,194,239,0.42);
+      color: #eaf4fd;
       background: transparent;
     }
 
     .btn-secondary:hover {
-      background: rgba(127,179,139,0.1);
+      background: rgba(103,194,239,0.1);
       border-color: var(--accent-strong);
     }
 
     .hero {
       padding: 5.3rem 0 4.4rem;
       background:
-        radial-gradient(circle at 80% 15%, rgba(127,179,139,0.14), transparent 26%),
-        linear-gradient(180deg, rgba(20,34,27,0.45), transparent 60%);
+        radial-gradient(circle at 80% 15%, rgba(103,194,239,0.2), transparent 26%),
+        linear-gradient(180deg, rgba(19,49,84,0.4), transparent 60%);
     }
 
     .hero-grid {
@@ -178,9 +179,9 @@
       display: inline-block;
       padding: 0.45rem 0.75rem;
       border-radius: 999px;
-      border: 1px solid rgba(127,179,139,0.24);
-      background: rgba(127,179,139,0.08);
-      color: #d4e3d7;
+      border: 1px solid rgba(103,194,239,0.28);
+      background: rgba(103,194,239,0.09);
+      color: #d9ecfb;
       font-size: 0.83rem;
       font-weight: 700;
       margin-bottom: 1rem;
@@ -207,12 +208,12 @@
       position: absolute;
       left: 18px;
       bottom: 18px;
-      background: rgba(8,17,13,0.88);
+      background: rgba(7,18,33,0.9);
       border: 1px solid rgba(255,255,255,0.08);
       padding: 0.85rem 1rem;
       border-radius: 14px;
       backdrop-filter: blur(8px);
-      color: #eef4ef;
+      color: #f2f7fc;
       max-width: 250px;
     }
 
@@ -269,9 +270,9 @@
     .service-meta {
       display: inline-block;
       font-size: 0.82rem;
-      color: #dbe7dd;
-      background: rgba(127,179,139,0.08);
-      border: 1px solid rgba(127,179,139,0.18);
+      color: #e4f3fd;
+      background: rgba(103,194,239,0.09);
+      border: 1px solid rgba(103,194,239,0.22);
       padding: 0.3rem 0.55rem;
       border-radius: 999px;
       margin-bottom: 0.8rem;
@@ -296,13 +297,13 @@
       padding: 0.95rem 1rem;
       border-radius: 12px;
       border: 1px solid rgba(255,255,255,0.1);
-      background: rgba(255,255,255,0.03);
-      color: #f1f6f2;
+      background: rgba(255,255,255,0.04);
+      color: #f1f6fb;
       font: inherit;
     }
 
     input::placeholder,
-    textarea::placeholder { color: #93a79c; }
+    textarea::placeholder { color: #8ca7c0; }
 
     textarea {
       min-height: 140px;
@@ -320,8 +321,8 @@
     }
 
     .book-panel {
-      background: linear-gradient(180deg, rgba(32,56,44,0.9), rgba(16,26,21,0.9));
-      border: 1px solid rgba(127,179,139,0.18);
+      background: linear-gradient(180deg, rgba(11,60,93,0.92), rgba(15,38,66,0.92));
+      border: 1px solid rgba(103,194,239,0.22);
       border-radius: 16px;
       padding: 1.2rem;
       margin-top: 1rem;
@@ -379,7 +380,7 @@
 
   <header class="topbar">
     <div class="container nav">
-      <div class="brand">M&A Books<small>Bookkeeping support for Montreal businesses</small></div>
+      <div class="brand">M&amp;A Books<small>Bookkeeping support for Montreal businesses</small></div>
       <nav class="nav-links">
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
