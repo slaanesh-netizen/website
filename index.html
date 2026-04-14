@@ -22,7 +22,6 @@
       --accent: #2aa8e2;
       --accent-strong: #67c2ef;
       --accent-deep: #0b3c5d;
-      --glow: rgba(103,194,239,0.22);
       --max: 1180px;
       --radius: 22px;
       --shadow: 0 16px 40px rgba(2, 18, 39, 0.35);
@@ -37,7 +36,7 @@
       font-family: Arial, Helvetica, sans-serif;
       background:
         radial-gradient(circle at 12% 0%, rgba(103,194,239,0.08), transparent 26%),
-        radial-gradient(circle at 88% 12%, rgba(42,168,226,0.10), transparent 24%),
+        radial-gradient(circle at 88% 12%, rgba(42,168,226,0.09), transparent 24%),
         linear-gradient(180deg, #061221 0%, #0b1d33 52%, #0f2743 100%);
       color: var(--text);
       line-height: 1.6;
@@ -50,11 +49,11 @@
       inset: 0;
       pointer-events: none;
       z-index: 0;
-      opacity: 0.3;
+      opacity: 0.22;
       background-image:
-        linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
-      background-size: 90px 90px;
+        linear-gradient(rgba(255,255,255,0.016) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.016) 1px, transparent 1px);
+      background-size: 88px 88px;
       mask-image: linear-gradient(to bottom, rgba(0,0,0,0.35), transparent 85%);
     }
 
@@ -69,18 +68,21 @@
     }
 
     h1, h2, h3, h4, p { margin-top: 0; }
+
     h1 {
       font-size: clamp(2.5rem, 4.4vw, 4.55rem);
       line-height: 1.04;
       margin-bottom: 1rem;
       letter-spacing: -0.03em;
     }
+
     h2 {
       font-size: clamp(1.9rem, 2.8vw, 2.9rem);
       line-height: 1.1;
       margin-bottom: 0.9rem;
       letter-spacing: -0.02em;
     }
+
     h3 {
       font-size: 1.24rem;
       margin: 1rem 0 0.55rem;
@@ -97,8 +99,7 @@
     .muted { color: var(--muted); }
 
     .top-strip {
-      background:
-        linear-gradient(90deg, rgba(11,43,73,0.92), rgba(10,33,58,0.88));
+      background: linear-gradient(90deg, rgba(11,43,73,0.92), rgba(10,33,58,0.88));
       border-bottom: 1px solid rgba(255,255,255,0.08);
       font-size: 0.92rem;
       position: relative;
@@ -211,9 +212,7 @@
       white-space: nowrap;
     }
 
-    .btn:hover {
-      transform: translateY(-1px);
-    }
+    .btn:hover { transform: translateY(-1px); }
 
     .btn-primary {
       background: linear-gradient(135deg, #36b9ee 0%, #2393cf 48%, #1a74ae 100%);
@@ -249,7 +248,8 @@
       z-index: 1;
     }
 
-    .section-bg {
+    .hero-bg,
+    .site-bg {
       position: absolute;
       inset: 0;
       z-index: 0;
@@ -257,25 +257,46 @@
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
-      opacity: 1;
     }
 
-    .section-bg::before,
-    .section-bg::after {
+    .hero-bg {
+      background-image: url('bg-hero.jpg');
+      transform: scale(1.04);
+    }
+
+    .site-bg {
+      background-image: url('bg-soft.jpg');
+    }
+
+    .hero-bg::before,
+    .site-bg::before,
+    .hero-bg::after,
+    .site-bg::after {
       content: "";
       position: absolute;
       inset: 0;
     }
 
-    .section-bg::before {
+    .hero-bg::before {
       background:
-        linear-gradient(180deg, rgba(6,18,33,0.68) 0%, rgba(6,18,33,0.86) 100%);
+        linear-gradient(180deg, rgba(6,18,33,0.48) 0%, rgba(6,18,33,0.78) 100%);
     }
 
-    .section-bg::after {
+    .hero-bg::after {
       background:
-        radial-gradient(circle at 82% 18%, rgba(103,194,239,0.18), transparent 28%),
-        radial-gradient(circle at 12% 82%, rgba(42,168,226,0.12), transparent 24%);
+        linear-gradient(90deg, rgba(6,18,33,0.78) 0%, rgba(6,18,33,0.44) 38%, rgba(6,18,33,0.72) 100%),
+        radial-gradient(circle at 76% 22%, rgba(103,194,239,0.18), transparent 24%);
+    }
+
+    .site-bg::before {
+      background:
+        linear-gradient(180deg, rgba(6,18,33,0.90) 0%, rgba(8,22,39,0.94) 100%);
+    }
+
+    .site-bg::after {
+      background:
+        radial-gradient(circle at 82% 16%, rgba(103,194,239,0.11), transparent 24%),
+        radial-gradient(circle at 14% 82%, rgba(42,168,226,0.08), transparent 22%);
       mix-blend-mode: screen;
     }
 
@@ -285,9 +306,9 @@
       pointer-events: none;
       z-index: 1;
       background:
-        linear-gradient(115deg, transparent 0%, rgba(255,255,255,0.045) 14%, transparent 26%),
-        linear-gradient(180deg, rgba(255,255,255,0.015), transparent 22%);
-      opacity: 0.85;
+        linear-gradient(115deg, transparent 0%, rgba(255,255,255,0.04) 14%, transparent 26%),
+        linear-gradient(180deg, rgba(255,255,255,0.012), transparent 22%);
+      opacity: 0.8;
     }
 
     .hero {
@@ -295,22 +316,6 @@
       display: flex;
       align-items: center;
       padding: 6.2rem 0 5rem;
-    }
-
-    .hero .section-bg {
-      background-image: url('bg-hero.jpg');
-      transform: scale(1.04);
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      pointer-events: none;
-      background:
-        linear-gradient(90deg, rgba(6,18,33,0.72) 0%, rgba(6,18,33,0.46) 36%, rgba(6,18,33,0.70) 100%),
-        radial-gradient(circle at 76% 22%, rgba(103,194,239,0.18), transparent 24%);
     }
 
     .hero-grid {
@@ -366,8 +371,7 @@
       content: "";
       position: absolute;
       inset: -18px;
-      background:
-        radial-gradient(circle at 72% 20%, rgba(103,194,239,0.18), transparent 34%);
+      background: radial-gradient(circle at 72% 20%, rgba(103,194,239,0.18), transparent 34%);
       filter: blur(24px);
       z-index: 0;
       pointer-events: none;
@@ -397,9 +401,9 @@
       box-shadow: 0 14px 40px rgba(0,0,0,0.26);
     }
 
-    .glass-panel,
-    .card {
-      background: linear-gradient(180deg, rgba(20,49,84,0.48), rgba(10,27,48,0.56));
+    .card,
+    .glass-panel {
+      background: linear-gradient(180deg, rgba(20,49,84,0.46), rgba(10,27,48,0.56));
       border: 1px solid rgba(255,255,255,0.08);
       border-radius: var(--radius);
       box-shadow: var(--shadow-soft);
@@ -409,26 +413,17 @@
       position: relative;
     }
 
-    .glass-panel::before,
-    .card::before {
+    .card::before,
+    .glass-panel::before {
       content: "";
       position: absolute;
       inset: 0;
       pointer-events: none;
-      background: linear-gradient(180deg, rgba(255,255,255,0.06), transparent 30%);
-    }
-
-    .services {
-      padding-top: 4.8rem;
-      padding-bottom: 5rem;
-    }
-
-    .services .section-bg {
-      background-image: url('bg-services.jpg');
+      background: linear-gradient(180deg, rgba(255,255,255,0.055), transparent 30%);
     }
 
     .section-heading {
-      max-width: 720px;
+      max-width: 760px;
       margin-bottom: 2rem;
     }
 
@@ -470,8 +465,6 @@
     .service-card img {
       height: 240px;
       border-radius: 0;
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
     }
 
     .service-card-body,
@@ -488,7 +481,7 @@
     .why-copy p,
     .book-card p,
     .contact-card p,
-    .premium-band p {
+    .premium-stat p {
       color: var(--muted);
     }
 
@@ -504,15 +497,6 @@
       text-transform: uppercase;
       letter-spacing: 0.05em;
       font-weight: 700;
-    }
-
-    .why {
-      padding-top: 5.2rem;
-      padding-bottom: 5.2rem;
-    }
-
-    .why .section-bg {
-      background-image: url('bg-soft.jpg');
     }
 
     .why-visual {
@@ -546,7 +530,8 @@
     ul.feature-list li { margin-bottom: 0.72rem; }
 
     .premium-band {
-      padding: 0 0 5rem;
+      padding-top: 0;
+      padding-bottom: 5rem;
     }
 
     .premium-band-inner {
@@ -568,15 +553,6 @@
       font-size: 1rem;
       margin-bottom: 0.35rem;
       color: #eef8ff;
-    }
-
-    .contact-section {
-      padding-top: 5rem;
-      padding-bottom: 5.6rem;
-    }
-
-    .contact-section .section-bg {
-      background-image: url('bg-cta.jpg');
     }
 
     .contact-layout {
@@ -765,7 +741,7 @@
   </header>
 
   <section class="hero">
-    <div class="section-bg"></div>
+    <div class="hero-bg"></div>
     <div class="section-sheen"></div>
 
     <div class="container hero-grid">
@@ -796,8 +772,8 @@
     </div>
   </section>
 
-  <section class="services" id="services">
-    <div class="section-bg"></div>
+  <section id="services">
+    <div class="site-bg"></div>
     <div class="section-sheen"></div>
 
     <div class="container">
@@ -805,8 +781,8 @@
         <span class="section-kicker">What we do</span>
         <h2>Clean, dependable support across the bookkeeping work that keeps your business moving.</h2>
         <p class="muted">
-          The site now keeps your existing imagery while using layered background photography to add depth,
-          texture, and a more premium visual rhythm throughout.
+          A single softer background image carries the rest of the site for a calmer,
+          more cohesive premium feel while keeping your existing section photos in place.
         </p>
       </div>
 
@@ -853,8 +829,8 @@
     </div>
   </section>
 
-  <section class="why">
-    <div class="section-bg"></div>
+  <section>
+    <div class="site-bg"></div>
     <div class="section-sheen"></div>
 
     <div class="container grid-2">
@@ -888,26 +864,29 @@
   </section>
 
   <section class="premium-band">
+    <div class="site-bg"></div>
+    <div class="section-sheen"></div>
+
     <div class="container">
       <div class="glass-panel premium-band-inner">
         <div class="premium-stat">
           <strong>Refined client experience</strong>
-          <p class="muted">Premium layering, sharper contrast, and a more composed visual feel across the site.</p>
+          <p>Premium layering, sharper contrast, and a calmer visual structure across the site.</p>
         </div>
         <div class="premium-stat">
           <strong>Stronger depth and texture</strong>
-          <p class="muted">Background photography now adds atmosphere without removing your existing content images.</p>
+          <p>Your existing imagery stays, while the unified background creates atmosphere and consistency.</p>
         </div>
         <div class="premium-stat">
           <strong>Higher-end service impression</strong>
-          <p class="muted">The design feels more established, more polished, and more aligned with premium firms.</p>
+          <p>The site feels more established, more polished, and more aligned with premium firms.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="contact-section footer-space" id="contact">
-    <div class="section-bg"></div>
+  <section class="footer-space" id="contact">
+    <div class="site-bg"></div>
     <div class="section-sheen"></div>
 
     <div class="container grid-2 contact-layout">
