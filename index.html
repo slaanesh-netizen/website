@@ -569,7 +569,7 @@
 
     .premium-band-inner {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 1rem;
     }
 
@@ -682,15 +682,15 @@
     }
 
     @media (max-width: 1200px) {
-      .services-grid {
+      .services-grid,
+      .premium-band-inner {
         grid-template-columns: repeat(2, 1fr);
       }
     }
 
     @media (max-width: 1080px) {
       .hero-grid,
-      .grid-2,
-      .premium-band-inner {
+      .grid-2 {
         grid-template-columns: 1fr;
       }
 
@@ -741,7 +741,8 @@
         max-width: none;
       }
 
-      .services-grid {
+      .services-grid,
+      .premium-band-inner {
         grid-template-columns: 1fr;
       }
 
@@ -843,7 +844,7 @@
             loading="lazy"
           />
           <div class="service-card-body">
-            <span class="service-meta">Core Service</span>
+            <span class="service-meta">Core service</span>
             <h3>Accounting</h3>
             <p>We deliver clear, accurate financial statements that help you understand your business and make confident decisions.</p>
           </div>
@@ -930,6 +931,10 @@
           <div class="premium-stat">
             <strong>Stronger routine</strong>
             <p>Build a cleaner process that improves consistency and reduces confusion.</p>
+          </div>
+          <div class="premium-stat">
+            <strong>Confidentiality</strong>
+            <p>Your information is handled in line with established industry standards. We use secure systems, controlled access, and strict confidentiality protocols to ensure your data remains protected, private, and in trusted hands at all times.</p>
           </div>
         </div>
       </div>
