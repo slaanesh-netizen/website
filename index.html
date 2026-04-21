@@ -300,6 +300,21 @@
       mix-blend-mode: screen;
     }
 
+    .section-solid {
+      background: linear-gradient(180deg, #0a1d34 0%, #0b1f38 100%);
+    }
+
+    .section-solid::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(circle at 18% 22%, rgba(103,194,239,0.05), transparent 24%),
+        radial-gradient(circle at 82% 78%, rgba(42,168,226,0.05), transparent 22%);
+    }
+
     .section-sheen {
       position: absolute;
       inset: 0;
@@ -749,7 +764,7 @@
         <div class="eyebrow">Montreal bookkeeping support</div>
         <h1>Helping your business stay organized and ready to grow.</h1>
         <p class="muted">
-          M&amp;A books helps small and medium-sized businesses bring clarity and order to their finances. Our approach is hands-on and supportive. We guide you through every step, making sure you always feel comfortable, informed, and confident. Think of us as your trusted partner, simplifying the process and giving you the peace of mind to focus on growing your business.
+          M&amp; books helps small and medium-sized businesses bring clarity and order to their finances. Our approach is hands-on and supportive. We guide you through every step, making sure you always feel comfortable, informed, and confident. Think of us as your trusted partner, simplifying the process and giving you the peace of mind to focus on growing your business.
         </p>
         <div class="divider"></div>
         <div class="hero-actions">
@@ -771,8 +786,7 @@
     </div>
   </section>
 
-  <section id="services">
-    <div class="site-bg"></div>
+  <section id="services" class="section-solid">
     <div class="section-sheen"></div>
 
     <div class="container">
@@ -937,7 +951,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <span>M&amp;A Books</span>
-      <span+1 (514) 534-0303 • info@mabooks.ca</span>
+      <span>+1 (514) 534-0303 • info@mabooks.ca</span>
     </div>
   </footer>
 
