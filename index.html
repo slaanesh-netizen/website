@@ -6,7 +6,7 @@
   <title>M&A Books | Bookkeeping Services in Montreal</title>
   <meta
     name="description"
-    content="M&A Books provides bookkeeping, payroll support, and GST/QST support for businesses in Montreal and across Quebec."
+    content="M&A Books provides bookkeeping, accounting, payroll support, and GST/QST support for businesses in Montreal and across Quebec."
   />
   <style>
     :root {
@@ -249,7 +249,8 @@
     }
 
     .hero-bg,
-    .site-bg {
+    .site-bg,
+    .shared-zone-bg {
       position: absolute;
       inset: 0;
       z-index: 0;
@@ -264,14 +265,17 @@
       transform: scale(1.04);
     }
 
-    .site-bg {
+    .site-bg,
+    .shared-zone-bg {
       background-image: url('bg-soft.jpg');
     }
 
     .hero-bg::before,
     .site-bg::before,
     .hero-bg::after,
-    .site-bg::after {
+    .site-bg::after,
+    .shared-zone-bg::before,
+    .shared-zone-bg::after {
       content: "";
       position: absolute;
       inset: 0;
@@ -288,12 +292,14 @@
         radial-gradient(circle at 76% 22%, rgba(103,194,239,0.18), transparent 24%);
     }
 
-    .site-bg::before {
+    .site-bg::before,
+    .shared-zone-bg::before {
       background:
         linear-gradient(180deg, rgba(6,18,33,0.90) 0%, rgba(8,22,39,0.94) 100%);
     }
 
-    .site-bg::after {
+    .site-bg::after,
+    .shared-zone-bg::after {
       background:
         radial-gradient(circle at 82% 16%, rgba(103,194,239,0.11), transparent 24%),
         radial-gradient(circle at 14% 82%, rgba(42,168,226,0.08), transparent 22%);
@@ -324,6 +330,19 @@
         linear-gradient(115deg, transparent 0%, rgba(255,255,255,0.04) 14%, transparent 26%),
         linear-gradient(180deg, rgba(255,255,255,0.012), transparent 22%);
       opacity: 0.8;
+    }
+
+    .shared-image-zone {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .shared-image-zone > section {
+      background: transparent;
+    }
+
+    .shared-image-zone .section-sheen {
+      opacity: 0.55;
     }
 
     .hero {
@@ -465,9 +484,9 @@
       align-items: center;
     }
 
-    .grid-3 {
+    .services-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 1.3rem;
     }
 
@@ -662,14 +681,16 @@
       font-size: 0.95rem;
     }
 
+    @media (max-width: 1200px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
     @media (max-width: 1080px) {
       .hero-grid,
       .grid-2,
       .premium-band-inner {
-        grid-template-columns: 1fr;
-      }
-
-      .grid-3 {
         grid-template-columns: 1fr;
       }
 
@@ -718,6 +739,10 @@
         position: static;
         margin-top: 1rem;
         max-width: none;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
       }
 
       h1 {
@@ -791,13 +816,13 @@
     <div class="container">
       <div class="section-heading centered">
         <span class="section-kicker">What we do</span>
-        <h2>Reliable bookkeeping support designed to keep your business organized and thriving.</h2>
+        <h2>Reliable support for the bookkeeping work that keeps your business organized.</h2>
         <p class="muted">
-          We help businesses stay current with their records, payroll routines, and all tax obligations.
+          We help businesses stay current with their records, payroll routines, and GST / QST obligations.
         </p>
       </div>
 
-      <div class="grid-3">
+      <div class="services-grid">
         <div class="card service-card">
           <img
             src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=900&q=80"
@@ -814,6 +839,19 @@
         <div class="card service-card">
           <img
             src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=900&q=80"
+            alt="Accounting and financial reporting"
+            loading="lazy"
+          />
+          <div class="service-card-body">
+            <span class="service-meta">Core Service</span>
+            <h3>Accounting</h3>
+            <p>We deliver clear, accurate financial statements that help you understand your business and make confident decisions.</p>
+          </div>
+        </div>
+
+        <div class="card service-card">
+          <img
+            src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?auto=format&fit=crop&w=900&q=80"
             alt="Payroll and reporting"
             loading="lazy"
           />
@@ -832,7 +870,7 @@
           />
           <div class="service-card-body">
             <span class="service-meta">Compliance support</span>
-            <h3>Sales Tax</h3>
+            <h3>GST / QST</h3>
             <p>Support for organizing sales tax information so filings are easier to manage and less stressful.</p>
           </div>
         </div>
@@ -840,111 +878,113 @@
     </div>
   </section>
 
-  <section>
-    <div class="site-bg"></div>
-    <div class="section-sheen"></div>
+  <div class="shared-image-zone">
+    <div class="shared-zone-bg"></div>
 
-    <div class="container grid-2">
-      <div class="why-visual">
-        <img
-          src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80"
-          alt="Business meeting"
-          loading="lazy"
-        />
-        <div class="why-visual-badge">
-          Reliable support, cleaner processes, and a more organized financial back office.
-        </div>
-      </div>
+    <section>
+      <div class="section-sheen"></div>
 
-      <div class="glass-panel why-copy">
-        <span class="section-kicker">Why M&amp;A Books</span>
-        <h2>Dependable support for bookkeeping that cannot be left behind.</h2>
-        <p class="muted">
-          The goal is simple: make your bookkeeping feel calmer, more organized,
-          and easier to stay on top of throughout the year.
-        </p>
-        <div class="divider"></div>
-        <ul class="feature-list">
-          <li>Consistent support for day-to-day bookkeeping tasks</li>
-          <li>Clear communication and practical follow-through</li>
-          <li>Quebec-relevant support for payroll and GST / QST</li>
-          <li>Professional presentation without unnecessary complexity</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="premium-band section-solid">
-    <div class="section-sheen"></div>
-
-    <div class="container">
-      <div class="glass-panel premium-band-inner">
-        <div class="premium-stat">
-          <strong>Organized records</strong>
-          <p>Keep financial activity better documented and easier to review throughout the year.</p>
-        </div>
-        <div class="premium-stat">
-          <strong>Reliable support</strong>
-          <p>We believe every question matters. Our team is here to provide clear guidance and dependable advice so you can move forward with confidence and build lasting success.</p>
-        </div>
-        <div class="premium-stat">
-          <strong>Stronger routine</strong>
-          <p>Build a cleaner process that improves consistency and reduces confusion.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="footer-space" id="contact">
-    <div class="site-bg"></div>
-    <div class="section-sheen"></div>
-
-    <div class="container grid-2 contact-layout">
-      <div class="card contact-card">
-        <div class="contact-card-inner">
-          <span class="section-kicker">General inquiries</span>
-          <h2>Contact Us</h2>
-          <p class="muted">
-            General inquiries only. Please avoid sending sensitive payroll, tax, or personal information through this form.
-          </p>
-
-          <form>
-            <input placeholder="Name" />
-            <input placeholder="Email" />
-            <textarea placeholder="Tell us a little about your business and what you need"></textarea>
-            <button class="btn btn-primary" type="button">Send Message</button>
-          </form>
-        </div>
-      </div>
-
-      <div class="card book-card" id="book">
-        <div class="book-card-inner">
-          <span class="section-kicker">Online booking</span>
-          <h2>Book a Consultation</h2>
-          <p class="muted">
-            Schedule an introductory call to discuss your current setup and the support you may need.
-          </p>
-
-          <div class="book-panel">
-            <strong>Schedule Introductory Teams Meeting</strong>
-            <p class="muted">
-              We can review your process, discuss your needs, and see whether M&amp;A Books is the right fit.
-            </p>
-            <a
-              href="https://outlook.office.com/book/MABooks1@mabooks.ca/"
-              target="_blank"
-              rel="noopener"
-              class="btn btn-primary"
-            >
-              Teams Meeting
-            </a>
+      <div class="container grid-2">
+        <div class="why-visual">
+          <img
+            src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80"
+            alt="Business meeting"
+            loading="lazy"
+          />
+          <div class="why-visual-badge">
+            Reliable support, cleaner processes, and a more organized financial back office.
           </div>
+        </div>
 
-          <p class="small-note">Contact: info@mabooks.ca • Montreal, Quebec</p>
+        <div class="glass-panel why-copy">
+          <span class="section-kicker">Why M&amp;A Books</span>
+          <h2>Dependable support for bookkeeping that cannot be left behind.</h2>
+          <p class="muted">
+            The goal is simple: make your bookkeeping feel calmer, more organized,
+            and easier to stay on top of throughout the year.
+          </p>
+          <div class="divider"></div>
+          <ul class="feature-list">
+            <li>Consistent support for day-to-day bookkeeping tasks</li>
+            <li>Clear communication and practical follow-through</li>
+            <li>Quebec-relevant support for payroll and GST / QST</li>
+            <li>Professional presentation without unnecessary complexity</li>
+          </ul>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="premium-band">
+      <div class="section-sheen"></div>
+
+      <div class="container">
+        <div class="glass-panel premium-band-inner">
+          <div class="premium-stat">
+            <strong>Organized records</strong>
+            <p>Keep financial activity better documented and easier to review throughout the year.</p>
+          </div>
+          <div class="premium-stat">
+            <strong>Reliable support</strong>
+            <p>We believe every question matters. Our team is here to provide clear guidance and dependable advice so you can move forward with confidence and build lasting success.</p>
+          </div>
+          <div class="premium-stat">
+            <strong>Stronger routine</strong>
+            <p>Build a cleaner process that improves consistency and reduces confusion.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer-space" id="contact">
+      <div class="section-sheen"></div>
+
+      <div class="container grid-2 contact-layout">
+        <div class="card contact-card">
+          <div class="contact-card-inner">
+            <span class="section-kicker">General inquiries</span>
+            <h2>Contact Us</h2>
+            <p class="muted">
+              General inquiries only. Please avoid sending sensitive payroll, tax, or personal information through this form.
+            </p>
+
+            <form>
+              <input placeholder="Name" />
+              <input placeholder="Email" />
+              <textarea placeholder="Tell us a little about your business and what you need"></textarea>
+              <button class="btn btn-primary" type="button">Send Message</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="card book-card" id="book">
+          <div class="book-card-inner">
+            <span class="section-kicker">Online booking</span>
+            <h2>Book a Consultation</h2>
+            <p class="muted">
+              Schedule an introductory call to discuss your current setup and the support you may need.
+            </p>
+
+            <div class="book-panel">
+              <strong>Schedule Introductory Teams Meeting</strong>
+              <p class="muted">
+                We can review your process, discuss your needs, and see whether M&amp;A Books is the right fit.
+              </p>
+              <a
+                href="https://outlook.office.com/book/MABooks1@mabooks.ca/"
+                target="_blank"
+                rel="noopener"
+                class="btn btn-primary"
+              >
+                Teams Meeting
+              </a>
+            </div>
+
+            <p class="small-note">Contact: info@mabooks.ca • Montreal, Quebec</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 
   <footer class="site-footer">
     <div class="container footer-inner">
