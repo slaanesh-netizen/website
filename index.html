@@ -183,7 +183,7 @@
       position: relative;
     }
 
-    .nav-links a:not(.btn)::after {
+    .nav-links a:not(.btn):not(.lang-switch)::after {
       content: "";
       position: absolute;
       left: 0;
@@ -194,10 +194,11 @@
       transition: width 0.25s ease;
     }
 
-    .nav-links a:not(.btn):hover::after { width: 100%; }
+    .nav-links a:not(.btn):not(.lang-switch):hover::after { width: 100%; }
     .nav-links a:hover { color: var(--accent-strong); }
 
-    .btn {
+    .btn,
+    .lang-switch {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -205,14 +206,15 @@
       border-radius: 12px;
       font-weight: 700;
       cursor: pointer;
-      transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease, background 0.22s ease;
+      transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease, background 0.22s ease, border-color 0.22s ease;
       border: 1px solid transparent;
       position: relative;
       overflow: hidden;
       white-space: nowrap;
     }
 
-    .btn:hover { transform: translateY(-1px); }
+    .btn:hover,
+    .lang-switch:hover { transform: translateY(-1px); }
 
     .btn-primary {
       background: linear-gradient(135deg, #36b9ee 0%, #2393cf 48%, #1a74ae 100%);
@@ -229,16 +231,25 @@
         0 0 0 1px rgba(255,255,255,0.08) inset;
     }
 
-    .btn-secondary {
+    .btn-secondary,
+    .lang-switch {
       border: 1px solid rgba(103,194,239,0.38);
       color: #eaf4fd;
       background: rgba(255,255,255,0.02);
       backdrop-filter: blur(12px);
     }
 
-    .btn-secondary:hover {
+    .btn-secondary:hover,
+    .lang-switch:hover {
       background: rgba(103,194,239,0.12);
       border-color: var(--accent-strong);
+      color: #ffffff;
+    }
+
+    .lang-switch {
+      min-width: 58px;
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
 
     section {
@@ -776,6 +787,7 @@
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
         <a href="#book" class="btn btn-secondary">Get a Quote</a>
+        <a href="index_fr.html" class="lang-switch">FR</a>
       </nav>
     </div>
   </header>
@@ -834,13 +846,13 @@
             <span class="service-meta">Core service</span>
             <h3>Bookkeeping</h3>
             <ul class="feature-list">
-  <li>Organization of receipts & financial documents</li>
-  <li>Record & maintain financial transactions</li>
-  <li>Bank and other account reconciliations</li>
-  <li>Review of cashflow</li>
-  <li>Analyze profit margins</li>
-  <li>Regular reporting for client visibility</li>
-</ul>
+              <li>Organization of receipts & financial documents</li>
+              <li>Record & maintain financial transactions</li>
+              <li>Bank and other account reconciliations</li>
+              <li>Review of cashflow</li>
+              <li>Analyze profit margins</li>
+              <li>Regular reporting for client visibility</li>
+            </ul>
           </div>
         </div>
 
@@ -854,10 +866,10 @@
             <span class="service-meta">Core service</span>
             <h3>Accounting</h3>
             <ul class="feature-list">
-  <li>Financial statements</li>
-  <li>Interim financial statements</li>
-  <li>Corporate tax preparation & filing</li>
-</ul>
+              <li>Financial statements</li>
+              <li>Interim financial statements</li>
+              <li>Corporate tax preparation & filing</li>
+            </ul>
           </div>
         </div>
 
@@ -871,14 +883,14 @@
             <span class="service-meta">Ongoing support</span>
             <h3>Payroll</h3>
             <ul class="feature-list">
-  <li>Payroll processing</li>
-  <li>Vacation & sick pay tracking</li>
-  <li>Holiday pay calculations</li>
-  <li>Deductions at source reporting</li>
-  <li>CNESST reporting</li>
-  <li>Tax slips</li>
-  <li>Maintaining employee portals</li>
-</ul>
+              <li>Payroll processing</li>
+              <li>Vacation & sick pay tracking</li>
+              <li>Holiday pay calculations</li>
+              <li>Deductions at source reporting</li>
+              <li>CNESST reporting</li>
+              <li>Tax slips</li>
+              <li>Maintaining employee portals</li>
+            </ul>
           </div>
         </div>
 
@@ -892,11 +904,11 @@
             <span class="service-meta">Compliance support</span>
             <h3>Sales Tax</h3>
             <ul class="feature-list">
-  <li>GST/HST & QST reporting & filing</li>
-  <li>Payment code for ease of mind</li>
-  <li>Quick method calculations</li>
-  <li>Government portal supervision</li>
-</ul>
+              <li>GST/HST & QST reporting & filing</li>
+              <li>Payment code for ease of mind</li>
+              <li>Quick method calculations</li>
+              <li>Government portal supervision</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -930,78 +942,78 @@
           </p>
           <div class="divider"></div>
           <ul class="feature-list">
-  <li>Consistent support for day-to-day bookkeeping tasks</li>
-  <li>Clear communication and practical follow-through</li>
-  <li>Quebec-relevant support for payroll and sales tax</li>
-  <li>Professional presentation without unnecessary complexity</li>
-  <li>Easy self-booking through our website — schedule a time that works for you, no calls needed</li>
-</ul>
+            <li>Consistent support for day-to-day bookkeeping tasks</li>
+            <li>Clear communication and practical follow-through</li>
+            <li>Quebec-relevant support for payroll and sales tax</li>
+            <li>Professional presentation without unnecessary complexity</li>
+            <li>Easy self-booking through our website — schedule a time that works for you, no calls needed</li>
+          </ul>
         </div>
       </div>
     </section>
 
     <section class="premium-band">
-  <div class="section-sheen"></div>
+      <div class="section-sheen"></div>
 
-  <div class="container">
-    <div class="glass-panel premium-band-inner">
+      <div class="container">
+        <div class="glass-panel premium-band-inner">
 
-      <div class="premium-stat">
-        <strong style="display:flex; align-items:center; gap:10px;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-               xmlns="http://www.w3.org/2000/svg"
-               style="stroke:#67c2ef; stroke-width:1.8;">
-            <path d="M3 7.5A1.5 1.5 0 0 1 4.5 6H10l2 2h7.5A1.5 1.5 0 0 1 21 9.5v8A1.5 1.5 0 0 1 19.5 19h-15A1.5 1.5 0 0 1 3 17.5v-10Z"></path>
-          </svg>
-          Organized records
-        </strong>
-        <p>Keep financial activity better documented and easier to review throughout the year.</p>
+          <div class="premium-stat">
+            <strong style="display:flex; align-items:center; gap:10px;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                   xmlns="http://www.w3.org/2000/svg"
+                   style="stroke:#67c2ef; stroke-width:1.8;">
+                <path d="M3 7.5A1.5 1.5 0 0 1 4.5 6H10l2 2h7.5A1.5 1.5 0 0 1 21 9.5v8A1.5 1.5 0 0 1 19.5 19h-15A1.5 1.5 0 0 1 3 17.5v-10Z"></path>
+              </svg>
+              Organized records
+            </strong>
+            <p>Keep financial activity better documented and easier to review throughout the year.</p>
+          </div>
+
+          <div class="premium-stat">
+            <strong style="display:flex; align-items:center; gap:10px;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                   xmlns="http://www.w3.org/2000/svg"
+                   style="stroke:#67c2ef; stroke-width:1.8;">
+                <path d="M4 18v-2a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2"></path>
+                <circle cx="9" cy="8" r="3"></circle>
+                <path d="M16 8h4"></path>
+                <path d="M18 6v4"></path>
+              </svg>
+              Reliable support
+            </strong>
+            <p>We believe every question matters. Our team is here to provide clear guidance and dependable advice so you can move forward with confidence and build lasting success.</p>
+          </div>
+
+          <div class="premium-stat">
+            <strong style="display:flex; align-items:center; gap:10px;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                   xmlns="http://www.w3.org/2000/svg"
+                   style="stroke:#67c2ef; stroke-width:1.8;">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h.01A1.65 1.65 0 0 0 10 3.09V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h.01a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v.01A1.65 1.65 0 0 0 20.91 10H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"></path>
+              </svg>
+              Stronger routine
+            </strong>
+            <p>Build a cleaner process that improves consistency and reduces confusion.</p>
+          </div>
+
+          <div class="premium-stat security-card">
+            <strong style="display:flex; align-items:center; gap:10px;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                   xmlns="http://www.w3.org/2000/svg"
+                   style="stroke:#67c2ef; stroke-width:1.8;">
+                <rect x="4" y="10" width="16" height="10" rx="2"></rect>
+                <path d="M8 10V7a4 4 0 0 1 8 0v3"></path>
+              </svg>
+              Confidentiality
+            </strong>
+            <p>Your information is handled in line with established industry standards. We use secure systems, controlled access, and strict confidentiality protocols to ensure your data remains protected, private, and in trusted hands at all times.</p>
+          </div>
+
+        </div>
       </div>
-
-      <div class="premium-stat">
-        <strong style="display:flex; align-items:center; gap:10px;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-               xmlns="http://www.w3.org/2000/svg"
-               style="stroke:#67c2ef; stroke-width:1.8;">
-            <path d="M4 18v-2a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2"></path>
-            <circle cx="9" cy="8" r="3"></circle>
-            <path d="M16 8h4"></path>
-            <path d="M18 6v4"></path>
-          </svg>
-          Reliable support
-        </strong>
-        <p>We believe every question matters. Our team is here to provide clear guidance and dependable advice so you can move forward with confidence and build lasting success.</p>
-      </div>
-
-      <div class="premium-stat">
-        <strong style="display:flex; align-items:center; gap:10px;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-               xmlns="http://www.w3.org/2000/svg"
-               style="stroke:#67c2ef; stroke-width:1.8;">
-            <circle cx="12" cy="12" r="3"></circle>
-            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h.01A1.65 1.65 0 0 0 10 3.09V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h.01a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v.01A1.65 1.65 0 0 0 20.91 10H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"></path>
-          </svg>
-          Stronger routine
-        </strong>
-        <p>Build a cleaner process that improves consistency and reduces confusion.</p>
-      </div>
-
-      <div class="premium-stat security-card">
-        <strong style="display:flex; align-items:center; gap:10px;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-               xmlns="http://www.w3.org/2000/svg"
-               style="stroke:#67c2ef; stroke-width:1.8;">
-            <rect x="4" y="10" width="16" height="10" rx="2"></rect>
-            <path d="M8 10V7a4 4 0 0 1 8 0v3"></path>
-          </svg>
-          Confidentiality
-        </strong>
-        <p>Your information is handled in line with established industry standards. We use secure systems, controlled access, and strict confidentiality protocols to ensure your data remains protected, private, and in trusted hands at all times.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
+    </section>
 
     <section class="footer-space" id="contact">
       <div class="section-sheen"></div>
