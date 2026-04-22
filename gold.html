@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M&A Books | Bookkeeping Services in Montreal</title>
+  <meta
+    name="description"
+    content="M&A Books provides bookkeeping, accounting, payroll support, and GST/QST support for businesses in Montreal and across Quebec."
+  />
+  <style>
+    :root {
+      --bg: #040b16;
+      --bg-soft: #071628;
+      --surface: #0c1f34;
+      --surface-2: #12304a;
+      --surface-3: #184a58;
+      --text: #f7f3e8;
+      --muted: #c9c1ad;
+      --line: rgba(255,255,255,0.1);
+      --line-soft: rgba(255,255,255,0.06);
+      --accent: #3fb7b3;
+      --accent-strong: #d7b56d;
+      --accent-deep: #133d4a;
+      --max: 1180px;
+      --radius: 22px;
+      --shadow: 0 16px 40px rgba(2, 10, 22, 0.48);
+      --shadow-soft: 0 24px 80px rgba(0, 0, 0, 0.42);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 50% 12%, rgba(215,181,109,0.13), transparent 22%),
+        radial-gradient(circle at 76% 74%, rgba(63,183,179,0.11), transparent 28%),
+        linear-gradient(180deg, #020712 0%, #041022 38%, #071a2c 68%, #0a2236 100%);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.22;
+      background-image:
+        linear-gradient(rgba(215,181,109,0.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(63,183,179,0.018) 1px, transparent 1px);
+      background-size: 88px 88px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.35), transparent 85%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 18px;
+      display: block;
+      object-fit: cover;
+    }
+
+    h1, h2, h3, h4, p { margin-top: 0; }
+
+    h1 {
+      font-size: clamp(2.5rem, 4.4vw, 4.55rem);
+      line-height: 1.04;
+      margin-bottom: 1rem;
+      letter-spacing: -0.03em;
+    }
+
+    h2 {
+      font-size: clamp(1.9rem, 2.8vw, 2.9rem);
+      line-height: 1.1;
+      margin-bottom: 0.9rem;
+      letter-spacing: -0.02em;
+    }
+
+    h3 {
+      font-size: 1.24rem;
+      margin: 1rem 0 0.55rem;
+      letter-spacing: -0.01em;
+    }
+
+    .container {
+      width: min(100% - 2rem, var(--max));
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .muted { color: var(--muted); }
+
+    .top-strip {
+      background: linear-gradient(90deg, rgba(6,18,31,0.96), rgba(9,24,40,0.92));
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      font-size: 0.92rem;
+      position: relative;
+      z-index: 20;
+    }
+
+    .top-strip::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(215,181,109,0.42), rgba(63,183,179,0.30), transparent);
+    }
+
+    .top-strip-inner {
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .top-strip-left,
+    .top-strip-right {
+      display: flex;
+      gap: 1.2rem;
+      color: #e8dcc0;
+      flex-wrap: wrap;
+    }
+
+    .topbar {
+      background: rgba(4, 11, 22, 0.80);
+      border-bottom: 1px solid var(--line-soft);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.14);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 84px;
+      gap: 1.5rem;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      flex: 0 0 auto;
+    }
+
+    .logo-img {
+      width: auto;
+      height: 72px;
+      max-width: none;
+      border-radius: 0;
+      object-fit: contain;
+      display: block;
+      filter: drop-shadow(0 8px 20px rgba(0,0,0,0.25));
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.2rem;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-left: auto;
+    }
+
+    .nav-links a {
+      color: #f2e7cc;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      position: relative;
+    }
+
+    .nav-links a:not(.btn)::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -7px;
+      width: 0;
+      height: 1px;
+      background: var(--accent-strong);
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:not(.btn):hover::after { width: 100%; }
+    .nav-links a:hover { color: var(--accent-strong); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.95rem 1.28rem;
+      border-radius: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease, background 0.22s ease;
+      border: 1px solid transparent;
+      position: relative;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #d8bc7a 0%, #b98a42 48%, #2f9e9b 100%);
+      color: #ffffff;
+      box-shadow:
+        0 10px 30px rgba(185,138,66,0.30),
+        0 0 0 1px rgba(255,255,255,0.06) inset;
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.05);
+      box-shadow:
+        0 16px 38px rgba(185,138,66,0.36),
+        0 0 0 1px rgba(255,255,255,0.08) inset;
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(215,181,109,0.34);
+      color: #f6ebcf;
+      background: rgba(255,255,255,0.02);
+      backdrop-filter: blur(12px);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(63,183,179,0.12);
+      border-color: var(--accent-strong);
+    }
+
+    section {
+      position: relative;
+      padding: 5rem 0;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .hero-bg,
+    .site-bg,
+    .shared-zone-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .hero-bg {
+      background-image: url('bg-hero.jpg');
+      transform: scale(1.04);
+    }
+
+    .site-bg,
+    .shared-zone-bg {
+      background-image: url('bg-soft.jpg');
+    }
+
+    .hero-bg::before,
+    .site-bg::before,
+    .hero-bg::after,
+    .site-bg::after,
+    .shared-zone-bg::before,
+    .shared-zone-bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
+
+    .hero-bg::before {
+      background:
+        linear-gradient(180deg, rgba(2,8,16,0.38) 0%, rgba(3,9,18,0.82) 100%);
+    }
+
+    .hero-bg::after {
+      background:
+        linear-gradient(90deg, rgba(2,8,16,0.82) 0%, rgba(4,12,22,0.46) 38%, rgba(2,8,16,0.80) 100%),
+        radial-gradient(circle at 76% 22%, rgba(215,181,109,0.14), transparent 24%),
+        radial-gradient(circle at 68% 32%, rgba(63,183,179,0.14), transparent 26%);
+    }
+
+    .site-bg::before,
+    .shared-zone-bg::before {
+      background:
+        linear-gradient(180deg, rgba(3,9,18,0.92) 0%, rgba(6,16,28,0.95) 100%);
+    }
+
+    .site-bg::after,
+    .shared-zone-bg::after {
+      background:
+        radial-gradient(circle at 82% 16%, rgba(215,181,109,0.10), transparent 24%),
+        radial-gradient(circle at 14% 82%, rgba(63,183,179,0.09), transparent 22%);
+      mix-blend-mode: screen;
+    }
+
+    .section-solid {
+      background: linear-gradient(180deg, #071324 0%, #091a2f 100%);
+    }
+
+    .section-solid::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(circle at 18% 22%, rgba(215,181,109,0.06), transparent 24%),
+        radial-gradient(circle at 82% 78%, rgba(63,183,179,0.06), transparent 22%);
+    }
+
+    .section-sheen {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      background:
+        linear-gradient(115deg, transparent 0%, rgba(255,255,255,0.04) 14%, transparent 26%),
+        linear-gradient(180deg, rgba(255,255,255,0.012), transparent 22%);
+      opacity: 0.8;
+    }
+
+    .shared-image-zone {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .shared-image-zone > section {
+      background: transparent;
+    }
+
+    .shared-image-zone .section-sheen {
+      opacity: 0.55;
+    }
+
+    .hero {
+      min-height: 82vh;
+      display: flex;
+      align-items: center;
+      padding: 6.2rem 0 5rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.02fr 0.98fr;
+      gap: 2.4rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 0.48rem 0.82rem;
+      border-radius: 999px;
+      border: 1px solid rgba(215,181,109,0.26);
+      background: rgba(215,181,109,0.10);
+      color: #f4e5bf;
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      backdrop-filter: blur(10px);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .hero-copy {
+      max-width: 650px;
+    }
+
+    .hero-copy p {
+      font-size: 1.06rem;
+      max-width: 52ch;
+      margin-bottom: 1.5rem;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, rgba(255,255,255,0.2), transparent);
+      margin: 1.5rem 0;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+      margin-top: 1.1rem;
+    }
+
+    .hero-media {
+      position: relative;
+    }
+
+    .hero-media::before {
+      content: "";
+      position: absolute;
+      inset: -18px;
+      background: radial-gradient(circle at 72% 20%, rgba(103,194,239,0.18), transparent 34%);
+      filter: blur(24px);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .hero-media img {
+      min-height: 480px;
+      max-height: 590px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(255,255,255,0.10);
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      position: absolute;
+      left: 22px;
+      bottom: 22px;
+      background: rgba(7,18,33,0.62);
+      border: 1px solid rgba(255,255,255,0.10);
+      padding: 0.92rem 1rem;
+      border-radius: 16px;
+      backdrop-filter: blur(14px);
+      color: #f2f7fc;
+      max-width: 280px;
+      z-index: 2;
+      box-shadow: 0 14px 40px rgba(0,0,0,0.26);
+    }
+
+    .card,
+    .glass-panel {
+      background: linear-gradient(180deg, rgba(18,40,60,0.48), rgba(8,19,34,0.64));
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      position: relative;
+    }
+
+    .card::before,
+    .glass-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(180deg, rgba(255,255,255,0.055), transparent 30%);
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 2rem;
+    }
+
+    .section-heading.centered {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-kicker {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #d7eefe;
+      margin-bottom: 0.7rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.3rem;
+    }
+
+    .service-card {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-card img {
+      height: 240px;
+      border-radius: 0;
+    }
+
+    .service-card-body,
+    .contact-card-inner,
+    .book-card-inner,
+    .why-copy,
+    .premium-band-inner {
+      padding: 1.55rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .service-card p,
+    .why-copy p,
+    .book-card p,
+    .contact-card p,
+    .premium-stat p {
+      color: var(--muted);
+    }
+
+    .service-meta {
+      display: inline-block;
+      font-size: 0.78rem;
+      color: #e4f3fd;
+      background: rgba(63,183,179,0.11);
+      border: 1px solid rgba(215,181,109,0.22);
+      padding: 0.34rem 0.58rem;
+      border-radius: 999px;
+      margin-bottom: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+    }
+
+    .why-visual {
+      position: relative;
+    }
+
+    .why-visual img {
+      min-height: 520px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(255,255,255,0.10);
+    }
+
+    .why-visual-badge {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      background: rgba(7,18,33,0.62);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 16px;
+      padding: 0.85rem 1rem;
+      backdrop-filter: blur(14px);
+      max-width: 240px;
+    }
+
+    ul.feature-list {
+      padding-left: 1.1rem;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    ul.feature-list li { margin-bottom: 0.72rem; }
+
+    .premium-band {
+      padding: 4rem 0 5rem;
+    }
+
+    .premium-band-inner {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .premium-stat {
+      padding: 1.3rem 1.35rem;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+    }
+
+    .premium-stat strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 0.35rem;
+      color: #f7ecd4;
+    }
+
+    .contact-layout {
+      align-items: stretch;
+    }
+
+    .contact-card,
+    .book-card {
+      height: 100%;
+    }
+
+    .book-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .book-panel {
+      background: linear-gradient(180deg, rgba(19,61,74,0.72), rgba(12,29,43,0.66));
+      border: 1px solid rgba(215,181,109,0.22);
+      border-radius: 18px;
+      padding: 1.25rem;
+      margin-top: 1rem;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+      backdrop-filter: blur(14px);
+    }
+
+    .book-panel strong {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      color: #eff9ff;
+    }
+
+    .small-note {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-top: 1rem;
+    }
+
+    form {
+      display: grid;
+      gap: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 1rem 1rem;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.09);
+      background: rgba(255,255,255,0.045);
+      color: #f1f6fb;
+      font: inherit;
+      outline: none;
+      transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    input::placeholder,
+    textarea::placeholder { color: #a79d87; }
+
+    input:focus,
+    textarea:focus {
+      border-color: rgba(103,194,239,0.55);
+      background: rgba(255,255,255,0.06);
+      box-shadow: 0 0 0 4px rgba(215,181,109,0.10);
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .footer-space { padding-bottom: 5.5rem; }
+
+    .site-footer {
+      position: relative;
+      z-index: 2;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      background: rgba(3,8,16,0.84);
+      backdrop-filter: blur(12px);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      min-height: 84px;
+      color: #bfb49a;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 1200px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .grid-2,
+      .premium-band-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-media img,
+      .why-visual img {
+        min-height: 340px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      section {
+        padding: 4.3rem 0;
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 0;
+      }
+
+      .logo-img {
+        height: 60px;
+      }
+
+      .nav-links {
+        width: 100%;
+        margin-left: 0;
+      }
+
+      .top-strip-inner { padding: 0.55rem 0; }
+
+      .hero {
+        padding-top: 5rem;
+      }
+
+      .hero-media img {
+        min-height: 300px;
+      }
+
+      .hero-badge,
+      .why-visual-badge {
+        position: static;
+        margin-top: 1rem;
+        max-width: none;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: clamp(2.2rem, 9vw, 3.1rem);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-strip">
+    <div class="container top-strip-inner">
+      <div class="top-strip-left">
+        <span>info@mabooks.ca</span>
+        <span>Montreal, Quebec</span>
+      </div>
+      <div class="top-strip-right">
+        <span>Bookkeeping • Accounting</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <div class="container nav">
+      <a href="#" class="brand-logo">
+        <img src="logo.png" alt="M&A Books Logo" class="logo-img" />
+      </a>
+
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <a href="#book" class="btn btn-secondary">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="section-sheen"></div>
+
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">Montreal bookkeeping support</div>
+        <h1>Helping your business stay organized and ready to grow.</h1>
+        <p class="muted">
+          M&amp; books helps small and medium-sized businesses bring clarity and order to their finances. Our approach is hands-on and supportive. We guide you through every step, making sure you always feel comfortable, informed, and confident. Think of us as your trusted partner, simplifying the process and giving you the peace of mind to focus on growing your business.
+        </p>
+        <div class="divider"></div>
+        <div class="hero-actions">
+          <a href="#book" class="btn btn-primary">Book Consultation</a>
+          <a href="#services" class="btn btn-secondary">Explore Services</a>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <img
+          src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80"
+          alt="Professional bookkeeping workspace"
+          loading="eager"
+        />
+        <div class="hero-badge">
+          Practical support for businesses that want cleaner books, better follow-through, and fewer administrative issues.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section-solid">
+    <div class="section-sheen"></div>
+
+    <div class="container">
+      <div class="section-heading centered">
+        <span class="section-kicker">What we do</span>
+        <h2>Reliable support for the bookkeeping work that keeps your business organized.</h2>
+        <p class="muted">
+          We help businesses stay current with their records, payroll routines, and GST / QST obligations.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <div class="card service-card">
+          <img
+            src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=900&q=80"
+            alt="Bookkeeping workspace"
+            loading="lazy"
+          />
+          <div class="service-card-body">
+            <span class="service-meta">Core service</span>
+            <h3>Bookkeeping</h3>
+            <p>Ongoing support to help keep records current, accounts organized, and financial activity properly tracked.</p>
+          </div>
+        </div>
+
+        <div class="card service-card">
+          <img
+            src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=900&q=80"
+            alt="Accounting and financial reporting"
+            loading="lazy"
+          />
+          <div class="service-card-body">
+            <span class="service-meta">Core Service</span>
+            <h3>Accounting</h3>
+            <p>We deliver clear, accurate financial statements that help you understand your business and make confident decisions.</p>
+          </div>
+        </div>
+
+        <div class="card service-card">
+          <img
+            src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?auto=format&fit=crop&w=900&q=80"
+            alt="Payroll and reporting"
+            loading="lazy"
+          />
+          <div class="service-card-body">
+            <span class="service-meta">Ongoing support</span>
+            <h3>Payroll</h3>
+            <p>Payroll support to help you stay consistent with employee pay, records, and recurring payroll administration.</p>
+          </div>
+        </div>
+
+        <div class="card service-card">
+          <img
+            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80"
+            alt="Business tax and reporting"
+            loading="lazy"
+          />
+          <div class="service-card-body">
+            <span class="service-meta">Compliance support</span>
+            <h3>GST / QST</h3>
+            <p>Support for organizing sales tax information so filings are easier to manage and less stressful.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="shared-image-zone">
+    <div class="shared-zone-bg"></div>
+
+    <section>
+      <div class="section-sheen"></div>
+
+      <div class="container grid-2">
+        <div class="why-visual">
+          <img
+            src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80"
+            alt="Business meeting"
+            loading="lazy"
+          />
+          <div class="why-visual-badge">
+            Reliable support, cleaner processes, and a more organized financial back office.
+          </div>
+        </div>
+
+        <div class="glass-panel why-copy">
+          <span class="section-kicker">Why M&amp;A Books</span>
+          <h2>Dependable support for bookkeeping that cannot be left behind.</h2>
+          <p class="muted">
+            The goal is simple: make your bookkeeping feel calmer, more organized,
+            and easier to stay on top of throughout the year.
+          </p>
+          <div class="divider"></div>
+          <ul class="feature-list">
+            <li>Consistent support for day-to-day bookkeeping tasks</li>
+            <li>Clear communication and practical follow-through</li>
+            <li>Quebec-relevant support for payroll and GST / QST</li>
+            <li>Professional presentation without unnecessary complexity</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="premium-band">
+      <div class="section-sheen"></div>
+
+      <div class="container">
+        <div class="glass-panel premium-band-inner">
+          <div class="premium-stat">
+            <strong>Organized records</strong>
+            <p>Keep financial activity better documented and easier to review throughout the year.</p>
+          </div>
+          <div class="premium-stat">
+            <strong>Reliable support</strong>
+            <p>We believe every question matters. Our team is here to provide clear guidance and dependable advice so you can move forward with confidence and build lasting success.</p>
+          </div>
+          <div class="premium-stat">
+            <strong>Stronger routine</strong>
+            <p>Build a cleaner process that improves consistency and reduces confusion.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer-space" id="contact">
+      <div class="section-sheen"></div>
+
+      <div class="container grid-2 contact-layout">
+        <div class="card contact-card">
+          <div class="contact-card-inner">
+            <span class="section-kicker">General inquiries</span>
+            <h2>Contact Us</h2>
+            <p class="muted">
+              General inquiries only. Please avoid sending sensitive payroll, tax, or personal information through this form.
+            </p>
+
+            <form>
+              <input placeholder="Name" />
+              <input placeholder="Email" />
+              <textarea placeholder="Tell us a little about your business and what you need"></textarea>
+              <button class="btn btn-primary" type="button">Send Message</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="card book-card" id="book">
+          <div class="book-card-inner">
+            <span class="section-kicker">Online booking</span>
+            <h2>Book a Consultation</h2>
+            <p class="muted">
+              Schedule an introductory call to discuss your current setup and the support you may need.
+            </p>
+
+            <div class="book-panel">
+              <strong>Schedule Introductory Teams Meeting</strong>
+              <p class="muted">
+                We can review your process, discuss your needs, and see whether M&amp;A Books is the right fit.
+              </p>
+              <a
+                href="https://outlook.office.com/book/MABooks1@mabooks.ca/"
+                target="_blank"
+                rel="noopener"
+                class="btn btn-primary"
+              >
+                Teams Meeting
+              </a>
+            </div>
+
+            <p class="small-note">Contact: info@mabooks.ca • Montreal, Quebec</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>M&amp;A Books</span>
+      <span>+1 (514) 534-0303 • info@mabooks.ca</span>
+    </div>
+  </footer>
+
+</body>
+</html>
