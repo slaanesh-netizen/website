@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>M&A Books | Bookkeeping Services in Montreal</title>
-  <meta
-    name="description"
-    content="M&A Books provides bookkeeping, accounting, payroll support, and sale tax support for businesses in Montreal and across Quebec."
-  />
+
+  <title>Bookkeeping Services Montreal & Quebec | M&amp;A Books</title>
+  <meta name="description" content="M&amp;A Books provides professional bookkeeping, accounting, payroll, and sales tax support for small and medium-sized businesses in Montreal and across Quebec.">
+  <meta name="keywords" content="bookkeeping Montreal, bookkeeping Quebec, accounting services Montreal, accounting services Quebec, payroll services Quebec, small business bookkeeping Montreal, GST QST filing Quebec">
+
   <style>
     :root {
       --bg: #07162a;
@@ -197,8 +197,7 @@
     .nav-links a:not(.btn):not(.lang-switch):hover::after { width: 100%; }
     .nav-links a:hover { color: var(--accent-strong); }
 
-    .btn,
-    .lang-switch {
+    .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -213,8 +212,7 @@
       white-space: nowrap;
     }
 
-    .btn:hover,
-    .lang-switch:hover { transform: translateY(-1px); }
+    .btn:hover { transform: translateY(-1px); }
 
     .btn-primary {
       background: linear-gradient(135deg, #36b9ee 0%, #2393cf 48%, #1a74ae 100%);
@@ -231,25 +229,40 @@
         0 0 0 1px rgba(255,255,255,0.08) inset;
     }
 
-    .btn-secondary,
-    .lang-switch {
+    .btn-secondary {
       border: 1px solid rgba(103,194,239,0.38);
       color: #eaf4fd;
       background: rgba(255,255,255,0.02);
       backdrop-filter: blur(12px);
     }
 
-    .btn-secondary:hover,
-    .lang-switch:hover {
+    .btn-secondary:hover {
       background: rgba(103,194,239,0.12);
       border-color: var(--accent-strong);
       color: #ffffff;
     }
 
     .lang-switch {
-      min-width: 58px;
-      padding-left: 1rem;
-      padding-right: 1rem;
+      color: #dbe9f7;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.35rem 0;
+      border: none;
+      background: none;
+      min-width: auto;
+      border-radius: 0;
+      box-shadow: none;
+      backdrop-filter: none;
+      transition: color 0.22s ease;
+    }
+
+    .lang-switch:hover {
+      color: var(--accent-strong);
+      transform: none;
+      background: none;
+      border: none;
     }
 
     section {
@@ -276,17 +289,24 @@
       transform: scale(1.04);
     }
 
-    .site-bg,
-    .shared-zone-bg {
+    .site-bg {
       background-image: url('bg-soft.jpg');
+    }
+
+    .shared-zone-bg {
+      background-image:
+        linear-gradient(180deg, rgba(6,18,33,0.86) 0%, rgba(7,20,36,0.82) 45%, rgba(6,18,33,0.88) 100%),
+        url('bg-soft.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transform: scale(1.02);
     }
 
     .hero-bg::before,
     .site-bg::before,
     .hero-bg::after,
-    .site-bg::after,
-    .shared-zone-bg::before,
-    .shared-zone-bg::after {
+    .site-bg::after {
       content: "";
       position: absolute;
       inset: 0;
@@ -303,14 +323,12 @@
         radial-gradient(circle at 76% 22%, rgba(103,194,239,0.18), transparent 24%);
     }
 
-    .site-bg::before,
-    .shared-zone-bg::before {
+    .site-bg::before {
       background:
         linear-gradient(180deg, rgba(6,18,33,0.90) 0%, rgba(8,22,39,0.94) 100%);
     }
 
-    .site-bg::after,
-    .shared-zone-bg::after {
+    .site-bg::after {
       background:
         radial-gradient(circle at 82% 16%, rgba(103,194,239,0.11), transparent 24%),
         radial-gradient(circle at 14% 82%, rgba(42,168,226,0.08), transparent 22%);
@@ -346,14 +364,28 @@
     .shared-image-zone {
       position: relative;
       overflow: hidden;
+      background: #07162a;
     }
 
     .shared-image-zone > section {
-      background: transparent;
+      background: transparent !important;
+      position: relative;
+      z-index: 1;
+    }
+
+    .shared-image-zone::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 50% 20%, rgba(103,194,239,0.08), transparent 28%),
+        linear-gradient(180deg, rgba(6,18,33,0.14) 0%, rgba(6,18,33,0.02) 45%, rgba(6,18,33,0.22) 100%);
     }
 
     .shared-image-zone .section-sheen {
-      opacity: 0.55;
+      opacity: 0.22;
     }
 
     .hero {
@@ -763,13 +795,14 @@
     }
   </style>
 </head>
+
 <body>
 
   <div class="top-strip">
     <div class="container top-strip-inner">
       <div class="top-strip-left">
+        <span>(514) 534-0303</span>
         <span>info@mabooks.ca</span>
-        <span>Montreal, Quebec</span>
       </div>
       <div class="top-strip-right">
         <span>Bookkeeping • Accounting</span>
@@ -780,7 +813,7 @@
   <header class="topbar">
     <div class="container nav">
       <a href="#" class="brand-logo">
-        <img src="logo.png" alt="M&A Books Logo" class="logo-img" />
+        <img src="logo.png" alt="M&A Books bookkeeping and accounting logo" class="logo-img" />
       </a>
 
       <nav class="nav-links">
@@ -798,12 +831,16 @@
 
     <div class="container hero-grid">
       <div class="hero-copy">
-        <div class="eyebrow">Montreal bookkeeping support</div>
-        <h1>Helping your business stay organized and ready to grow.</h1>
-        <p class="muted">
-          M&amp;A books helps small and medium-sized businesses bring clarity and order to their finances. Our approach is hands-on and supportive. We guide you through every step, making sure you always feel comfortable, informed, and confident. Think of us as your trusted partner, simplifying the process and giving you the peace of mind to focus on growing your business.
-        </p>
+        <div class="eyebrow">Based in Montreal • Supporting businesses across Quebec</div>
+
+        <h1>Bookkeeping Services in Montreal</h1>
+
+     <p class="muted">
+  M&amp;A Books helps small and medium-sized businesses in Montreal and across Quebec bring clarity and order to their finances. Our approach is hands-on and supportive — we guide you through every step, ensuring you always feel informed, confident, and in control. With reliable bookkeeping, accounting, payroll, and tax support, we simplify your financial processes and give you the peace of mind to focus on growing your business.
+</p>
+
         <div class="divider"></div>
+
         <div class="hero-actions">
           <a href="#book" class="btn btn-primary">Book Consultation</a>
           <a href="#services" class="btn btn-secondary">Explore Services</a>
@@ -813,7 +850,7 @@
       <div class="hero-media">
         <img
           src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80"
-          alt="Professional bookkeeping workspace"
+          alt="Professional bookkeeping workspace for Montreal and Quebec business financial records"
           loading="eager"
         />
         <div class="hero-badge">
@@ -829,28 +866,31 @@
     <div class="container">
       <div class="section-heading centered">
         <span class="section-kicker">What we do</span>
-        <h2>Reliable support for the bookkeeping work that keeps your business organized.</h2>
+
+        <h2>Bookkeeping, Accounting, and Payroll Services for Quebec Businesses</h2>
+
         <p class="muted">
-          We help businesses stay current with their records, payroll routines, and all tax obligations.
+          We provide bookkeeping, accounting, payroll, and sales tax support that helps your records stay accurate, compliant, and up to date.
         </p>
       </div>
 
       <div class="services-grid">
+
         <div class="card service-card">
           <img
             src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=900&q=80"
-            alt="Bookkeeping workspace"
+            alt="Bookkeeping records and financial documents"
             loading="lazy"
           />
           <div class="service-card-body">
             <span class="service-meta">Core service</span>
             <h3>Bookkeeping</h3>
             <ul class="feature-list">
-              <li>Organization of receipts & financial documents</li>
-              <li>Record & maintain financial transactions</li>
-              <li>Bank and other account reconciliations</li>
-              <li>Review of cashflow</li>
-              <li>Analyze profit margins</li>
+              <li>Organization of receipts and financial documents</li>
+              <li>Recording and maintaining financial transactions</li>
+              <li>Bank and account reconciliations</li>
+              <li>Cash flow review</li>
+              <li>Profit margin analysis</li>
               <li>Regular reporting for client visibility</li>
             </ul>
           </div>
@@ -859,7 +899,7 @@
         <div class="card service-card">
           <img
             src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=900&q=80"
-            alt="Accounting and financial reporting"
+            alt="Accounting and financial reporting support"
             loading="lazy"
           />
           <div class="service-card-body">
@@ -868,7 +908,7 @@
             <ul class="feature-list">
               <li>Financial statements</li>
               <li>Interim financial statements</li>
-              <li>Corporate tax preparation & filing</li>
+              <li>Corporate tax preparation and filing</li>
             </ul>
           </div>
         </div>
@@ -876,7 +916,7 @@
         <div class="card service-card">
           <img
             src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?auto=format&fit=crop&w=900&q=80"
-            alt="Payroll and reporting"
+            alt="Payroll processing and reporting"
             loading="lazy"
           />
           <div class="service-card-body">
@@ -884,12 +924,12 @@
             <h3>Payroll</h3>
             <ul class="feature-list">
               <li>Payroll processing</li>
-              <li>Vacation & sick pay tracking</li>
+              <li>Vacation and sick pay tracking</li>
               <li>Holiday pay calculations</li>
               <li>Deductions at source reporting</li>
               <li>CNESST reporting</li>
               <li>Tax slips</li>
-              <li>Maintaining employee portals</li>
+              <li>Employee portal maintenance</li>
             </ul>
           </div>
         </div>
@@ -897,20 +937,21 @@
         <div class="card service-card">
           <img
             src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80"
-            alt="Business tax and reporting"
+            alt="GST QST sales tax filing and compliance support"
             loading="lazy"
           />
           <div class="service-card-body">
             <span class="service-meta">Compliance support</span>
             <h3>Sales Tax</h3>
             <ul class="feature-list">
-              <li>GST/HST & QST reporting & filing</li>
-              <li>Payment code for ease of mind</li>
+              <li>GST/HST and QST reporting and filing</li>
+              <li>Payment code support for peace of mind</li>
               <li>Quick method calculations</li>
               <li>Government portal supervision</li>
             </ul>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -925,7 +966,7 @@
         <div class="why-visual">
           <img
             src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80"
-            alt="Business meeting"
+            alt="Business meeting for bookkeeping and accounting support"
             loading="lazy"
           />
           <div class="why-visual-badge">
@@ -935,12 +976,15 @@
 
         <div class="glass-panel why-copy">
           <span class="section-kicker">Why M&amp;A Books</span>
-          <h2>Dependable support for bookkeeping that cannot be left behind.</h2>
+
+          <h2>Reliable Bookkeeping Support That Keeps Your Business Organized</h2>
+
           <p class="muted">
-            The goal is simple: make your bookkeeping feel calmer, more organized,
-            and easier to stay on top of throughout the year.
+            We work with businesses that need reliable, consistent bookkeeping support. Our goal is to simplify your financial processes, reduce administrative stress, and give you clear, practical visibility over your records year-round.
           </p>
+
           <div class="divider"></div>
+
           <ul class="feature-list">
             <li>Consistent support for day-to-day bookkeeping tasks</li>
             <li>Clear communication and practical follow-through</li>
@@ -1022,7 +1066,9 @@
         <div class="card contact-card">
           <div class="contact-card-inner">
             <span class="section-kicker">General inquiries</span>
-            <h2>Contact Us</h2>
+
+            <h2>Contact Our Bookkeeping Team</h2>
+
             <p class="muted">
               General inquiries only. Please avoid sending sensitive payroll, tax, or personal information through this form.
             </p>
@@ -1039,7 +1085,9 @@
         <div class="card book-card" id="book">
           <div class="book-card-inner">
             <span class="section-kicker">Online booking</span>
+
             <h2>Book a Consultation</h2>
+
             <p class="muted">
               Schedule a quick introductory call to review your needs and see how we can support your business.
             </p>
@@ -1066,7 +1114,7 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <span>M&amp;A Books</span>
+      <span>M&amp;A Books | Bookkeeping Services in Montreal &amp; Across Quebec</span>
       <span>+1 (514) 534-0303 • info@mabooks.ca</span>
     </div>
   </footer>
