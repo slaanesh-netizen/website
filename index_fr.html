@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>M&A Books | Services de comptabilité à Montréal</title>
-  <meta
-    name="description"
-    content="M&A Books offre des services de comptabilité, de tenue de livres, de paie et de soutien pour les taxes de vente aux entreprises de Montréal et de partout au Québec."
-  />
+
+  <title>Tenue de livres Montréal &amp; Québec | Livres M&amp;A</title>
+  <meta name="description" content="Livres M&amp;A offre des services de tenue de livres, comptabilité, paie et taxes de vente pour les petites et moyennes entreprises à Montréal et partout au Québec.">
+  <meta name="keywords" content="tenue de livres Montréal, comptabilité Montréal, tenue de livres Québec, services comptables Québec, paie Québec, TPS TVQ Québec, comptabilité PME Montréal">
+
   <style>
     :root {
       --bg: #07162a;
@@ -97,6 +97,35 @@
     }
 
     .muted { color: var(--muted); }
+
+    .service-card-body a {
+      color: #dbe9f7;
+      font-weight: 700;
+      text-decoration: underline;
+      text-decoration-color: rgba(103,194,239,0.45);
+      text-underline-offset: 4px;
+    }
+
+    .service-card-body a:hover {
+      color: var(--accent-strong);
+      text-decoration-color: var(--accent-strong);
+    }
+
+    .service-link {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #dbe9f7;
+      font-weight: 700;
+      text-decoration: underline;
+      text-decoration-color: rgba(103,194,239,0.45);
+      text-underline-offset: 4px;
+    }
+
+    .service-link:hover {
+      color: var(--accent-strong);
+      text-decoration-color: var(--accent-strong);
+    }
+
 
     .top-strip {
       background: linear-gradient(90deg, rgba(11,43,73,0.92), rgba(10,33,58,0.88));
@@ -197,8 +226,7 @@
     .nav-links a:not(.btn):not(.lang-switch):hover::after { width: 100%; }
     .nav-links a:hover { color: var(--accent-strong); }
 
-    .btn,
-    .lang-switch {
+    .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -213,8 +241,7 @@
       white-space: nowrap;
     }
 
-    .btn:hover,
-    .lang-switch:hover { transform: translateY(-1px); }
+    .btn:hover { transform: translateY(-1px); }
 
     .btn-primary {
       background: linear-gradient(135deg, #36b9ee 0%, #2393cf 48%, #1a74ae 100%);
@@ -231,25 +258,40 @@
         0 0 0 1px rgba(255,255,255,0.08) inset;
     }
 
-    .btn-secondary,
-    .lang-switch {
+    .btn-secondary {
       border: 1px solid rgba(103,194,239,0.38);
       color: #eaf4fd;
       background: rgba(255,255,255,0.02);
       backdrop-filter: blur(12px);
     }
 
-    .btn-secondary:hover,
-    .lang-switch:hover {
+    .btn-secondary:hover {
       background: rgba(103,194,239,0.12);
       border-color: var(--accent-strong);
       color: #ffffff;
     }
 
     .lang-switch {
-      min-width: 58px;
-      padding-left: 1rem;
-      padding-right: 1rem;
+      color: #dbe9f7;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.35rem 0;
+      border: none;
+      background: none;
+      min-width: auto;
+      border-radius: 0;
+      box-shadow: none;
+      backdrop-filter: none;
+      transition: color 0.22s ease;
+    }
+
+    .lang-switch:hover {
+      color: var(--accent-strong);
+      transform: none;
+      background: none;
+      border: none;
     }
 
     section {
@@ -276,17 +318,24 @@
       transform: scale(1.04);
     }
 
-    .site-bg,
-    .shared-zone-bg {
+    .site-bg {
       background-image: url('bg-soft.jpg');
+    }
+
+    .shared-zone-bg {
+      background-image:
+        linear-gradient(180deg, rgba(6,18,33,0.86) 0%, rgba(7,20,36,0.82) 45%, rgba(6,18,33,0.88) 100%),
+        url('bg-soft.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transform: scale(1.02);
     }
 
     .hero-bg::before,
     .site-bg::before,
     .hero-bg::after,
-    .site-bg::after,
-    .shared-zone-bg::before,
-    .shared-zone-bg::after {
+    .site-bg::after {
       content: "";
       position: absolute;
       inset: 0;
@@ -303,14 +352,12 @@
         radial-gradient(circle at 76% 22%, rgba(103,194,239,0.18), transparent 24%);
     }
 
-    .site-bg::before,
-    .shared-zone-bg::before {
+    .site-bg::before {
       background:
         linear-gradient(180deg, rgba(6,18,33,0.90) 0%, rgba(8,22,39,0.94) 100%);
     }
 
-    .site-bg::after,
-    .shared-zone-bg::after {
+    .site-bg::after {
       background:
         radial-gradient(circle at 82% 16%, rgba(103,194,239,0.11), transparent 24%),
         radial-gradient(circle at 14% 82%, rgba(42,168,226,0.08), transparent 22%);
@@ -346,14 +393,28 @@
     .shared-image-zone {
       position: relative;
       overflow: hidden;
+      background: #07162a;
     }
 
     .shared-image-zone > section {
-      background: transparent;
+      background: transparent !important;
+      position: relative;
+      z-index: 1;
+    }
+
+    .shared-image-zone::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 50% 20%, rgba(103,194,239,0.08), transparent 28%),
+        linear-gradient(180deg, rgba(6,18,33,0.14) 0%, rgba(6,18,33,0.02) 45%, rgba(6,18,33,0.22) 100%);
     }
 
     .shared-image-zone .section-sheen {
-      opacity: 0.55;
+      opacity: 0.22;
     }
 
     .hero {
@@ -763,27 +824,29 @@
     }
   </style>
 </head>
+
 <body>
 
   <div class="top-strip">
     <div class="container top-strip-inner">
       <div class="top-strip-left">
-        <span>info@mabooks.ca</span>
-        <span>Montréal, Québec</span>
+        <span>(514) 534-0303</span>
+        <span>info@maLivres.ca</span>
       </div>
       <div class="top-strip-right">
-        <span>Comptabilité • Tenue de livres</span>
+        <span>Tenue de livres • Comptabilité</span>
       </div>
     </div>
   </div>
 
   <header class="topbar">
     <div class="container nav">
-      <a href="#" class="brand-logo">
-        <img src="logo.png" alt="Logo M&A Books" class="logo-img" />
+      <a href="index_fr.html" class="brand-logo">
+        <img src="logo.png" alt="Logo M&A Livres tenue de livres et comptabilité" class="logo-img" />
       </a>
 
       <nav class="nav-links">
+        <a href="index_fr.html">Accueil</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
         <a href="#book" class="btn btn-secondary">Obtenir une soumission</a>
@@ -798,12 +861,16 @@
 
     <div class="container hero-grid">
       <div class="hero-copy">
-        <div class="eyebrow">Soutien en comptabilité à Montréal</div>
-        <h1>Nous aidons votre entreprise à rester organisée et prête à croître.</h1>
+        <div class="eyebrow">Basé à Montréal • Soutien aux entreprises partout au Québec</div>
+
+        <h1>Services de tenue de livres à Montréal</h1>
+
         <p class="muted">
-          M&amp;A Books aide les petites et moyennes entreprises à mettre de l’ordre et de la clarté dans leurs finances. Notre approche est pratique, humaine et axée sur l’accompagnement. Nous vous guidons à chaque étape afin que vous vous sentiez toujours à l’aise, bien informé et en confiance. Voyez-nous comme un partenaire de confiance qui simplifie vos processus et vous donne la tranquillité d’esprit nécessaire pour vous concentrer sur la croissance de votre entreprise.
+          Livres M&amp;A aide les petites et moyennes entreprises à mettre de l’ordre et de la clarté dans leurs finances. Notre approche est simple, humaine et axée sur l’accompagnement — nous vous guidons à chaque étape pour que vous vous sentiez bien informé, en confiance et en contrôle. Avec un soutien fiable en tenue de livres, comptabilité, paie et taxes, nous simplifions vos processus financiers pour vous permettre de vous concentrer sur la croissance de votre entreprise.
         </p>
+
         <div class="divider"></div>
+
         <div class="hero-actions">
           <a href="#book" class="btn btn-primary">Prendre rendez-vous</a>
           <a href="#services" class="btn btn-secondary">Découvrir nos services</a>
@@ -813,11 +880,11 @@
       <div class="hero-media">
         <img
           src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80"
-          alt="Espace de travail professionnel en comptabilité"
+          alt="Espace de travail professionnel pour la tenue de livres et la comptabilité"
           loading="eager"
         />
         <div class="hero-badge">
-          Un soutien concret pour les entreprises qui veulent une comptabilité mieux tenue, un meilleur suivi et moins de tâches administratives qui s’accumulent.
+          Un soutien concret pour des livres mieux tenus, un meilleur suivi et moins de tâches administratives qui s’accumulent.
         </div>
       </div>
     </div>
@@ -828,38 +895,42 @@
 
     <div class="container">
       <div class="section-heading centered">
-        <span class="section-kicker">Ce que nous faisons</span>
-        <h2>Un soutien fiable pour la comptabilité qui permet à votre entreprise de rester bien organisée.</h2>
+        <span class="section-kicker">Nos services</span>
+
+        <h2>Tenue de livres, comptabilité et paie pour les entreprises du Québec</h2>
+
         <p class="muted">
-          Nous aidons les entreprises à garder leurs dossiers à jour, à assurer le suivi de la paie et à respecter leurs obligations fiscales.
+          Nous offrons des services de tenue de livres, de comptabilité, de paie et de taxes de vente pour les entreprises à Montréal et partout au Québec, afin de garder vos dossiers exacts, conformes et à jour.
         </p>
       </div>
 
       <div class="services-grid">
+
         <div class="card service-card">
           <img
             src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=900&q=80"
-            alt="Espace de travail en tenue de livres"
+            alt="Documents financiers et tenue de livres"
             loading="lazy"
           />
           <div class="service-card-body">
             <span class="service-meta">Service principal</span>
-            <h3>Tenue de livres</h3>
+            <h3><a href="tenue-de-livres-montreal.html">Tenue de livres</a></h3>
             <ul class="feature-list">
               <li>Organisation des reçus et des documents financiers</li>
-              <li>Enregistrement et tenue à jour des transactions financières</li>
-              <li>Rapprochements bancaires et autres rapprochements de comptes</li>
-              <li>Révision des flux de trésorerie</li>
+              <li>Enregistrement et tenue à jour des transactions</li>
+              <li>Rapprochements bancaires et rapprochements de comptes</li>
+              <li>Suivi des flux de trésorerie</li>
               <li>Analyse des marges bénéficiaires</li>
-              <li>Rapports réguliers pour une meilleure visibilité du client</li>
+              <li>Rapports réguliers pour une meilleure visibilité</li>
             </ul>
+            <a href="tenue-de-livres-montreal.html" class="service-link">En savoir plus sur la tenue de livres</a>
           </div>
         </div>
 
         <div class="card service-card">
           <img
             src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=900&q=80"
-            alt="Comptabilité et information financière"
+            alt="Comptabilité et rapports financiers"
             loading="lazy"
           />
           <div class="service-card-body">
@@ -868,7 +939,7 @@
             <ul class="feature-list">
               <li>États financiers</li>
               <li>États financiers intérimaires</li>
-              <li>Préparation et production des déclarations fiscales des sociétés</li>
+              <li>Préparation et production des déclarations fiscales de sociétés</li>
             </ul>
           </div>
         </div>
@@ -881,36 +952,39 @@
           />
           <div class="service-card-body">
             <span class="service-meta">Soutien continu</span>
-            <h3>Paie</h3>
+            <h3><a href="paie-quebec.html">Paie</a></h3>
             <ul class="feature-list">
               <li>Traitement de la paie</li>
               <li>Suivi des vacances et des congés de maladie</li>
-              <li>Calcul des indemnités de jours fériés</li>
+              <li>Calcul des jours fériés</li>
               <li>Déclarations des retenues à la source</li>
               <li>Déclarations à la CNESST</li>
               <li>Feuillets fiscaux</li>
               <li>Gestion des portails employés</li>
             </ul>
+            <a href="paie-quebec.html" class="service-link">En savoir plus sur la paie</a>
           </div>
         </div>
 
         <div class="card service-card">
           <img
             src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80"
-            alt="Taxes et conformité d’entreprise"
+            alt="Taxes de vente TPS TVQ et conformité"
             loading="lazy"
           />
           <div class="service-card-body">
-            <span class="service-meta">Soutien en conformité</span>
-            <h3>Taxes de vente</h3>
+            <span class="service-meta">Conformité</span>
+            <h3><a href="taxes-de-vente-quebec.html">Taxes de vente</a></h3>
             <ul class="feature-list">
               <li>Préparation et production des déclarations TPS/TVH et TVQ</li>
-              <li>Codes de paiement pour une plus grande tranquillité d’esprit</li>
+              <li>Codes de paiement pour plus de tranquillité d’esprit</li>
               <li>Calculs selon la méthode rapide</li>
               <li>Suivi des portails gouvernementaux</li>
             </ul>
+            <a href="taxes-de-vente-quebec.html" class="service-link">En savoir plus sur les taxes de vente</a>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -925,27 +999,31 @@
         <div class="why-visual">
           <img
             src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80"
-            alt="Réunion d’affaires"
+            alt="Rencontre d'affaires pour du soutien en comptabilité"
             loading="lazy"
           />
           <div class="why-visual-badge">
-            Un soutien fiable, des processus plus propres et une gestion financière interne mieux organisée.
+            Un soutien fiable, des processus plus clairs et une gestion financière mieux organisée.
           </div>
         </div>
 
         <div class="glass-panel why-copy">
-          <span class="section-kicker">Pourquoi M&amp;A Books</span>
-          <h2>Un soutien fiable pour la comptabilité qui ne peut pas être mise de côté.</h2>
+          <span class="section-kicker">Pourquoi Livres M&amp;A</span>
+
+          <h2>Un soutien fiable pour garder votre entreprise bien organisée</h2>
+
           <p class="muted">
-            L’objectif est simple : rendre votre comptabilité plus calme, plus structurée et plus facile à suivre tout au long de l’année.
+            Nous accompagnons les entreprises qui ont besoin d’un soutien constant en tenue de livres et en comptabilité. Notre objectif est de simplifier vos processus financiers, réduire la charge administrative et vous donner une vision claire de vos dossiers tout au long de l’année.
           </p>
+
           <div class="divider"></div>
+
           <ul class="feature-list">
-            <li>Soutien constant pour les tâches de comptabilité au quotidien</li>
+            <li>Soutien constant pour les tâches de comptabilité courantes</li>
             <li>Communication claire et suivi concret</li>
-            <li>Soutien adapté au Québec pour la paie et les taxes de vente</li>
+            <li>Approche adaptée au Québec pour la paie et les taxes de vente</li>
             <li>Présentation professionnelle sans complexité inutile</li>
-            <li>Prise de rendez-vous facile en ligne — choisissez un moment qui vous convient, sans appel requis</li>
+            <li>Prise de rendez-vous facile en ligne — choisissez un moment qui vous convient</li>
           </ul>
         </div>
       </div>
@@ -966,7 +1044,7 @@
               </svg>
               Dossiers bien organisés
             </strong>
-            <p>Gardez vos opérations financières mieux documentées et plus faciles à revoir tout au long de l’année.</p>
+            <p>Gardez vos opérations financières mieux documentées et plus faciles à consulter tout au long de l’année.</p>
           </div>
 
           <div class="premium-stat">
@@ -981,7 +1059,7 @@
               </svg>
               Soutien fiable
             </strong>
-            <p>Nous croyons que chaque question compte. Notre équipe est là pour vous offrir des conseils clairs et un accompagnement fiable afin que vous puissiez avancer avec confiance et bâtir un succès durable.</p>
+            <p>Chaque question compte. Notre équipe vous offre des explications claires et un accompagnement fiable pour vous aider à avancer avec confiance.</p>
           </div>
 
           <div class="premium-stat">
@@ -994,7 +1072,7 @@
               </svg>
               Routine plus solide
             </strong>
-            <p>Mettez en place un processus plus propre qui améliore la constance et réduit la confusion.</p>
+            <p>Mettez en place un processus plus clair qui améliore la constance et réduit la confusion.</p>
           </div>
 
           <div class="premium-stat security-card">
@@ -1007,7 +1085,7 @@
               </svg>
               Confidentialité
             </strong>
-            <p>Vos renseignements sont traités selon des normes reconnues de l’industrie. Nous utilisons des systèmes sécurisés, des accès contrôlés et des protocoles stricts de confidentialité afin que vos données demeurent protégées, privées et entre de bonnes mains en tout temps.</p>
+            <p>Vos renseignements sont traités avec soin. Nous utilisons des systèmes sécurisés, des accès contrôlés et des pratiques strictes de confidentialité afin que vos données demeurent protégées.</p>
           </div>
 
         </div>
@@ -1021,7 +1099,9 @@
         <div class="card contact-card">
           <div class="contact-card-inner">
             <span class="section-kicker">Demandes générales</span>
-            <h2>Contactez-nous</h2>
+
+            <h2>Contactez notre équipe en comptabilité</h2>
+
             <p class="muted">
               Pour les demandes générales seulement. Veuillez éviter d’envoyer des renseignements sensibles liés à la paie, aux impôts ou à des informations personnelles par ce formulaire.
             </p>
@@ -1038,18 +1118,20 @@
         <div class="card book-card" id="book">
           <div class="book-card-inner">
             <span class="section-kicker">Réservation en ligne</span>
+
             <h2>Prendre une consultation</h2>
+
             <p class="muted">
-              Planifiez un court appel d’introduction pour discuter de vos besoins et voir comment nous pouvons soutenir votre entreprise.
+              Planifiez un court appel pour discuter de vos besoins et voir comment nous pouvons vous accompagner.
             </p>
 
             <div class="book-panel">
               <strong>Planifier une rencontre d’introduction sur Teams</strong>
               <p class="muted">
-                Nous pourrons revoir votre fonctionnement, discuter de vos besoins et voir si M&amp;A Books convient à votre entreprise.
+                Nous pourrons revoir votre situation, discuter de vos besoins et voir si Livres M&amp;A est le bon partenaire pour votre entreprise.
               </p>
               <a
-                href="https://outlook.office.com/book/MABooks1@mabooks.ca/"
+                href="https://outlook.office.com/book/MALivres1@maLivres.ca/"
                 target="_blank"
                 rel="noopener"
                 class="btn btn-primary"
@@ -1065,8 +1147,8 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <span>M&amp;A Books</span>
-      <span>+1 (514) 534-0303 • info@mabooks.ca</span>
+      <span>Livres M&amp;A | Tenue de livres à Montréal &amp; partout au Québec</span>
+      <span>+1 (514) 534-0303 • info@maLivres.ca</span>
     </div>
   </footer>
 
