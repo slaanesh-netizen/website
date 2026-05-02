@@ -98,6 +98,34 @@
 
     .muted { color: var(--muted); }
 
+    .service-card-body a {
+      color: #dbe9f7;
+      font-weight: 700;
+      text-decoration: underline;
+      text-decoration-color: rgba(103,194,239,0.45);
+      text-underline-offset: 4px;
+    }
+
+    .service-card-body a:hover {
+      color: var(--accent-strong);
+      text-decoration-color: var(--accent-strong);
+    }
+
+    .service-link {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #dbe9f7;
+      font-weight: 700;
+      text-decoration: underline;
+      text-decoration-color: rgba(103,194,239,0.45);
+      text-underline-offset: 4px;
+    }
+
+    .service-link:hover {
+      color: var(--accent-strong);
+      text-decoration-color: var(--accent-strong);
+    }
+
     .top-strip {
       background: linear-gradient(90deg, rgba(11,43,73,0.92), rgba(10,33,58,0.88));
       border-bottom: 1px solid rgba(255,255,255,0.08);
@@ -703,6 +731,117 @@
       resize: vertical;
     }
 
+
+    .trust-strip {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1rem;
+      align-items: center;
+      padding: 1rem 1.1rem;
+      margin: 1.1rem 0 1.2rem;
+      border-radius: 16px;
+      background: rgba(103,194,239,0.08);
+      border: 1px solid rgba(103,194,239,0.20);
+    }
+
+    .stars {
+      color: #f5d36f;
+      letter-spacing: 0.06em;
+      font-size: 1.05rem;
+      white-space: nowrap;
+    }
+
+    .trust-strip strong {
+      display: block;
+      color: #f2f9ff;
+      margin-bottom: 0.15rem;
+    }
+
+    .trust-strip span {
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .booking-layout {
+      grid-template-columns: 1.08fr 0.92fr;
+    }
+
+    .book-card.featured-booking {
+      border-color: rgba(103,194,239,0.20);
+      background:
+        radial-gradient(circle at 80% 0%, rgba(103,194,239,0.16), transparent 36%),
+        linear-gradient(180deg, rgba(20,64,104,0.58), rgba(10,27,48,0.62));
+    }
+
+    .booking-benefits {
+      display: grid;
+      gap: 0.65rem;
+      margin: 1.1rem 0;
+      color: var(--muted);
+    }
+
+    .booking-benefits span {
+      display: flex;
+      gap: 0.55rem;
+      align-items: flex-start;
+    }
+
+    .booking-benefits span::before {
+      content: "✓";
+      color: var(--accent-strong);
+      font-weight: 800;
+      line-height: 1.5;
+    }
+
+    .micro-trust {
+      display: flex;
+      gap: 0.55rem;
+      flex-wrap: wrap;
+      margin: 1rem 0 1.15rem;
+    }
+
+    .micro-trust span {
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.035);
+      border-radius: 999px;
+      padding: 0.42rem 0.64rem;
+      color: #d9ecfb;
+      font-size: 0.84rem;
+      font-weight: 700;
+    }
+
+    .testimonial-card {
+      margin-top: 1rem;
+      padding: 1rem;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.035);
+      border: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .testimonial-card p {
+      margin-bottom: 0.55rem;
+      color: #d7e6f5;
+      font-size: 0.96rem;
+    }
+
+    .testimonial-card small {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .secondary-contact {
+      opacity: 0.9;
+    }
+
+    .secondary-contact h2 {
+      font-size: clamp(1.65rem, 2.4vw, 2.45rem);
+    }
+
+    .secondary-contact .btn-primary {
+      background: linear-gradient(135deg, #2aa8e2 0%, #1e86c3 100%);
+      box-shadow: 0 8px 22px rgba(42,168,226,0.20);
+    }
+
     .footer-space { padding-bottom: 5.5rem; }
 
     .site-footer {
@@ -812,14 +951,15 @@
 
   <header class="topbar">
     <div class="container nav">
-      <a href="#" class="brand-logo">
+      <a href="index.html" class="brand-logo">
         <img src="logo.png" alt="M&A Books bookkeeping and accounting logo" class="logo-img" />
       </a>
 
-      <nav class="nav-links">
+            <nav class="nav-links">
+        <a href="index.html">Home</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
-        <a href="#book" class="btn btn-secondary">Get a Quote</a>
+        <a href="#book" class="btn btn-secondary">Book Free Consultation</a>
         <a href="index_fr.html" class="lang-switch">FR</a>
       </nav>
     </div>
@@ -836,13 +976,13 @@
         <h1>Bookkeeping Services in Montreal</h1>
 
      <p class="muted">
-  M&amp;A Books helps small and medium-sized businesses in Montreal and across Quebec bring clarity and order to their finances. Our approach is hands-on and supportive — we guide you through every step, ensuring you always feel informed, confident, and in control. With reliable bookkeeping, accounting, payroll, and tax support, we simplify your financial processes and give you the peace of mind to focus on growing your business.
-</p>
+          M&amp;A Books helps small and medium-sized businesses bring clarity and order to their finances. Our approach is hands-on and supportive — we guide you through every step, ensuring you always feel informed, confident, and in control. With reliable bookkeeping, accounting, payroll, and tax support, we simplify your financial processes and give you the peace of mind to focus on growing your business.
+        </p>
 
         <div class="divider"></div>
 
         <div class="hero-actions">
-          <a href="#book" class="btn btn-primary">Book Consultation</a>
+          <a href="#book" class="btn btn-primary">Book Free Consultation</a>
           <a href="#services" class="btn btn-secondary">Explore Services</a>
         </div>
       </div>
@@ -870,7 +1010,7 @@
         <h2>Bookkeeping, Accounting, and Payroll Services for Quebec Businesses</h2>
 
         <p class="muted">
-          We provide bookkeeping, accounting, payroll, and sales tax support that helps your records stay accurate, compliant, and up to date.
+          We provide bookkeeping, accounting, payroll, and sales tax services for businesses in Montreal and across Quebec, helping your records stay accurate, compliant, and up to date.
         </p>
       </div>
 
@@ -884,7 +1024,7 @@
           />
           <div class="service-card-body">
             <span class="service-meta">Core service</span>
-            <h3>Bookkeeping</h3>
+            <h3><a href="bookkeeping-montreal.html">Bookkeeping</a></h3>
             <ul class="feature-list">
               <li>Organization of receipts and financial documents</li>
               <li>Recording and maintaining financial transactions</li>
@@ -893,6 +1033,7 @@
               <li>Profit margin analysis</li>
               <li>Regular reporting for client visibility</li>
             </ul>
+            <a href="bookkeeping-montreal.html" class="service-link">Learn more about bookkeeping</a>
           </div>
         </div>
 
@@ -921,7 +1062,7 @@
           />
           <div class="service-card-body">
             <span class="service-meta">Ongoing support</span>
-            <h3>Payroll</h3>
+            <h3><a href="payroll-services-quebec.html">Payroll</a></h3>
             <ul class="feature-list">
               <li>Payroll processing</li>
               <li>Vacation and sick pay tracking</li>
@@ -931,6 +1072,7 @@
               <li>Tax slips</li>
               <li>Employee portal maintenance</li>
             </ul>
+            <a href="payroll-services-quebec.html" class="service-link">Learn more about payroll</a>
           </div>
         </div>
 
@@ -942,13 +1084,14 @@
           />
           <div class="service-card-body">
             <span class="service-meta">Compliance support</span>
-            <h3>Sales Tax</h3>
+            <h3><a href="sales-tax-filing-quebec.html">Sales Tax</a></h3>
             <ul class="feature-list">
               <li>GST/HST and QST reporting and filing</li>
               <li>Payment code support for peace of mind</li>
               <li>Quick method calculations</li>
               <li>Government portal supervision</li>
             </ul>
+            <a href="sales-tax-filing-quebec.html" class="service-link">Learn more about sales tax</a>
           </div>
         </div>
 
@@ -1062,15 +1205,57 @@
     <section class="footer-space" id="contact">
       <div class="section-sheen"></div>
 
-      <div class="container grid-2 contact-layout">
-        <div class="card contact-card">
+      <div class="container grid-2 contact-layout booking-layout">
+        <div class="card book-card featured-booking" id="book">
+          <div class="book-card-inner">
+            <span class="section-kicker">Online booking</span>
+
+            <h2>Book Your Free Consultation</h2>
+
+            <p class="muted">
+              Free introductory call. No obligation — just clear guidance on your bookkeeping, accounting, payroll, or sales tax needs.
+            </p>
+
+            <div class="book-panel">
+              <strong>Schedule Your Introductory Teams Call</strong>
+              <p class="muted">
+                We’ll review your current setup, identify gaps, and outline exactly how M&amp;A Books can support your business.
+              </p>
+
+              <div class="booking-benefits">
+                <span>Quick Teams meeting at a time that works for you</span>
+                <span>Ideal for new businesses, catch-up work, or ongoing support</span>
+                <span>No documents required before the call</span>
+              </div>
+
+              <div class="micro-trust">
+                <span>Free consultation</span>
+                <span>No obligation</span>
+                <span>Quebec-focused support</span>
+              </div>
+
+              <a
+                href="https://outlook.office.com/book/MABooks1@mabooks.ca/"
+                target="_blank"
+                rel="noopener"
+                class="btn btn-primary"
+              >
+                Book Your Free Consultation
+              </a>
+            </div>
+
+           
+          </div>
+        </div>
+
+        <div class="card contact-card secondary-contact">
           <div class="contact-card-inner">
-            <span class="section-kicker">General inquiries</span>
+            <span class="section-kicker">Prefer email?</span>
 
             <h2>Contact Our Bookkeeping Team</h2>
 
             <p class="muted">
-              General inquiries only. Please avoid sending sensitive payroll, tax, or personal information through this form.
+              For general inquiries only. Please avoid sending sensitive financial, payroll, tax, or personal information through this form.
             </p>
 
             <form>
@@ -1079,33 +1264,10 @@
               <textarea placeholder="Tell us a little about your business and what you need"></textarea>
               <button class="btn btn-primary" type="button">Send Message</button>
             </form>
-          </div>
-        </div>
 
-        <div class="card book-card" id="book">
-          <div class="book-card-inner">
-            <span class="section-kicker">Online booking</span>
-
-            <h2>Book a Consultation</h2>
-
-            <p class="muted">
-              Schedule a quick introductory call to review your needs and see how we can support your business.
+            <p class="small-note">
+              Prefer to speak directly? Use the booking option to schedule a quick introductory Teams call.
             </p>
-
-            <div class="book-panel">
-              <strong>Schedule Introductory Teams Meeting</strong>
-              <p class="muted">
-                We can review your process, discuss your needs, and see whether M&amp;A Books is the right fit.
-              </p>
-              <a
-                href="https://outlook.office.com/book/MABooks1@mabooks.ca/"
-                target="_blank"
-                rel="noopener"
-                class="btn btn-primary"
-              >
-                Teams Meeting
-              </a>
-            </div>
           </div>
         </div>
       </div>
