@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Bookkeeping Services Montreal | M&amp;A Books</title>
+  <meta name="description" content="M&amp;A Books provides professional bookkeeping services in Montreal for small and medium-sized businesses, including reconciliations, financial records, reporting, cleanup, and ongoing bookkeeping support.">
+  <meta name="keywords" content="bookkeeping services Montreal, bookkeeping Montreal, small business bookkeeping Montreal, monthly bookkeeping Montreal, bookkeeping cleanup Montreal, financial records Montreal">
+
+  <style>
+    :root {
+      --bg: #07162a;
+      --bg-soft: #0b1f38;
+      --surface: #0f2642;
+      --surface-2: #133154;
+      --surface-3: #173d66;
+      --text: #f4f8fc;
+      --muted: #aac0d8;
+      --line: rgba(255,255,255,0.1);
+      --line-soft: rgba(255,255,255,0.06);
+      --accent: #2aa8e2;
+      --accent-strong: #67c2ef;
+      --accent-deep: #0b3c5d;
+      --max: 1180px;
+      --radius: 22px;
+      --shadow: 0 16px 40px rgba(2, 18, 39, 0.35);
+      --shadow-soft: 0 24px 80px rgba(0, 0, 0, 0.28);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 12% 0%, rgba(103,194,239,0.08), transparent 26%),
+        radial-gradient(circle at 88% 12%, rgba(42,168,226,0.09), transparent 24%),
+        linear-gradient(180deg, #061221 0%, #0b1d33 52%, #0f2743 100%);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.22;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.016) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.016) 1px, transparent 1px);
+      background-size: 88px 88px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.35), transparent 85%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 18px;
+      display: block;
+      object-fit: cover;
+    }
+
+    h1, h2, h3, h4, p { margin-top: 0; }
+
+    h1 {
+      font-size: clamp(2.5rem, 4.4vw, 4.55rem);
+      line-height: 1.04;
+      margin-bottom: 1rem;
+      letter-spacing: -0.03em;
+    }
+
+    h2 {
+      font-size: clamp(1.9rem, 2.8vw, 2.9rem);
+      line-height: 1.1;
+      margin-bottom: 0.9rem;
+      letter-spacing: -0.02em;
+    }
+
+    h3 {
+      font-size: 1.24rem;
+      margin: 1rem 0 0.55rem;
+      letter-spacing: -0.01em;
+    }
+
+    .container {
+      width: min(100% - 2rem, var(--max));
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .muted { color: var(--muted); }
+
+    .top-strip {
+      background: linear-gradient(90deg, rgba(11,43,73,0.92), rgba(10,33,58,0.88));
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      font-size: 0.92rem;
+      position: relative;
+      z-index: 20;
+    }
+
+    .top-strip::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(103,194,239,0.32), transparent);
+    }
+
+    .top-strip-inner {
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .top-strip-left,
+    .top-strip-right {
+      display: flex;
+      gap: 1.2rem;
+      color: #dce8f5;
+      flex-wrap: wrap;
+    }
+
+    .topbar {
+      background: rgba(7, 18, 33, 0.72);
+      border-bottom: 1px solid var(--line-soft);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.14);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 84px;
+      gap: 1.5rem;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      flex: 0 0 auto;
+    }
+
+    .logo-img {
+      width: auto;
+      height: 72px;
+      max-width: none;
+      border-radius: 0;
+      object-fit: contain;
+      display: block;
+      filter: drop-shadow(0 8px 20px rgba(0,0,0,0.25));
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.2rem;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-left: auto;
+    }
+
+    .nav-links a {
+      color: #dbe9f7;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      position: relative;
+    }
+
+    .nav-links a:not(.btn):not(.lang-switch)::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -7px;
+      width: 0;
+      height: 1px;
+      background: var(--accent-strong);
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:not(.btn):not(.lang-switch):hover::after { width: 100%; }
+    .nav-links a:hover { color: var(--accent-strong); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.95rem 1.28rem;
+      border-radius: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease, background 0.22s ease, border-color 0.22s ease;
+      border: 1px solid transparent;
+      position: relative;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #36b9ee 0%, #2393cf 48%, #1a74ae 100%);
+      color: #ffffff;
+      box-shadow:
+        0 10px 30px rgba(42,168,226,0.28),
+        0 0 0 1px rgba(255,255,255,0.06) inset;
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.05);
+      box-shadow:
+        0 16px 38px rgba(42,168,226,0.34),
+        0 0 0 1px rgba(255,255,255,0.08) inset;
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(103,194,239,0.38);
+      color: #eaf4fd;
+      background: rgba(255,255,255,0.02);
+      backdrop-filter: blur(12px);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(103,194,239,0.12);
+      border-color: var(--accent-strong);
+      color: #ffffff;
+    }
+
+    .lang-switch {
+      color: #dbe9f7;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.35rem 0;
+      border: none;
+      background: none;
+      min-width: auto;
+      border-radius: 0;
+      box-shadow: none;
+      backdrop-filter: none;
+      transition: color 0.22s ease;
+    }
+
+    .lang-switch:hover {
+      color: var(--accent-strong);
+      transform: none;
+      background: none;
+      border: none;
+    }
+
+    section {
+      position: relative;
+      padding: 5rem 0;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .hero-bg,
+    .shared-zone-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .hero-bg {
+      background-image: url('bg-hero.jpg');
+      transform: scale(1.04);
+    }
+
+    .shared-zone-bg {
+      background-image:
+        linear-gradient(180deg, rgba(6,18,33,0.86) 0%, rgba(7,20,36,0.82) 45%, rgba(6,18,33,0.88) 100%),
+        url('bg-soft.jpg');
+      transform: scale(1.02);
+    }
+
+    .hero-bg::before,
+    .hero-bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
+
+    .hero-bg::before {
+      background:
+        linear-gradient(180deg, rgba(6,18,33,0.48) 0%, rgba(6,18,33,0.78) 100%);
+    }
+
+    .hero-bg::after {
+      background:
+        linear-gradient(90deg, rgba(6,18,33,0.78) 0%, rgba(6,18,33,0.44) 38%, rgba(6,18,33,0.72) 100%),
+        radial-gradient(circle at 76% 22%, rgba(103,194,239,0.18), transparent 24%);
+    }
+
+    .section-solid {
+      background: linear-gradient(180deg, #0a1d34 0%, #0b1f38 100%);
+    }
+
+    .section-solid::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(circle at 18% 22%, rgba(103,194,239,0.05), transparent 24%),
+        radial-gradient(circle at 82% 78%, rgba(42,168,226,0.05), transparent 22%);
+    }
+
+    .section-sheen {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      background:
+        linear-gradient(115deg, transparent 0%, rgba(255,255,255,0.04) 14%, transparent 26%),
+        linear-gradient(180deg, rgba(255,255,255,0.012), transparent 22%);
+      opacity: 0.8;
+    }
+
+    .shared-image-zone {
+      position: relative;
+      overflow: hidden;
+      background: #07162a;
+    }
+
+    .shared-image-zone > section {
+      background: transparent !important;
+      position: relative;
+      z-index: 1;
+    }
+
+    .shared-image-zone::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 50% 20%, rgba(103,194,239,0.08), transparent 28%),
+        linear-gradient(180deg, rgba(6,18,33,0.14) 0%, rgba(6,18,33,0.02) 45%, rgba(6,18,33,0.22) 100%);
+    }
+
+    .shared-image-zone .section-sheen { opacity: 0.22; }
+
+    .hero {
+      min-height: 78vh;
+      display: flex;
+      align-items: center;
+      padding: 6.2rem 0 5rem;
+    }
+
+    .hero-grid,
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1.02fr 0.98fr;
+      gap: 2.4rem;
+      align-items: center;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.3rem;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 0.48rem 0.82rem;
+      border-radius: 999px;
+      border: 1px solid rgba(103,194,239,0.24);
+      background: rgba(103,194,239,0.08);
+      color: #d9ecfb;
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      backdrop-filter: blur(10px);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .hero-copy { max-width: 650px; }
+
+    .hero-copy p {
+      font-size: 1.06rem;
+      max-width: 52ch;
+      margin-bottom: 1.5rem;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, rgba(255,255,255,0.2), transparent);
+      margin: 1.5rem 0;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+      margin-top: 1.1rem;
+    }
+
+    .hero-media { position: relative; }
+
+    .hero-media::before {
+      content: "";
+      position: absolute;
+      inset: -18px;
+      background: radial-gradient(circle at 72% 20%, rgba(103,194,239,0.18), transparent 34%);
+      filter: blur(24px);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .hero-media img,
+    .why-visual img {
+      min-height: 460px;
+      max-height: 570px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(255,255,255,0.10);
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge,
+    .why-visual-badge {
+      position: absolute;
+      background: rgba(7,18,33,0.62);
+      border: 1px solid rgba(255,255,255,0.10);
+      padding: 0.92rem 1rem;
+      border-radius: 16px;
+      backdrop-filter: blur(14px);
+      color: #f2f7fc;
+      max-width: 300px;
+      z-index: 2;
+      box-shadow: 0 14px 40px rgba(0,0,0,0.26);
+    }
+
+    .hero-badge { left: 22px; bottom: 22px; }
+    .why-visual-badge { right: 20px; bottom: 20px; }
+
+    .card,
+    .glass-panel {
+      background: linear-gradient(180deg, rgba(20,49,84,0.46), rgba(10,27,48,0.56));
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      position: relative;
+    }
+
+    .card::before,
+    .glass-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(180deg, rgba(255,255,255,0.055), transparent 30%);
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 2rem;
+    }
+
+    .section-heading.centered {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-kicker {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #d7eefe;
+      margin-bottom: 0.7rem;
+    }
+
+    .content-card,
+    .faq-card,
+    .cta-panel {
+      padding: 1.55rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .content-card p,
+    .faq-card p,
+    .cta-panel p { color: var(--muted); }
+
+    ul.feature-list {
+      padding-left: 1.1rem;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    ul.feature-list li { margin-bottom: 0.72rem; }
+
+    .service-meta {
+      display: inline-block;
+      font-size: 0.78rem;
+      color: #e4f3fd;
+      background: rgba(103,194,239,0.09);
+      border: 1px solid rgba(103,194,239,0.20);
+      padding: 0.34rem 0.58rem;
+      border-radius: 999px;
+      margin-bottom: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+    }
+
+    .why-visual { position: relative; }
+
+    .cta-panel {
+      text-align: center;
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    .breadcrumb {
+      display: inline-flex;
+      gap: 0.45rem;
+      align-items: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .breadcrumb a { color: #dbe9f7; }
+    .breadcrumb a:hover { color: var(--accent-strong); }
+
+    .footer-space { padding-bottom: 5.5rem; }
+
+    .site-footer {
+      position: relative;
+      z-index: 2;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      background: rgba(5,14,26,0.72);
+      backdrop-filter: blur(12px);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      min-height: 84px;
+      color: #9fb8d1;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 1200px) {
+      .grid-3 { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .grid-2 { grid-template-columns: 1fr; }
+      .hero { min-height: auto; }
+      .hero-media img,
+      .why-visual img { min-height: 340px; }
+    }
+
+    @media (max-width: 720px) {
+      section { padding: 4.3rem 0; }
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 0;
+      }
+      .logo-img { height: 60px; }
+      .nav-links { width: 100%; margin-left: 0; }
+      .top-strip-inner { padding: 0.55rem 0; }
+      .hero { padding-top: 5rem; }
+      .hero-media img { min-height: 300px; }
+      .hero-badge,
+      .why-visual-badge {
+        position: static;
+        margin-top: 1rem;
+        max-width: none;
+      }
+      h1 { font-size: clamp(2.2rem, 9vw, 3.1rem); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="top-strip">
+    <div class="container top-strip-inner">
+      <div class="top-strip-left">
+        <span>(514) 534-0303</span>
+        <span>info@mabooks.ca</span>
+      </div>
+      <div class="top-strip-right">
+        <span>Bookkeeping • Accounting</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <div class="container nav">
+      <a href="index.html" class="brand-logo">
+        <img src="logo.png" alt="M&A Books bookkeeping and accounting logo" class="logo-img" />
+      </a>
+
+      <nav class="nav-links">
+  <a href="index.html">Home</a>
+  <a href="index.html#services">Services</a>
+  <a href="index.html#contact">Contact</a>
+  <a href="index.html#book" class="btn btn-secondary">Get a Quote</a>
+  <a href="index_fr.html" class="lang-switch">FR</a>
+</nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="section-sheen"></div>
+
+    <div class="container hero-grid">
+      <div class="hero-copy">
+<div class="breadcrumb">
+  <a href="index.html">Home</a>
+  <span>/</span>
+  <a href="index.html#services">Services</a>
+  <span>/</span>
+  <span>Bookkeeping Services</span>
+</div>
+
+        <div class="eyebrow">Montreal bookkeeping support</div>
+
+        <h1>Bookkeeping Services in Montreal</h1>
+
+        <p class="muted">
+          M&amp;A Books helps small and medium-sized businesses in Montreal keep their financial records organized, accurate, and easier to manage. Whether you need ongoing bookkeeping support, cleanup work, or a clearer monthly routine, we help bring structure and peace of mind to your business finances.
+        </p>
+
+        <div class="divider"></div>
+
+        <div class="hero-actions">
+          <a href="index.html#book" class="btn btn-primary">Book Consultation</a>
+          <a href="#included" class="btn btn-secondary">What’s Included</a>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <img
+          src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80"
+          alt="Bookkeeping services in Montreal for organized financial records"
+          loading="eager"
+        />
+        <div class="hero-badge">
+          Ongoing bookkeeping support for businesses that want cleaner records, better visibility, and fewer administrative issues.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="included" class="section-solid">
+    <div class="section-sheen"></div>
+
+    <div class="container">
+      <div class="section-heading centered">
+        <span class="section-kicker">What’s included</span>
+        <h2>Reliable bookkeeping support for day-to-day financial records</h2>
+        <p class="muted">
+          This page focuses specifically on bookkeeping: the recurring financial recordkeeping work that keeps your business organized throughout the year.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card content-card">
+          <span class="service-meta">Records</span>
+          <h3>Transaction organization</h3>
+          <p>
+            We help keep your business activity properly recorded and categorized so your books are easier to review and maintain.
+          </p>
+          <ul class="feature-list">
+            <li>Recording financial transactions</li>
+            <li>Organizing receipts and documents</li>
+            <li>Categorizing income and expenses</li>
+            <li>Maintaining cleaner records over time</li>
+          </ul>
+        </div>
+
+        <div class="card content-card">
+          <span class="service-meta">Accuracy</span>
+          <h3>Bank and account reconciliations</h3>
+          <p>
+            Reconciliations help confirm that your records match your bank, credit card, and other account activity.
+          </p>
+          <ul class="feature-list">
+            <li>Bank reconciliations</li>
+            <li>Credit card reconciliations</li>
+            <li>Review of account balances</li>
+            <li>Identification of missing or unclear items</li>
+          </ul>
+        </div>
+
+        <div class="card content-card">
+          <span class="service-meta">Visibility</span>
+          <h3>Reporting and monthly review</h3>
+          <p>
+            Better bookkeeping gives you clearer visibility into where your business stands and what needs attention.
+          </p>
+          <ul class="feature-list">
+            <li>Regular bookkeeping reports</li>
+            <li>Cash flow visibility</li>
+            <li>Profit margin review</li>
+            <li>Cleaner records for tax preparation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="shared-image-zone">
+    <div class="shared-zone-bg"></div>
+
+    <section>
+      <div class="section-sheen"></div>
+
+      <div class="container grid-2">
+        <div class="why-visual">
+          <img
+            src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80"
+            alt="Montreal business bookkeeping meeting"
+            loading="lazy"
+          />
+          <div class="why-visual-badge">
+            Cleaner records, better follow-through, and a simpler bookkeeping routine.
+          </div>
+        </div>
+
+        <div class="glass-panel content-card">
+          <span class="section-kicker">Who we help</span>
+          <h2>Bookkeeping for small and medium-sized businesses</h2>
+          <p class="muted">
+            Our bookkeeping services are designed for business owners who want their records handled consistently without having to chase every detail themselves.
+          </p>
+          <div class="divider"></div>
+          <ul class="feature-list">
+            <li>Businesses that are behind on financial records</li>
+            <li>Owners who want a cleaner monthly routine</li>
+            <li>Companies preparing for tax season or year-end</li>
+            <li>Growing businesses that need better visibility</li>
+            <li>Teams that want less administrative stress</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-sheen"></div>
+
+      <div class="container">
+        <div class="section-heading centered">
+          <span class="section-kicker">Common challenges</span>
+          <h2>Bookkeeping problems we help clean up</h2>
+          <p class="muted">
+            Bookkeeping issues usually start small, then become stressful when records fall behind. We help bring the process back under control.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card content-card">
+            <h3>Falling behind</h3>
+            <p>
+              When records are not updated regularly, it becomes harder to understand cash flow, expenses, and what needs to be handled before tax time.
+            </p>
+          </div>
+
+          <div class="card content-card">
+            <h3>Unclear records</h3>
+            <p>
+              Missing receipts, unclear categories, and unreconciled accounts can make your financial picture harder to trust.
+            </p>
+          </div>
+
+          <div class="card content-card">
+            <h3>Too much admin work</h3>
+            <p>
+              Business owners should not have to spend valuable time trying to sort through every transaction on their own.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-sheen"></div>
+
+      <div class="container grid-2">
+        <div class="glass-panel content-card">
+          <span class="section-kicker">How we help</span>
+          <h2>A more organized bookkeeping process</h2>
+          <p class="muted">
+            We help set up a clear bookkeeping rhythm so your records are updated, reviewed, and easier to understand. The goal is practical: fewer surprises, better visibility, and less stress around your financial records.
+          </p>
+          <div class="divider"></div>
+          <ul class="feature-list">
+            <li>Consistent follow-through on bookkeeping tasks</li>
+            <li>Clear communication when information is needed</li>
+            <li>Support that works alongside your accounting and tax needs</li>
+            <li>Organized records that are easier to review throughout the year</li>
+          </ul>
+        </div>
+
+        <div class="glass-panel content-card">
+          <span class="section-kicker">Montreal + Quebec</span>
+          <h2>Local support with Quebec business needs in mind</h2>
+          <p class="muted">
+            M&amp;A Books is based in Montreal and supports businesses across Quebec. Our bookkeeping work is built around practical business needs, including payroll, sales tax, and year-end readiness.
+          </p>
+          <div class="divider"></div>
+          <ul class="feature-list">
+            <li>Montreal-focused bookkeeping service page</li>
+            <li>Quebec-relevant support for taxes and payroll</li>
+            <li>Online booking for simple scheduling</li>
+            <li>Professional support without unnecessary complexity</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-sheen"></div>
+
+      <div class="container">
+        <div class="section-heading centered">
+          <span class="section-kicker">FAQ</span>
+          <h2>Bookkeeping questions</h2>
+        </div>
+
+        <div class="grid-3">
+          <div class="card faq-card">
+            <h3>Do you offer ongoing monthly bookkeeping?</h3>
+            <p>
+              Yes. We can support recurring bookkeeping needs so your records stay organized and easier to review throughout the year.
+            </p>
+          </div>
+
+          <div class="card faq-card">
+            <h3>Can you help if my books are behind?</h3>
+            <p>
+              Yes. Cleanup and catch-up work is often part of the bookkeeping process when a business needs to get records back in order.
+            </p>
+          </div>
+
+          <div class="card faq-card">
+            <h3>Do you only serve Montreal?</h3>
+            <p>
+              Montreal is our main focus, but we support businesses across Quebec through online communication and booking.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer-space">
+      <div class="section-sheen"></div>
+
+      <div class="container">
+        <div class="glass-panel cta-panel">
+          <span class="section-kicker">Get started</span>
+          <h2>Need bookkeeping support in Montreal?</h2>
+          <p class="muted">
+            Book a consultation to review your current process, discuss what you need, and see how M&amp;A Books can help keep your records organized.
+          </p>
+          <div class="hero-actions" style="justify-content:center;">
+            <a href="index.html#book" class="btn btn-primary">Book Consultation</a>
+            <a href="index.html#contact" class="btn btn-secondary">Contact Our Bookkeeping Team</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>M&amp;A Books | Bookkeeping Services in Montreal</span>
+      <span>+1 (514) 534-0303 • info@mabooks.ca</span>
+    </div>
+  </footer>
+
+</body>
+</html>

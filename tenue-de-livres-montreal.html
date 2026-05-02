@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Tenue de livres Montréal | Livres M&amp;A</title>
+  <meta name="description" content="Livres M&amp;A offre des services de tenue de livres à Montréal pour les petites et moyennes entreprises, incluant rapprochements, dossiers financiers, rapports, rattrapage et soutien continu.">
+  <meta name="keywords" content="tenue de livres Montréal, services de tenue de livres Montréal, comptabilité PME Montréal, rattrapage comptable Montréal, rapprochements bancaires Montréal">
+
+  <style>
+    :root {
+      --bg: #07162a;
+      --bg-soft: #0b1f38;
+      --surface: #0f2642;
+      --surface-2: #133154;
+      --surface-3: #173d66;
+      --text: #f4f8fc;
+      --muted: #aac0d8;
+      --line: rgba(255,255,255,0.1);
+      --line-soft: rgba(255,255,255,0.06);
+      --accent: #2aa8e2;
+      --accent-strong: #67c2ef;
+      --accent-deep: #0b3c5d;
+      --max: 1180px;
+      --radius: 22px;
+      --shadow: 0 16px 40px rgba(2, 18, 39, 0.35);
+      --shadow-soft: 0 24px 80px rgba(0, 0, 0, 0.28);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 12% 0%, rgba(103,194,239,0.08), transparent 26%),
+        radial-gradient(circle at 88% 12%, rgba(42,168,226,0.09), transparent 24%),
+        linear-gradient(180deg, #061221 0%, #0b1d33 52%, #0f2743 100%);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.22;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.016) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.016) 1px, transparent 1px);
+      background-size: 88px 88px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.35), transparent 85%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 18px;
+      display: block;
+      object-fit: cover;
+    }
+
+    h1, h2, h3, h4, p { margin-top: 0; }
+
+    h1 {
+      font-size: clamp(2.5rem, 4.4vw, 4.55rem);
+      line-height: 1.04;
+      margin-bottom: 1rem;
+      letter-spacing: -0.03em;
+    }
+
+    h2 {
+      font-size: clamp(1.9rem, 2.8vw, 2.9rem);
+      line-height: 1.1;
+      margin-bottom: 0.9rem;
+      letter-spacing: -0.02em;
+    }
+
+    h3 {
+      font-size: 1.24rem;
+      margin: 1rem 0 0.55rem;
+      letter-spacing: -0.01em;
+    }
+
+    .container {
+      width: min(100% - 2rem, var(--max));
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .muted { color: var(--muted); }
+
+    .top-strip {
+      background: linear-gradient(90deg, rgba(11,43,73,0.92), rgba(10,33,58,0.88));
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      font-size: 0.92rem;
+      position: relative;
+      z-index: 20;
+    }
+
+    .top-strip::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(103,194,239,0.32), transparent);
+    }
+
+    .top-strip-inner {
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .top-strip-left,
+    .top-strip-right {
+      display: flex;
+      gap: 1.2rem;
+      color: #dce8f5;
+      flex-wrap: wrap;
+    }
+
+    .topbar {
+      background: rgba(7, 18, 33, 0.72);
+      border-bottom: 1px solid var(--line-soft);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.14);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 84px;
+      gap: 1.5rem;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      flex: 0 0 auto;
+    }
+
+    .logo-img {
+      width: auto;
+      height: 72px;
+      max-width: none;
+      border-radius: 0;
+      object-fit: contain;
+      display: block;
+      filter: drop-shadow(0 8px 20px rgba(0,0,0,0.25));
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.2rem;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-left: auto;
+    }
+
+    .nav-links a {
+      color: #dbe9f7;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      position: relative;
+    }
+
+    .nav-links a:not(.btn):not(.lang-switch)::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -7px;
+      width: 0;
+      height: 1px;
+      background: var(--accent-strong);
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:not(.btn):not(.lang-switch):hover::after { width: 100%; }
+    .nav-links a:hover { color: var(--accent-strong); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.95rem 1.28rem;
+      border-radius: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease, background 0.22s ease, border-color 0.22s ease;
+      border: 1px solid transparent;
+      position: relative;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #36b9ee 0%, #2393cf 48%, #1a74ae 100%);
+      color: #ffffff;
+      box-shadow:
+        0 10px 30px rgba(42,168,226,0.28),
+        0 0 0 1px rgba(255,255,255,0.06) inset;
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.05);
+      box-shadow:
+        0 16px 38px rgba(42,168,226,0.34),
+        0 0 0 1px rgba(255,255,255,0.08) inset;
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(103,194,239,0.38);
+      color: #eaf4fd;
+      background: rgba(255,255,255,0.02);
+      backdrop-filter: blur(12px);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(103,194,239,0.12);
+      border-color: var(--accent-strong);
+      color: #ffffff;
+    }
+
+    .lang-switch {
+      color: #dbe9f7;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.35rem 0;
+      border: none;
+      background: none;
+      min-width: auto;
+      border-radius: 0;
+      box-shadow: none;
+      backdrop-filter: none;
+      transition: color 0.22s ease;
+    }
+
+    .lang-switch:hover {
+      color: var(--accent-strong);
+      transform: none;
+      background: none;
+      border: none;
+    }
+
+    section {
+      position: relative;
+      padding: 5rem 0;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .hero-bg,
+    .site-bg,
+    .shared-zone-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .hero-bg {
+      background-image: url('bg-hero.jpg');
+      transform: scale(1.04);
+    }
+
+    .site-bg {
+      background-image: url('bg-soft.jpg');
+    }
+
+    .shared-zone-bg {
+      background-image:
+        linear-gradient(180deg, rgba(6,18,33,0.86) 0%, rgba(7,20,36,0.82) 45%, rgba(6,18,33,0.88) 100%),
+        url('bg-soft.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transform: scale(1.02);
+    }
+
+    .hero-bg::before,
+    .site-bg::before,
+    .hero-bg::after,
+    .site-bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
+
+    .hero-bg::before {
+      background:
+        linear-gradient(180deg, rgba(6,18,33,0.48) 0%, rgba(6,18,33,0.78) 100%);
+    }
+
+    .hero-bg::after {
+      background:
+        linear-gradient(90deg, rgba(6,18,33,0.78) 0%, rgba(6,18,33,0.44) 38%, rgba(6,18,33,0.72) 100%),
+        radial-gradient(circle at 76% 22%, rgba(103,194,239,0.18), transparent 24%);
+    }
+
+    .site-bg::before {
+      background:
+        linear-gradient(180deg, rgba(6,18,33,0.90) 0%, rgba(8,22,39,0.94) 100%);
+    }
+
+    .site-bg::after {
+      background:
+        radial-gradient(circle at 82% 16%, rgba(103,194,239,0.11), transparent 24%),
+        radial-gradient(circle at 14% 82%, rgba(42,168,226,0.08), transparent 22%);
+      mix-blend-mode: screen;
+    }
+
+    .section-solid {
+      background: linear-gradient(180deg, #0a1d34 0%, #0b1f38 100%);
+    }
+
+    .section-solid::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(circle at 18% 22%, rgba(103,194,239,0.05), transparent 24%),
+        radial-gradient(circle at 82% 78%, rgba(42,168,226,0.05), transparent 22%);
+    }
+
+    .section-sheen {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      background:
+        linear-gradient(115deg, transparent 0%, rgba(255,255,255,0.04) 14%, transparent 26%),
+        linear-gradient(180deg, rgba(255,255,255,0.012), transparent 22%);
+      opacity: 0.8;
+    }
+
+    .shared-image-zone {
+      position: relative;
+      overflow: hidden;
+      background: #07162a;
+    }
+
+    .shared-image-zone > section {
+      background: transparent !important;
+      position: relative;
+      z-index: 1;
+    }
+
+    .shared-image-zone::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 50% 20%, rgba(103,194,239,0.08), transparent 28%),
+        linear-gradient(180deg, rgba(6,18,33,0.14) 0%, rgba(6,18,33,0.02) 45%, rgba(6,18,33,0.22) 100%);
+    }
+
+    .shared-image-zone .section-sheen {
+      opacity: 0.22;
+    }
+
+    .hero {
+      min-height: 82vh;
+      display: flex;
+      align-items: center;
+      padding: 6.2rem 0 5rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.02fr 0.98fr;
+      gap: 2.4rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 0.48rem 0.82rem;
+      border-radius: 999px;
+      border: 1px solid rgba(103,194,239,0.24);
+      background: rgba(103,194,239,0.08);
+      color: #d9ecfb;
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      backdrop-filter: blur(10px);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .hero-copy {
+      max-width: 650px;
+    }
+
+    .hero-copy p {
+      font-size: 1.06rem;
+      max-width: 52ch;
+      margin-bottom: 1.5rem;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, rgba(255,255,255,0.2), transparent);
+      margin: 1.5rem 0;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+      margin-top: 1.1rem;
+    }
+
+    .hero-media {
+      position: relative;
+    }
+
+    .hero-media::before {
+      content: "";
+      position: absolute;
+      inset: -18px;
+      background: radial-gradient(circle at 72% 20%, rgba(103,194,239,0.18), transparent 34%);
+      filter: blur(24px);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .hero-media img {
+      min-height: 480px;
+      max-height: 590px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(255,255,255,0.10);
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      position: absolute;
+      left: 22px;
+      bottom: 22px;
+      background: rgba(7,18,33,0.62);
+      border: 1px solid rgba(255,255,255,0.10);
+      padding: 0.92rem 1rem;
+      border-radius: 16px;
+      backdrop-filter: blur(14px);
+      color: #f2f7fc;
+      max-width: 280px;
+      z-index: 2;
+      box-shadow: 0 14px 40px rgba(0,0,0,0.26);
+    }
+
+    .card,
+    .glass-panel {
+      background: linear-gradient(180deg, rgba(20,49,84,0.46), rgba(10,27,48,0.56));
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      position: relative;
+    }
+
+    .card::before,
+    .glass-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(180deg, rgba(255,255,255,0.055), transparent 30%);
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 2rem;
+    }
+
+    .section-heading.centered {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-kicker {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #d7eefe;
+      margin-bottom: 0.7rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.3rem;
+    }
+
+    .service-card {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-card img {
+      height: 240px;
+      border-radius: 0;
+    }
+
+    .service-card-body,
+    .contact-card-inner,
+    .book-card-inner,
+    .why-copy,
+    .premium-band-inner {
+      padding: 1.55rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .service-card p,
+    .why-copy p,
+    .book-card p,
+    .contact-card p,
+    .premium-stat p {
+      color: var(--muted);
+    }
+
+    .service-meta {
+      display: inline-block;
+      font-size: 0.78rem;
+      color: #e4f3fd;
+      background: rgba(103,194,239,0.09);
+      border: 1px solid rgba(103,194,239,0.20);
+      padding: 0.34rem 0.58rem;
+      border-radius: 999px;
+      margin-bottom: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+    }
+
+    .why-visual {
+      position: relative;
+    }
+
+    .why-visual img {
+      min-height: 520px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(255,255,255,0.10);
+    }
+
+    .why-visual-badge {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      background: rgba(7,18,33,0.62);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 16px;
+      padding: 0.85rem 1rem;
+      backdrop-filter: blur(14px);
+      max-width: 240px;
+    }
+
+    ul.feature-list {
+      padding-left: 1.1rem;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    ul.feature-list li { margin-bottom: 0.72rem; }
+
+    .premium-band {
+      padding: 4rem 0 5rem;
+    }
+
+    .premium-band-inner {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+
+    .premium-stat {
+      padding: 1.3rem 1.35rem;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+    }
+
+    .premium-stat strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 0.35rem;
+      color: #eef8ff;
+    }
+
+    .contact-layout {
+      align-items: stretch;
+    }
+
+    .contact-card,
+    .book-card {
+      height: 100%;
+    }
+
+    .book-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .book-panel {
+      background: linear-gradient(180deg, rgba(11,60,93,0.72), rgba(15,38,66,0.62));
+      border: 1px solid rgba(103,194,239,0.20);
+      border-radius: 18px;
+      padding: 1.25rem;
+      margin-top: 1rem;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+      backdrop-filter: blur(14px);
+    }
+
+    .book-panel strong {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      color: #eff9ff;
+    }
+
+    .small-note {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-top: 1rem;
+    }
+
+    form {
+      display: grid;
+      gap: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 1rem 1rem;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.09);
+      background: rgba(255,255,255,0.045);
+      color: #f1f6fb;
+      font: inherit;
+      outline: none;
+      transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    input::placeholder,
+    textarea::placeholder { color: #8ca7c0; }
+
+    input:focus,
+    textarea:focus {
+      border-color: rgba(103,194,239,0.55);
+      background: rgba(255,255,255,0.06);
+      box-shadow: 0 0 0 4px rgba(103,194,239,0.10);
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.3rem;
+    }
+
+    .content-card,
+    .faq-card,
+    .cta-panel {
+      padding: 1.55rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .content-card p,
+    .faq-card p,
+    .cta-panel p {
+      color: var(--muted);
+    }
+
+    .breadcrumb {
+      display: inline-flex;
+      gap: 0.45rem;
+      align-items: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .breadcrumb a { color: #dbe9f7; }
+    .breadcrumb a:hover { color: var(--accent-strong); }
+
+    .cta-panel {
+      text-align: center;
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .related-services {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1.2rem;
+    }
+
+    .related-services a {
+      color: #dbe9f7;
+      border: 1px solid rgba(103,194,239,0.26);
+      background: rgba(255,255,255,0.025);
+      padding: 0.65rem 0.85rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.88rem;
+    }
+
+    .related-services a:hover {
+      color: var(--accent-strong);
+      border-color: var(--accent-strong);
+      background: rgba(103,194,239,0.10);
+    }
+
+    .footer-space { padding-bottom: 5.5rem; }
+
+    .site-footer {
+      position: relative;
+      z-index: 2;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      background: rgba(5,14,26,0.72);
+      backdrop-filter: blur(12px);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      min-height: 84px;
+      color: #9fb8d1;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 1200px) {
+      .services-grid,
+      .premium-band-inner {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-media img,
+      .why-visual img {
+        min-height: 340px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      section {
+        padding: 4.3rem 0;
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 0;
+      }
+
+      .logo-img {
+        height: 60px;
+      }
+
+      .nav-links {
+        width: 100%;
+        margin-left: 0;
+      }
+
+      .top-strip-inner { padding: 0.55rem 0; }
+
+      .hero {
+        padding-top: 5rem;
+      }
+
+      .hero-media img {
+        min-height: 300px;
+      }
+
+      .hero-badge,
+      .why-visual-badge {
+        position: static;
+        margin-top: 1rem;
+        max-width: none;
+      }
+
+      .services-grid,
+      .premium-band-inner {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: clamp(2.2rem, 9vw, 3.1rem);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="top-strip">
+    <div class="container top-strip-inner">
+      <div class="top-strip-left">
+        <span>(514) 534-0303</span>
+        <span>info@maLivres.ca</span>
+      </div>
+      <div class="top-strip-right">
+        <span>Tenue de livres • Comptabilité</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <div class="container nav">
+      <a href="index_fr.html" class="brand-logo">
+        <img src="logo.png" alt="Logo M&A Livres tenue de livres et comptabilité" class="logo-img" />
+      </a>
+
+      <nav class="nav-links">
+        <a href="index_fr.html">Accueil</a>
+        <a href="index_fr.html#services">Services</a>
+        <a href="index_fr.html#contact">Contact</a>
+        <a href="index_fr.html#book" class="btn btn-secondary">Obtenir une soumission</a>
+        <a href="index.html" class="lang-switch">EN</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="section-sheen"></div>
+
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="breadcrumb">
+          <a href="index_fr.html">Accueil</a>
+          <span>/</span>
+          <a href="index_fr.html#services">Services</a>
+          <span>/</span>
+          <span>Tenue de livres</span>
+          <span>/</span>
+          <span>Montréal</span>
+        </div>
+
+        <div class="eyebrow">Soutien en tenue de livres à Montréal</div>
+
+        <h1>Services de tenue de livres à Montréal</h1>
+
+        <p class="muted">Livres M&amp;A aide les petites et moyennes entreprises à Montréal à garder leurs dossiers financiers organisés, exacts et plus faciles à gérer. Que vous ayez besoin d’un soutien continu, d’un rattrapage ou d’une routine mensuelle plus claire, nous aidons à remettre de l’ordre dans vos finances.</p>
+
+        <div class="divider"></div>
+
+        <div class="hero-actions">
+          <a href="index_fr.html#book" class="btn btn-primary">Prendre rendez-vous</a>
+          <a href="#included" class="btn btn-secondary">Ce qui est inclus</a>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80" alt="Services de tenue de livres à Montréal pour dossiers financiers organisés" loading="eager" />
+        <div class="hero-badge">Un soutien continu pour des livres plus propres, une meilleure visibilité et moins de tâches administratives.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="included" class="section-solid">
+    <div class="section-sheen"></div>
+
+    <div class="container">
+      <div class="section-heading centered">
+        <span class="section-kicker">Ce qui est inclus</span>
+        <h2>Un soutien fiable pour vos dossiers financiers courants</h2>
+        <p class="muted">Cette page porte spécifiquement sur la tenue de livres : le travail récurrent qui garde vos dossiers organisés tout au long de l’année.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card content-card">
+          <span class="service-meta">Dossiers</span>
+          <h3>Organisation des transactions</h3>
+          <p>Nous aidons à enregistrer et classer correctement les activités de votre entreprise pour que vos livres soient plus faciles à consulter.</p>
+          <ul class="feature-list">
+            <li>Enregistrement des transactions financières</li><li>Organisation des reçus et documents</li><li>Catégorisation des revenus et dépenses</li><li>Tenue de dossiers plus propres</li>
+          </ul>
+        </div>
+        <div class="card content-card">
+          <span class="service-meta">Exactitude</span>
+          <h3>Rapprochements bancaires et de comptes</h3>
+          <p>Les rapprochements permettent de vérifier que vos dossiers concordent avec vos comptes bancaires, cartes de crédit et autres activités.</p>
+          <ul class="feature-list">
+            <li>Rapprochements bancaires</li><li>Rapprochements de cartes de crédit</li><li>Révision des soldes de comptes</li><li>Repérage des éléments manquants ou à clarifier</li>
+          </ul>
+        </div>
+        <div class="card content-card">
+          <span class="service-meta">Visibilité</span>
+          <h3>Rapports et révision mensuelle</h3>
+          <p>Une tenue de livres plus claire vous donne une meilleure visibilité sur la situation de votre entreprise.</p>
+          <ul class="feature-list">
+            <li>Rapports réguliers</li><li>Visibilité sur les flux de trésorerie</li><li>Révision des marges bénéficiaires</li><li>Dossiers plus prêts pour la période fiscale</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="shared-image-zone">
+    <div class="shared-zone-bg"></div>
+
+    <section>
+      <div class="section-sheen"></div>
+
+      <div class="container grid-2">
+        <div class="why-visual">
+          <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80" alt="Rencontre professionnelle pour du soutien comptable" loading="lazy" />
+          <div class="why-visual-badge">Un soutien fiable, un suivi clair et moins de stress administratif.</div>
+        </div>
+
+        <div class="glass-panel content-card">
+          <span class="section-kicker">Pour qui</span>
+          <h2>Tenue de livres pour petites et moyennes entreprises</h2>
+          <p class="muted">Nos services s’adressent aux propriétaires qui veulent des dossiers suivis avec constance sans devoir courir après chaque détail eux-mêmes.</p>
+          <div class="divider"></div>
+          <ul class="feature-list">
+            <li>Entreprises en retard dans leurs dossiers financiers</li><li>Propriétaires qui veulent une routine mensuelle plus claire</li><li>Entreprises qui se préparent à la fin d’année ou aux impôts</li><li>Entreprises en croissance qui veulent plus de visibilité</li><li>Équipes qui veulent réduire la charge administrative</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-sheen"></div>
+
+      <div class="container">
+        <div class="section-heading centered">
+          <span class="section-kicker">Défis fréquents</span>
+          <h2>Problèmes de tenue de livres que nous aidons à régler</h2>
+          <p class="muted">Les problèmes commencent souvent petit, puis deviennent stressants lorsque les dossiers prennent du retard.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card content-card">
+            <h3>Dossiers en retard</h3>
+            <p>Quand les dossiers ne sont pas mis à jour régulièrement, il devient plus difficile de comprendre les flux de trésorerie, les dépenses et les priorités.</p>
+          </div>
+          <div class="card content-card">
+            <h3>Dossiers peu clairs</h3>
+            <p>Reçus manquants, catégories floues et comptes non rapprochés peuvent rendre vos chiffres plus difficiles à interpréter.</p>
+          </div>
+          <div class="card content-card">
+            <h3>Trop d’administration</h3>
+            <p>Les propriétaires ne devraient pas perdre un temps précieux à trier chaque transaction eux-mêmes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-sheen"></div>
+
+      <div class="container grid-2">
+        <div class="glass-panel content-card">
+          <span class="section-kicker">Comment nous aidons</span>
+          <h2>Un processus de tenue de livres mieux structuré</h2>
+          <p class="muted">Nous aidons à établir une routine claire pour que vos dossiers soient mis à jour, révisés et plus faciles à comprendre.</p>
+          <div class="divider"></div>
+          <ul class="feature-list">
+            <li>Suivi constant des tâches de tenue de livres</li><li>Communication claire lorsque des informations sont nécessaires</li><li>Soutien aligné avec vos besoins comptables et fiscaux</li><li>Dossiers plus faciles à réviser pendant l’année</li>
+          </ul>
+        </div>
+
+        <div class="glass-panel content-card">
+          <span class="section-kicker">Montréal + Québec</span>
+          <h2>Soutien local avec les besoins du Québec en tête</h2>
+          <p class="muted">Livres M&amp;A est basé à Montréal et soutient les entreprises partout au Québec avec une approche pratique.</p>
+          <div class="divider"></div>
+          <ul class="feature-list">
+            <li>Page dédiée à la tenue de livres à Montréal</li><li>Soutien adapté au Québec pour la paie et les taxes</li><li>Prise de rendez-vous en ligne simple</li><li>Soutien professionnel sans complexité inutile</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-sheen"></div>
+
+      <div class="container">
+        <div class="section-heading centered">
+          <span class="section-kicker">FAQ</span>
+          <h2>Questions sur la tenue de livres</h2>
+        </div>
+
+        <div class="grid-3">
+          <div class="card faq-card">
+            <h3>Offrez-vous de la tenue de livres mensuelle?</h3>
+            <p>Oui. Nous pouvons soutenir vos besoins récurrents pour que vos dossiers restent organisés tout au long de l’année.</p>
+          </div>
+          <div class="card faq-card">
+            <h3>Pouvez-vous aider si mes livres sont en retard?</h3>
+            <p>Oui. Le rattrapage et le nettoyage de dossiers font souvent partie du travail lorsque l’entreprise doit remettre ses livres en ordre.</p>
+          </div>
+          <div class="card faq-card">
+            <h3>Servez-vous seulement Montréal?</h3>
+            <p>Montréal est notre base principale, mais nous soutenons aussi les entreprises partout au Québec grâce aux outils en ligne.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer-space">
+      <div class="section-sheen"></div>
+
+      <div class="container">
+        <div class="glass-panel cta-panel">
+          <span class="section-kicker">Commencer</span>
+          <h2>Besoin de soutien en tenue de livres à Montréal?</h2>
+          <p class="muted">Prenez rendez-vous pour revoir votre processus actuel, discuter de vos besoins et voir comment Livres M&amp;A peut vous aider.</p>
+          <div class="hero-actions" style="justify-content:center;">
+            <a href="index_fr.html#book" class="btn btn-primary">Prendre rendez-vous</a>
+            <a href="index_fr.html#contact" class="btn btn-secondary">Contacter notre équipe</a>
+          </div>
+          <div class="related-services">
+            <a href="paie-quebec.html">Paie</a> <a href="taxes-de-vente-quebec.html">Taxes de vente</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>Livres M&amp;A | Tenue de livres à Montréal</span>
+      <span>+1 (514) 534-0303 • info@maLivres.ca</span>
+    </div>
+  </footer>
+
+</body>
+</html>

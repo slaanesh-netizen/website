@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Sales Tax Filing Quebec | GST/HST & QST | M&A Books</title>
+  <meta name="description" content="M&A Books helps Quebec businesses with sales tax filing, including GST/HST and QST reporting, payment code support, quick method calculations, government portal follow-up, and filing preparation.">
+  <meta name="keywords" content="sales tax filing Quebec, GST QST filing Quebec, QST filing Quebec, GST HST Quebec, sales tax services Quebec, TPS TVQ Quebec, sales tax filing Montreal">
+
+  <style>
+    :root {
+      --bg: #07162a;
+      --bg-soft: #0b1f38;
+      --surface: #0f2642;
+      --surface-2: #133154;
+      --surface-3: #173d66;
+      --text: #f4f8fc;
+      --muted: #aac0d8;
+      --line: rgba(255,255,255,0.1);
+      --line-soft: rgba(255,255,255,0.06);
+      --accent: #2aa8e2;
+      --accent-strong: #67c2ef;
+      --accent-deep: #0b3c5d;
+      --max: 1180px;
+      --radius: 22px;
+      --shadow: 0 16px 40px rgba(2, 18, 39, 0.35);
+      --shadow-soft: 0 24px 80px rgba(0, 0, 0, 0.28);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 12% 0%, rgba(103,194,239,0.08), transparent 26%),
+        radial-gradient(circle at 88% 12%, rgba(42,168,226,0.09), transparent 24%),
+        linear-gradient(180deg, #061221 0%, #0b1d33 52%, #0f2743 100%);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.22;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.016) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.016) 1px, transparent 1px);
+      background-size: 88px 88px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.35), transparent 85%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 18px;
+      display: block;
+      object-fit: cover;
+    }
+
+    h1, h2, h3, h4, p { margin-top: 0; }
+
+    h1 {
+      font-size: clamp(2.5rem, 4.4vw, 4.55rem);
+      line-height: 1.04;
+      margin-bottom: 1rem;
+      letter-spacing: -0.03em;
+    }
+
+    h2 {
+      font-size: clamp(1.9rem, 2.8vw, 2.9rem);
+      line-height: 1.1;
+      margin-bottom: 0.9rem;
+      letter-spacing: -0.02em;
+    }
+
+    h3 {
+      font-size: 1.24rem;
+      margin: 1rem 0 0.55rem;
+      letter-spacing: -0.01em;
+    }
+
+    .container {
+      width: min(100% - 2rem, var(--max));
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .muted { color: var(--muted); }
+
+    .top-strip {
+      background: linear-gradient(90deg, rgba(11,43,73,0.92), rgba(10,33,58,0.88));
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      font-size: 0.92rem;
+      position: relative;
+      z-index: 20;
+    }
+
+    .top-strip::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(103,194,239,0.32), transparent);
+    }
+
+    .top-strip-inner {
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .top-strip-left,
+    .top-strip-right {
+      display: flex;
+      gap: 1.2rem;
+      color: #dce8f5;
+      flex-wrap: wrap;
+    }
+
+    .topbar {
+      background: rgba(7, 18, 33, 0.72);
+      border-bottom: 1px solid var(--line-soft);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.14);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 84px;
+      gap: 1.5rem;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      flex: 0 0 auto;
+    }
+
+    .logo-img {
+      width: auto;
+      height: 72px;
+      max-width: none;
+      border-radius: 0;
+      object-fit: contain;
+      display: block;
+      filter: drop-shadow(0 8px 20px rgba(0,0,0,0.25));
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.2rem;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-left: auto;
+    }
+
+    .nav-links a {
+      color: #dbe9f7;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      position: relative;
+    }
+
+    .nav-links a:not(.btn):not(.lang-switch)::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -7px;
+      width: 0;
+      height: 1px;
+      background: var(--accent-strong);
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:not(.btn):not(.lang-switch):hover::after { width: 100%; }
+    .nav-links a:hover { color: var(--accent-strong); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.95rem 1.28rem;
+      border-radius: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease, background 0.22s ease, border-color 0.22s ease;
+      border: 1px solid transparent;
+      position: relative;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #36b9ee 0%, #2393cf 48%, #1a74ae 100%);
+      color: #ffffff;
+      box-shadow:
+        0 10px 30px rgba(42,168,226,0.28),
+        0 0 0 1px rgba(255,255,255,0.06) inset;
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.05);
+      box-shadow:
+        0 16px 38px rgba(42,168,226,0.34),
+        0 0 0 1px rgba(255,255,255,0.08) inset;
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(103,194,239,0.38);
+      color: #eaf4fd;
+      background: rgba(255,255,255,0.02);
+      backdrop-filter: blur(12px);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(103,194,239,0.12);
+      border-color: var(--accent-strong);
+      color: #ffffff;
+    }
+
+    .lang-switch {
+      color: #dbe9f7;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.35rem 0;
+      border: none;
+      background: none;
+      min-width: auto;
+      border-radius: 0;
+      box-shadow: none;
+      backdrop-filter: none;
+      transition: color 0.22s ease;
+    }
+
+    .lang-switch:hover {
+      color: var(--accent-strong);
+      transform: none;
+      background: none;
+      border: none;
+    }
+
+    section {
+      position: relative;
+      padding: 5rem 0;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .hero-bg,
+    .shared-zone-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .hero-bg {
+      background-image: url('bg-hero.jpg');
+      transform: scale(1.04);
+    }
+
+    .shared-zone-bg {
+      background-image:
+        linear-gradient(180deg, rgba(6,18,33,0.86) 0%, rgba(7,20,36,0.82) 45%, rgba(6,18,33,0.88) 100%),
+        url('bg-soft.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transform: scale(1.02);
+    }
+
+    .hero-bg::before,
+    .hero-bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
+
+    .hero-bg::before {
+      background:
+        linear-gradient(180deg, rgba(6,18,33,0.48) 0%, rgba(6,18,33,0.78) 100%);
+    }
+
+    .hero-bg::after {
+      background:
+        linear-gradient(90deg, rgba(6,18,33,0.78) 0%, rgba(6,18,33,0.44) 38%, rgba(6,18,33,0.72) 100%),
+        radial-gradient(circle at 76% 22%, rgba(103,194,239,0.18), transparent 24%);
+    }
+
+    .section-solid {
+      background: linear-gradient(180deg, #0a1d34 0%, #0b1f38 100%);
+    }
+
+    .section-solid::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(circle at 18% 22%, rgba(103,194,239,0.05), transparent 24%),
+        radial-gradient(circle at 82% 78%, rgba(42,168,226,0.05), transparent 22%);
+    }
+
+    .section-sheen {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      background:
+        linear-gradient(115deg, transparent 0%, rgba(255,255,255,0.04) 14%, transparent 26%),
+        linear-gradient(180deg, rgba(255,255,255,0.012), transparent 22%);
+      opacity: 0.8;
+    }
+
+    .shared-image-zone {
+      position: relative;
+      overflow: hidden;
+      background: #07162a;
+    }
+
+    .shared-image-zone > section {
+      background: transparent !important;
+      position: relative;
+      z-index: 1;
+    }
+
+    .shared-image-zone::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 50% 20%, rgba(103,194,239,0.08), transparent 28%),
+        linear-gradient(180deg, rgba(6,18,33,0.14) 0%, rgba(6,18,33,0.02) 45%, rgba(6,18,33,0.22) 100%);
+    }
+
+    .shared-image-zone .section-sheen { opacity: 0.22; }
+
+    .hero {
+      min-height: 78vh;
+      display: flex;
+      align-items: center;
+      padding: 6.2rem 0 5rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.02fr 0.98fr;
+      gap: 2.4rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 0.48rem 0.82rem;
+      border-radius: 999px;
+      border: 1px solid rgba(103,194,239,0.24);
+      background: rgba(103,194,239,0.08);
+      color: #d9ecfb;
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      backdrop-filter: blur(10px);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .hero-copy { max-width: 650px; }
+
+    .hero-copy p {
+      font-size: 1.06rem;
+      max-width: 52ch;
+      margin-bottom: 1.5rem;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, rgba(255,255,255,0.2), transparent);
+      margin: 1.5rem 0;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+      margin-top: 1.1rem;
+    }
+
+    .hero-media { position: relative; }
+
+    .hero-media::before {
+      content: "";
+      position: absolute;
+      inset: -18px;
+      background: radial-gradient(circle at 72% 20%, rgba(103,194,239,0.18), transparent 34%);
+      filter: blur(24px);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .hero-media img {
+      min-height: 460px;
+      max-height: 570px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(255,255,255,0.10);
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      position: absolute;
+      left: 22px;
+      bottom: 22px;
+      background: rgba(7,18,33,0.62);
+      border: 1px solid rgba(255,255,255,0.10);
+      padding: 0.92rem 1rem;
+      border-radius: 16px;
+      backdrop-filter: blur(14px);
+      color: #f2f7fc;
+      max-width: 300px;
+      z-index: 2;
+      box-shadow: 0 14px 40px rgba(0,0,0,0.26);
+    }
+
+    .card,
+    .glass-panel {
+      background: linear-gradient(180deg, rgba(20,49,84,0.46), rgba(10,27,48,0.56));
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      position: relative;
+    }
+
+    .card::before,
+    .glass-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(180deg, rgba(255,255,255,0.055), transparent 30%);
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 2rem;
+    }
+
+    .section-heading.centered {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-kicker {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #d7eefe;
+      margin-bottom: 0.7rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.3rem;
+    }
+
+    .content-card,
+    .faq-card,
+    .cta-panel {
+      padding: 1.55rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .content-card p,
+    .faq-card p,
+    .cta-panel p { color: var(--muted); }
+
+    ul.feature-list {
+      padding-left: 1.1rem;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    ul.feature-list li { margin-bottom: 0.72rem; }
+
+    .service-meta {
+      display: inline-block;
+      font-size: 0.78rem;
+      color: #e4f3fd;
+      background: rgba(103,194,239,0.09);
+      border: 1px solid rgba(103,194,239,0.20);
+      padding: 0.34rem 0.58rem;
+      border-radius: 999px;
+      margin-bottom: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+    }
+
+    .why-visual { position: relative; }
+
+    .why-visual img {
+      min-height: 520px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(255,255,255,0.10);
+    }
+
+    .why-visual-badge {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      background: rgba(7,18,33,0.62);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 16px;
+      padding: 0.85rem 1rem;
+      backdrop-filter: blur(14px);
+      max-width: 260px;
+    }
+
+    .cta-panel {
+      text-align: center;
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .breadcrumb {
+      display: inline-flex;
+      gap: 0.45rem;
+      align-items: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .breadcrumb a { color: #dbe9f7; }
+    .breadcrumb a:hover { color: var(--accent-strong); }
+
+    .footer-space { padding-bottom: 5.5rem; }
+
+    .site-footer {
+      position: relative;
+      z-index: 2;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      background: rgba(5,14,26,0.72);
+      backdrop-filter: blur(12px);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      min-height: 84px;
+      color: #9fb8d1;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 1200px) {
+      .grid-3 { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .grid-2 { grid-template-columns: 1fr; }
+
+      .hero { min-height: auto; }
+
+      .hero-media img,
+      .why-visual img { min-height: 340px; }
+    }
+
+    @media (max-width: 720px) {
+      section { padding: 4.3rem 0; }
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 0;
+      }
+
+      .logo-img { height: 60px; }
+      .nav-links { width: 100%; margin-left: 0; }
+      .top-strip-inner { padding: 0.55rem 0; }
+      .hero { padding-top: 5rem; }
+      .hero-media img { min-height: 300px; }
+
+      .hero-badge,
+      .why-visual-badge {
+        position: static;
+        margin-top: 1rem;
+        max-width: none;
+      }
+
+      h1 { font-size: clamp(2.2rem, 9vw, 3.1rem); }
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="top-strip">
+    <div class="container top-strip-inner">
+      <div class="top-strip-left">
+        <span>(514) 534-0303</span>
+        <span>info@mabooks.ca</span>
+      </div>
+      <div class="top-strip-right">
+        <span>Bookkeeping • Accounting</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <div class="container nav">
+      <a href="index.html" class="brand-logo">
+        <img src="logo.png" alt="M&A Books bookkeeping and accounting logo" class="logo-img" />
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="index.html#book" class="btn btn-secondary">Get a Quote</a>
+        <a href="index_fr.html" class="lang-switch">FR</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="section-sheen"></div>
+
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>Sales Tax Filing</span>
+        </div>
+
+        <div class="eyebrow">GST/HST and QST support across Quebec</div>
+
+        <h1>Sales Tax Filing in Quebec</h1>
+
+        <p class="muted">M&A Books helps small and medium-sized businesses stay organized with GST/HST and QST filing support. We help review the records behind your sales tax returns, prepare filing information, support payment codes, and reduce the stress that comes with sales tax deadlines.</p>
+
+        <div class="divider"></div>
+
+        <div class="hero-actions">
+          <a href="index.html#book" class="btn btn-primary">Book Consultation</a>
+          <a href="#included" class="btn btn-secondary">What’s Included</a>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80" alt="Sales tax filing in Quebec GST HST and QST support" loading="eager" />
+        <div class="hero-badge">Sales tax support for businesses that want clearer records, timely filing, and fewer compliance headaches.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="included" class="section-solid">
+    <div class="section-sheen"></div>
+
+    <div class="container">
+      <div class="section-heading centered">
+        <span class="section-kicker">What’s included</span>
+        <h2>GST/HST and QST support for Quebec businesses</h2>
+        <p class="muted">This page focuses specifically on sales tax: the records, calculations, filing support, and follow-through that help keep your business compliant.</p>
+      </div>
+
+      <div class="grid-3">
+        
+        <div class="card content-card">
+          <span class="service-meta">Filing</span>
+          <h3>GST/HST and QST filing</h3>
+          <p>We help businesses prepare and file sales tax returns so reporting stays organized and easier to manage.</p>
+          <ul class="feature-list">
+            <li>GST/HST return support</li><li>QST return support</li><li>Filing-period review</li><li>Payment code support</li>
+          </ul>
+        </div>
+
+        <div class="card content-card">
+          <span class="service-meta">Review</span>
+          <h3>Sales tax record review</h3>
+          <p>Accurate sales tax reporting depends on clean records. We help review the bookkeeping details behind the filing.</p>
+          <ul class="feature-list">
+            <li>Review of taxable sales</li><li>Review of input tax credits</li><li>Review of source records</li><li>Identification of missing items</li>
+          </ul>
+        </div>
+
+        <div class="card content-card">
+          <span class="service-meta">Method</span>
+          <h3>Quick method and portal support</h3>
+          <p>We help with practical sales tax administration, including quick method calculations and government portal follow-through.</p>
+          <ul class="feature-list">
+            <li>Quick method calculations</li><li>Government portal monitoring</li><li>Payment follow-up</li><li>Filing support documentation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="shared-image-zone">
+    <div class="shared-zone-bg"></div>
+
+    <section>
+      <div class="section-sheen"></div>
+
+      <div class="container grid-2">
+        <div class="why-visual">
+          <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80" alt="Sales Tax Filing support meeting" loading="lazy" />
+          <div class="why-visual-badge">Reliable support, clear follow-through, and less administrative stress.</div>
+        </div>
+
+        <div class="glass-panel content-card">
+          <span class="section-kicker">Who we help</span>
+          <h2>Sales tax filing support for Quebec businesses</h2>
+          <p class="muted">Our sales tax support is built for businesses that collect GST/HST and QST and want a clearer filing process.</p>
+          <div class="divider"></div>
+          <ul class="feature-list">
+            <li>Businesses filing GST/HST and QST returns</li><li>Owners who want help preparing sales tax records</li><li>Companies using or considering the quick method</li><li>Businesses that want payment and portal follow-up</li><li>Teams that need cleaner tax-period records</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-sheen"></div>
+
+      <div class="container">
+        <div class="section-heading centered">
+          <span class="section-kicker">Common challenges</span>
+          <h2>Sales tax issues that cause confusion</h2>
+          <p class="muted">Sales tax filing becomes harder when records are unclear, filing periods are missed, or payment details are not organized.</p>
+        </div>
+
+        <div class="grid-3">
+          
+          <div class="card content-card">
+            <h3>Unclear taxable sales</h3>
+            <p>If taxable sales and inputs are not organized, filing can become slower and harder to trust.</p>
+          </div>
+
+          <div class="card content-card">
+            <h3>Missed payment details</h3>
+            <p>Payment codes, balances, and deadlines can create stress when they are not tracked clearly.</p>
+          </div>
+
+          <div class="card content-card">
+            <h3>Rushed filings</h3>
+            <p>Last-minute filing increases the chance of missing information or needing to revisit prior records.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-sheen"></div>
+
+      <div class="container grid-2">
+        <div class="glass-panel content-card">
+          <span class="section-kicker">How we help</span>
+          <h2>A cleaner sales tax filing process</h2>
+          <p class="muted">We help organize the sales tax process so filing periods are easier to manage, records are easier to review, and required information is easier to prepare.</p>
+          <div class="divider"></div>
+          <ul class="feature-list">
+            <li>Review of bookkeeping records tied to sales tax</li><li>GST/HST and QST filing support</li><li>Payment code and portal follow-up</li><li>Support for quick method calculations</li><li>Clear communication when information is missing</li>
+          </ul>
+        </div>
+
+        <div class="glass-panel content-card">
+          <span class="section-kicker">Quebec support</span>
+          <h2>Quebec GST/HST and QST support</h2>
+          <p class="muted">Quebec businesses often deal with both GST/HST and QST obligations. M&A Books helps keep the process practical, organized, and easier to follow.</p>
+          <div class="divider"></div>
+          <ul class="feature-list">
+            <li>GST/HST reporting support</li><li>QST reporting support</li><li>Quebec-focused sales tax administration</li><li>Government portal support</li><li>Online booking for simple scheduling</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-sheen"></div>
+
+      <div class="container">
+        <div class="section-heading centered">
+          <span class="section-kicker">FAQ</span>
+          <h2>Sales tax questions</h2>
+        </div>
+
+        <div class="grid-3">
+          
+          <div class="card faq-card">
+            <h3>Do you help with GST/HST and QST filings?</h3>
+            <p>Yes. We can help prepare and support GST/HST and QST filing based on your business records.</p>
+          </div>
+
+          <div class="card faq-card">
+            <h3>Can you help with the quick method?</h3>
+            <p>Yes. We can support quick method calculations where applicable and help keep the related records organized.</p>
+          </div>
+
+          <div class="card faq-card">
+            <h3>Do you help if my sales tax records are messy?</h3>
+            <p>Yes. We can help review and organize the records needed to support your sales tax filing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer-space">
+      <div class="section-sheen"></div>
+
+      <div class="container">
+        <div class="glass-panel cta-panel">
+          <span class="section-kicker">Get started</span>
+          <h2>Need sales tax filing support in Quebec?</h2>
+          <p class="muted">Book a consultation to review your current filing process, discuss what you need, and see how M&A Books can help.</p>
+          <div class="hero-actions" style="justify-content:center;">
+            <a href="index.html#book" class="btn btn-primary">Book Consultation</a>
+            <a href="index.html#contact" class="btn btn-secondary">Contact Our Team</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>M&A Books | Sales Tax Filing in Quebec</span>
+      <span>+1 (514) 534-0303 • info@mabooks.ca</span>
+    </div>
+  </footer>
+</body>
+</html>
