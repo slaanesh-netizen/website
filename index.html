@@ -1258,12 +1258,37 @@
               For general inquiries only. Please avoid sending sensitive financial, payroll, tax, or personal information through this form.
             </p>
 
-            <form>
-              <input placeholder="Name" />
-              <input placeholder="Email" />
-              <textarea placeholder="Tell us a little about your business and what you need"></textarea>
-              <button class="btn btn-primary" type="button">Send Message</button>
-            </form>
+           <form action="https://formsubmit.co/info@booksmr.ca" method="POST">
+
+  <input 
+    type="text"
+    name="name"
+    placeholder="Name"
+    required
+  />
+
+  <input 
+    type="email"
+    name="email"
+    placeholder="Email"
+    required
+  />
+
+  <textarea
+    name="message"
+    placeholder="Tell us a little about your business and what you need"
+    required
+  ></textarea>
+
+  <!-- Optional -->
+  <input type="hidden" name="_subject" value="New Inquiry - Books MR Website">
+  <input type="hidden" name="_captcha" value="false">
+
+  <button class="btn btn-primary" type="submit">
+    Send Message
+  </button>
+
+</form>
 
             <p class="small-note">
               Prefer to speak directly? Use the booking option to schedule a quick introductory Teams call.
