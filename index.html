@@ -889,51 +889,110 @@
     }
 
     @media (max-width: 720px) {
-      section {
-        padding: 4.3rem 0;
-      }
 
-      .nav {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1rem 0;
-      }
+  section {
+    padding: 4.3rem 0;
+  }
 
-      .logo-img {
-        height: 60px;
-      }
+  .top-strip-inner {
+    padding: 0.55rem 0;
+    justify-content: center;
+  }
 
-      .nav-links {
-        width: 100%;
-        margin-left: 0;
-      }
+  .top-strip-left,
+  .top-strip-right {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
 
-      .top-strip-inner { padding: 0.55rem 0; }
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 0;
+  }
 
-      .hero {
-        padding-top: 5rem;
-      }
+  .brand-logo {
+    width: 100%;
+    justify-content: center;
+  }
 
-      .hero-media img {
-        min-height: 300px;
-      }
+  .logo-img {
+    height: 60px;
+  }
 
-      .hero-badge,
-      .why-visual-badge {
-        position: static;
-        margin-top: 1rem;
-        max-width: none;
-      }
+  .nav-links {
+    width: 100%;
+    margin-left: 0;
+    justify-content: center;
+    gap: 0.75rem;
+  }
 
-      .services-grid,
-      .premium-band-inner {
-        grid-template-columns: 1fr;
-      }
+  .nav-links a {
+    font-size: 0.78rem;
+  }
 
-      h1 {
-        font-size: clamp(2.2rem, 9vw, 3.1rem);
-      }
-    }
+  .nav-links .btn {
+    width: 100%;
+    margin-top: 0.25rem;
+  }
+
+  .hero {
+    padding-top: 3.8rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-media img,
+  .why-visual img {
+    min-height: 300px;
+  }
+
+  .hero-badge,
+  .why-visual-badge {
+    position: static;
+    margin-top: 1rem;
+    max-width: none;
+  }
+
+  .services-grid,
+  .premium-band-inner,
+  .booking-layout,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card-inner,
+  .book-card-inner,
+  .why-copy,
+  .premium-band-inner,
+  .service-card-body {
+    padding: 1.2rem;
+  }
+
+  input,
+  textarea,
+  .btn {
+    width: 100%;
+  }
+
+  .footer-inner {
+    text-align: center;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: clamp(2.2rem, 9vw, 3.1rem);
+  }
+}
   </style>
 </head>
 
