@@ -40,11 +40,13 @@
       display: block;
     }
 
+    .site-header img[src="logo.png"],
     .site-header .brand img {
-      width: 126px;
-      height: auto;
-      max-height: 58px;
-      object-fit: contain;
+      width: 126px !important;
+      max-width: 126px !important;
+      height: auto !important;
+      max-height: 58px !important;
+      object-fit: contain !important;
     }
 
     .nav-links,
@@ -142,7 +144,7 @@
         "potentialAction": {
           "@type": "ReserveAction",
           "name": "Book a free consultation",
-          "target": "https://bookings.cloud.microsoft/book/MABooks1@mabooks.ca/?ismsaljsauthenabled=true/"
+          "target": "https://book.booksmr.ca"
         }
       },
       {
@@ -209,7 +211,7 @@
   <header class="site-header">
     <div class="container nav-inner">
       <a class="brand" href="index.html" aria-label="M&R Books home">
-        <img src="logo.png" alt="M&R Books logo" width="126" height="58" />
+        <img src="logo.png" alt="M&R Books logo" width="126" height="58" style="width:126px;max-width:126px;height:auto;max-height:58px;object-fit:contain;" />
       </a>
       <nav class="nav-links" aria-label="Main navigation">
         <a href="index.html">Home</a>
@@ -220,7 +222,7 @@
         <a href="index.html#contact">Contact</a>
       </nav>
       <div class="nav-actions">
-        <a class="btn btn-outline" href="https://bookings.cloud.microsoft/book/MABooks1@mabooks.ca/?ismsaljsauthenabled=true/">Book Free Consultation</a>
+        <a class="btn btn-outline" href="https://book.booksmr.ca">Book Free Consultation</a>
         <a class="language-link" href="index_fr.html">FR</a>
       </div>
     </div>
@@ -235,7 +237,7 @@
           <p class="lead">M&R Books is a boutique bookkeeping and accounting support business for small businesses, entrepreneurs, and individuals who want clear records, responsive communication, and fewer financial loose ends.</p>
           <p>We intentionally keep our client list focused so each client receives attentive support, reliable routines, and work that is easy to understand. The goal is not to make bookkeeping feel bigger. It is to make it feel manageable.</p>
           <div class="about-hero-actions">
-            <a class="btn btn-primary" href="https://bookings.cloud.microsoft/book/MABooks1@mabooks.ca/?ismsaljsauthenabled=true/">Book Free Consultation</a>
+            <a class="btn btn-primary" href="https://book.booksmr.ca">Book Free Consultation</a>
             <a class="btn btn-secondary" href="index.html#services">Explore Services</a>
           </div>
         </div>
@@ -360,7 +362,7 @@
             <h2>Let’s talk about where your books feel messy and what would make them feel more under control.</h2>
             <p>Book a free consultation to walk through your current setup, what feels unclear, and whether M&R Books is the right level of support for you.</p>
           </div>
-          <a class="btn btn-primary" href="https://bookings.cloud.microsoft/book/MABooks1@mabooks.ca/?ismsaljsauthenabled=true/">Book Free Consultation</a>
+          <a class="btn btn-primary" href="https://book.booksmr.ca">Book Free Consultation</a>
         </div>
       </div>
     </section>
@@ -377,9 +379,14 @@
         <a href="payroll-services-quebec.html">Payroll</a>
         <a href="sales-tax-filing-quebec.html">GST/QST</a>
         <a href="about.html">About</a>
-        <a href="https://bookings.cloud.microsoft/book/MABooks1@mabooks.ca/?ismsaljsauthenabled=true/">Book</a>
+        <a href="https://book.booksmr.ca">Book</a>
       </nav>
     </div>
   </footer>
+  <script>
+    document.querySelectorAll('a[href*="bookings.cloud.microsoft"]').forEach(function (link) {
+      link.href = 'https://book.booksmr.ca';
+    });
+  </script>
 </body>
 </html>
