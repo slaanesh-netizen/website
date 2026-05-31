@@ -70,7 +70,7 @@
         "potentialAction": {
           "@type": "ReserveAction",
           "name": "Book a free consultation",
-          "target": "https://bookings.cloud.microsoft/book/MABooks1@mabooks.ca/?ismsaljsauthenabled=true/"
+      "target": "https://book.booksmr.ca"
         },
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
@@ -178,5 +178,10 @@
       <nav class="footer-links" aria-label="Footer navigation"><a href="bookkeeping-montreal.html">Bookkeeping</a><a href="payroll-services-quebec.html">Payroll</a><a href="sales-tax-filing-quebec.html">GST/QST</a><a href="about.html">About</a><a href="#book">Book</a></nav>
     </div>
   </footer>
+  <script>
+    document.querySelectorAll('a[href*="bookings.cloud.microsoft"]').forEach(function (link) {
+      link.href = 'https://book.booksmr.ca';
+    });
+  </script>
 </body>
 </html>

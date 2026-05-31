@@ -70,7 +70,7 @@
         "potentialAction": {
           "@type": "ReserveAction",
           "name": "Book a free consultation",
-          "target": "https://bookings.cloud.microsoft/book/MABooks1@mabooks.ca/?ismsaljsauthenabled=true/"
+      "target": "https://book.booksmr.ca"
         },
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
@@ -190,5 +190,10 @@
       <nav class="footer-links" aria-label="Navigation du pied de page"><a href="tenue-de-livres-montreal.html">Tenue de livres</a><a href="paie-quebec.html">Paie</a><a href="taxes-de-vente-quebec.html">TPS/TVQ</a><a href="index_fr.html">Accueil</a><a href="#book">Consultation</a></nav>
     </div>
   </footer>
+  <script>
+    document.querySelectorAll('a[href*="bookings.cloud.microsoft"]').forEach(function (link) {
+      link.href = 'https://book.booksmr.ca';
+    });
+  </script>
 </body>
 </html>
