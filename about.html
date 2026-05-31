@@ -7,6 +7,84 @@
   <meta name="description" content="Meet M&amp;R Books, a boutique bookkeeping and accounting support business in Montreal serving Quebec small businesses, entrepreneurs, and individuals with attentive, organized support.">
   <meta name="keywords" content="about M&amp;R Books, bookkeeping Montreal, bookkeeping Quebec, accounting Quebec, payroll Quebec, boutique bookkeeping">
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .topbar .container,
+    .site-header .container,
+    .site-footer .container {
+      width: min(100% - 2rem, 1140px);
+      margin-inline: auto;
+    }
+
+    .topbar-inner,
+    .nav-inner,
+    .about-footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .topbar-inner {
+      min-height: 38px;
+      font-size: 0.88rem;
+    }
+
+    .topbar-inner > div {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .site-header .brand,
+    .site-header .brand img {
+      display: block;
+    }
+
+    .site-header .brand img {
+      width: 126px;
+      height: auto;
+      max-height: 58px;
+      object-fit: contain;
+    }
+
+    .nav-links,
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .about-footer-inner {
+      padding: 1.8rem 0;
+    }
+
+    .about-footer-copy p {
+      margin: 0.35rem 0 0;
+      max-width: 720px;
+    }
+
+    .about-footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 1rem;
+    }
+
+    @media (max-width: 900px) {
+      .nav-inner,
+      .about-footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links,
+      .nav-actions,
+      .about-footer-links {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+    }
+  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -120,8 +198,10 @@
 
   <div class="topbar">
     <div class="container topbar-inner">
-      <a href="tel:+15145340303">(514) 534-0303</a>
-      <a href="mailto:info@booksmr.ca">info@booksmr.ca</a>
+      <div>
+        <a href="tel:+15145340303">(514) 534-0303</a>
+        <a href="mailto:info@booksmr.ca">info@booksmr.ca</a>
+      </div>
       <span>Bookkeeping, accounting, and payroll Quebec</span>
     </div>
   </div>
@@ -129,7 +209,7 @@
   <header class="site-header">
     <div class="container nav-inner">
       <a class="brand" href="index.html" aria-label="M&R Books home">
-        <img src="logo.png" alt="M&R Books logo" width="160" height="60" />
+        <img src="logo.png" alt="M&R Books logo" width="126" height="58" />
       </a>
       <nav class="nav-links" aria-label="Main navigation">
         <a href="index.html">Home</a>
@@ -286,13 +366,13 @@
     </section>
   </main>
 
-  <footer class="site-footer compact-footer">
-    <div class="container compact-footer-inner">
-      <div>
+  <footer class="site-footer">
+    <div class="container about-footer-inner">
+      <div class="about-footer-copy">
         <strong>M&amp;R Books</strong>
         <p>Bookkeeping services in Montreal and across Quebec. Call +1 (514) 534-0303 or email info@booksmr.ca.</p>
       </div>
-      <nav class="footer-nav" aria-label="Footer navigation">
+      <nav class="about-footer-links" aria-label="Footer navigation">
         <a href="bookkeeping-montreal.html">Bookkeeping</a>
         <a href="payroll-services-quebec.html">Payroll</a>
         <a href="sales-tax-filing-quebec.html">GST/QST</a>
