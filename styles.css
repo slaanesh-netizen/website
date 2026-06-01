@@ -1198,6 +1198,118 @@ body #services .service-card a:nth-of-type(n+2) {
   text-underline-offset: 0.25em;
 }
 
+/* Stable homepage services copy fallback for GitHub Pages */
+body #services .service-card > div > p:not(.service-summary),
+body #services .service-content > p:not(.service-summary) {
+  display: none !important;
+}
+
+body #services .service-card ul::before {
+  display: block !important;
+  max-width: 27ch;
+  margin: 0 0 1.1rem !important;
+  padding-bottom: 1.1rem !important;
+  border-bottom: 1px solid rgba(156, 214, 234, 0.18) !important;
+  color: rgba(230, 242, 249, 0.92) !important;
+  font-size: clamp(1rem, 1.12vw, 1.08rem) !important;
+  line-height: 1.5 !important;
+}
+
+body #services .service-card:has(.service-summary) ul::before {
+  display: none !important;
+  content: none !important;
+}
+
+body #services .service-card:not(:has(.service-summary)) ul {
+  border-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+body #services .service-card .service-summary {
+  padding-bottom: 1.1rem !important;
+  border-bottom: 1px solid rgba(156, 214, 234, 0.18) !important;
+}
+
+body #services .service-card:nth-child(1) ul::before {
+  content: "Monthly bookkeeping and reconciliations for Quebec businesses." !important;
+}
+
+body #services .service-card:nth-child(2) ul::before {
+  content: "Financial reporting and year-end support for better business decisions." !important;
+}
+
+body #services .service-card:nth-child(3) ul::before {
+  content: "Reliable payroll processing and compliance support." !important;
+}
+
+body #services .service-card:nth-child(4) ul::before {
+  content: "GST/HST and QST filing support for Quebec businesses." !important;
+}
+
+body #services .service-card li {
+  font-size: 0 !important;
+}
+
+body #services .service-card li::after {
+  position: static !important;
+  display: inline !important;
+  width: auto !important;
+  height: auto !important;
+  border: 0 !important;
+  color: rgba(226, 239, 247, 0.88) !important;
+  font-size: 0.98rem !important;
+  line-height: 1.4 !important;
+  transform: none !important;
+}
+
+body #services .service-card:nth-child(1) li:nth-child(1)::after {
+  content: "Monthly bookkeeping" !important;
+}
+
+body #services .service-card:nth-child(1) li:nth-child(2)::after {
+  content: "Bank reconciliations" !important;
+}
+
+body #services .service-card:nth-child(1) li:nth-child(3)::after {
+  content: "Financial reporting" !important;
+}
+
+body #services .service-card:nth-child(2) li:nth-child(1)::after {
+  content: "Financial statements" !important;
+}
+
+body #services .service-card:nth-child(2) li:nth-child(2)::after {
+  content: "Year-end preparation" !important;
+}
+
+body #services .service-card:nth-child(2) li:nth-child(3)::after {
+  content: "Corporate tax support" !important;
+}
+
+body #services .service-card:nth-child(3) li:nth-child(1)::after {
+  content: "Payroll processing" !important;
+}
+
+body #services .service-card:nth-child(3) li:nth-child(2)::after {
+  content: "Employee remittances" !important;
+}
+
+body #services .service-card:nth-child(3) li:nth-child(3)::after {
+  content: "Ongoing payroll support" !important;
+}
+
+body #services .service-card:nth-child(4) li:nth-child(1)::after {
+  content: "GST/HST and QST filings" !important;
+}
+
+body #services .service-card:nth-child(4) li:nth-child(2)::after {
+  content: "Remittance support" !important;
+}
+
+body #services .service-card:nth-child(4) li:nth-child(3)::after {
+  content: "Compliance monitoring" !important;
+}
+
 /* Homepage service cards: concise summary mode */
 body #services .service-card {
   min-height: 540px !important;
