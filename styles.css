@@ -1148,6 +1148,56 @@ body #services .service-card a:nth-of-type(n+2) {
   display: none !important;
 }
 
+/* Footer social links */
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 0.7rem;
+}
+
+.footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.85rem;
+  height: 1.85rem;
+  border: 1px solid rgba(120, 203, 224, 0.28);
+  border-radius: 999px;
+  color: rgba(226, 244, 252, 0.9);
+  background: rgba(16, 48, 74, 0.42);
+  text-decoration: none;
+  transition: border-color 180ms ease, color 180ms ease, background 180ms ease;
+}
+
+.footer-socials a:hover,
+.footer-socials a:focus-visible {
+  border-color: rgba(126, 227, 255, 0.58);
+  color: #86e6ff;
+  background: rgba(28, 88, 128, 0.42);
+}
+
+.footer-socials svg {
+  width: 0.9rem;
+  height: 0.9rem;
+  fill: currentColor;
+}
+
+.founder-linkedin {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 1rem;
+  color: #86e6ff;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.founder-linkedin:hover,
+.founder-linkedin:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
 /* Homepage service cards: concise summary mode */
 body #services .service-card {
   min-height: 540px !important;
