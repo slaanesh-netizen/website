@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M&amp;R Books Photo Branding Test</title>
+  <link rel="stylesheet" href="styles.css?v=photo-branding-test" />
+  <style>
+    body {
+      background:
+        linear-gradient(180deg, rgba(3, 17, 31, 0.96), rgba(6, 27, 45, 0.98)),
+        url("bg-soft.jpg") center / cover fixed;
+    }
+
+    .test-page {
+      min-height: 100vh;
+      padding: clamp(2rem, 6vw, 5rem) 0;
+    }
+
+    .test-heading {
+      max-width: 820px;
+      margin: 0 auto clamp(2rem, 4vw, 3.5rem);
+      text-align: center;
+    }
+
+    .test-heading h1 {
+      margin: 0.8rem 0 1rem;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      line-height: 1.05;
+    }
+
+    .test-heading p {
+      margin: 0 auto;
+      max-width: 680px;
+      color: rgba(218, 235, 245, 0.86);
+      font-size: 1.08rem;
+      line-height: 1.65;
+    }
+
+    .brand-demo-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(1rem, 2vw, 1.5rem);
+    }
+
+    .brand-demo-card {
+      overflow: hidden;
+      border: 1px solid rgba(125, 202, 226, 0.34);
+      border-radius: 8px;
+      background: linear-gradient(180deg, rgba(14, 47, 76, 0.9), rgba(5, 24, 43, 0.94));
+      box-shadow: 0 22px 64px rgba(0, 0, 0, 0.28);
+    }
+
+    .brand-photo {
+      position: relative;
+      aspect-ratio: 1.42 / 1;
+      overflow: hidden;
+      background: rgba(5, 18, 30, 0.7);
+    }
+
+    .brand-photo img:not(.brand-mark) {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .brand-photo::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 55%, rgba(1, 11, 20, 0.18));
+      pointer-events: none;
+    }
+
+    .brand-mark {
+      position: absolute;
+      z-index: 2;
+      width: clamp(42px, 4.6vw, 58px);
+      height: auto;
+      opacity: 0.78;
+      filter: drop-shadow(0 5px 12px rgba(0, 0, 0, 0.32));
+    }
+
+    .folder-mark {
+      right: 7%;
+      bottom: 12%;
+      transform: rotate(-3deg);
+    }
+
+    .dashboard-mark {
+      top: 12%;
+      left: 10%;
+      width: clamp(34px, 3.8vw, 48px);
+      opacity: 0.55;
+      mix-blend-mode: screen;
+    }
+
+    .report-label {
+      position: absolute;
+      z-index: 2;
+      right: 8%;
+      bottom: 10%;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      border: 1px solid rgba(195, 232, 242, 0.28);
+      border-radius: 4px;
+      padding: 0.32rem 0.45rem;
+      color: rgba(238, 250, 255, 0.86);
+      font-size: 0.55rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      background: rgba(7, 31, 49, 0.48);
+      backdrop-filter: blur(6px);
+    }
+
+    .report-label img {
+      width: 18px;
+      height: auto;
+      opacity: 0.8;
+    }
+
+    .brand-demo-body {
+      padding: 1.35rem;
+    }
+
+    .brand-demo-body h2 {
+      margin: 0 0 0.55rem;
+      color: #f6fbff;
+      font-size: 1.25rem;
+    }
+
+    .brand-demo-body p {
+      margin: 0;
+      color: rgba(205, 224, 235, 0.86);
+      line-height: 1.55;
+    }
+
+    .test-note {
+      max-width: 820px;
+      margin: 2rem auto 0;
+      border: 1px solid rgba(125, 202, 226, 0.22);
+      border-radius: 8px;
+      padding: 1rem 1.15rem;
+      color: rgba(216, 234, 244, 0.86);
+      background: rgba(7, 30, 50, 0.62);
+    }
+
+    @media (max-width: 1050px) {
+      .brand-demo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .brand-demo-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="test-page">
+    <div class="container">
+      <header class="test-heading">
+        <span class="eyebrow">Concept only</span>
+        <h1>Subtle M&amp;R Books Branding in Workspace Photos</h1>
+        <p>This test shows how tiny brand details could feel inside the existing service imagery without turning the photos into ads or obvious watermarks.</p>
+      </header>
+
+      <section class="brand-demo-grid" aria-label="Photo branding concept cards">
+        <article class="brand-demo-card">
+          <div class="brand-photo">
+            <img src="assets/mr-books-bookkeeping.png" alt="Bookkeeping workspace concept with subtle M&R Books branding" />
+            <span class="report-label"><img src="logo.png" alt="" /> Client File</span>
+          </div>
+          <div class="brand-demo-body">
+            <h2>Folder / File Label</h2>
+            <p>A small branded file label feels natural on a desk and keeps the photo professional.</p>
+          </div>
+        </article>
+
+        <article class="brand-demo-card">
+          <div class="brand-photo">
+            <img src="assets/mr-books-consultation.png" alt="Accounting dashboard concept with subtle M&R Books branding" />
+            <img class="brand-mark dashboard-mark" src="logo.png" alt="" />
+          </div>
+          <div class="brand-demo-body">
+            <h2>Laptop Dashboard</h2>
+            <p>A faint mark on the dashboard suggests a real M&R Books workspace without shouting.</p>
+          </div>
+        </article>
+
+        <article class="brand-demo-card">
+          <div class="brand-photo">
+            <img src="assets/mr-books-payroll.png" alt="Payroll workspace concept with subtle M&R Books branding" />
+            <img class="brand-mark folder-mark" src="logo.png" alt="" />
+          </div>
+          <div class="brand-demo-body">
+            <h2>Desk Folder</h2>
+            <p>A small logo on a folder is likely the safest premium direction for service cards.</p>
+          </div>
+        </article>
+
+        <article class="brand-demo-card">
+          <div class="brand-photo">
+            <img src="assets/mr-books-tax.png" alt="Sales tax workspace concept with subtle M&R Books branding" />
+            <span class="report-label"><img src="logo.png" alt="" /> GST/QST</span>
+          </div>
+          <div class="brand-demo-body">
+            <h2>Report Cover</h2>
+            <p>A tiny report label reinforces the brand while still reading like a real workspace detail.</p>
+          </div>
+        </article>
+      </section>
+
+      <p class="test-note">Note: this is a quick mockup using overlays, not final edited images. If you like the direction, the next step would be creating actual photo edits where the branding is blended into the laptop screen or folder surface more naturally.</p>
+    </div>
+  </main>
+</body>
+</html>
