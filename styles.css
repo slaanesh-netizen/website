@@ -1310,6 +1310,32 @@ body #services .service-card a:nth-of-type(n+2) {
   margin-top: 0.85rem;
 }
 
+.footer-legal {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 0 1.15rem;
+}
+
+.footer-legal a {
+  color: rgba(226, 244, 252, 0.84);
+  font-size: 0.86rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.footer-legal a:hover,
+.footer-legal a:focus-visible {
+  color: #86e6ff;
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+@media (max-width: 800px) {
+  .footer-legal {
+    justify-content: flex-start;
+  }
+}
+
 /* Stable homepage services copy fallback for GitHub Pages */
 body #services .service-card > div > p:not(.service-summary),
 body #services .service-content > p:not(.service-summary) {

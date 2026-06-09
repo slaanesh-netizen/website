@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://booksmr.ca/</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://booksmr.ca/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://booksmr.ca/index_fr.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://booksmr.ca/" />
+  </url>
+  <url>
+    <loc>https://booksmr.ca/index_fr.html</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://booksmr.ca/" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://booksmr.ca/index_fr.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://booksmr.ca/" />
+  </url>
+  <url>
+    <loc>https://booksmr.ca/bookkeeping-montreal.html</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://booksmr.ca/bookkeeping-montreal.html" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://booksmr.ca/tenue-de-livres-montreal.html" />
+  </url>
+  <url>
+    <loc>https://booksmr.ca/tenue-de-livres-montreal.html</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://booksmr.ca/bookkeeping-montreal.html" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://booksmr.ca/tenue-de-livres-montreal.html" />
+  </url>
+  <url>
+    <loc>https://booksmr.ca/payroll-services-quebec.html</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://booksmr.ca/payroll-services-quebec.html" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://booksmr.ca/paie-quebec.html" />
+  </url>
+  <url>
+    <loc>https://booksmr.ca/paie-quebec.html</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://booksmr.ca/payroll-services-quebec.html" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://booksmr.ca/paie-quebec.html" />
+  </url>
+  <url>
+    <loc>https://booksmr.ca/sales-tax-filing-quebec.html</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://booksmr.ca/sales-tax-filing-quebec.html" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://booksmr.ca/taxes-de-vente-quebec.html" />
+  </url>
+  <url>
+    <loc>https://booksmr.ca/taxes-de-vente-quebec.html</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://booksmr.ca/sales-tax-filing-quebec.html" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://booksmr.ca/taxes-de-vente-quebec.html" />
+  </url>
+  <url>
+    <loc>https://booksmr.ca/about.html</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://booksmr.ca/privacy.html</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://booksmr.ca/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://booksmr.ca/politique-confidentialite.html" />
+  </url>
+  <url>
+    <loc>https://booksmr.ca/politique-confidentialite.html</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://booksmr.ca/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://booksmr.ca/politique-confidentialite.html" />
+  </url>
+</urlset>
