@@ -1,21 +1,21 @@
 :root {
-  --bg: #061323;
-  --bg-2: #091b30;
-  --bg-3: #0d233c;
-  --surface: rgba(15, 37, 63, 0.72);
-  --surface-strong: rgba(18, 48, 81, 0.84);
-  --text: #f5f9fc;
-  --muted: #b7c8da;
-  --muted-2: #8fa8bf;
-  --line: rgba(255, 255, 255, 0.11);
-  --line-strong: rgba(141, 207, 239, 0.28);
-  --accent: #5ebce8;
-  --accent-strong: #8bd8f3;
-  --success: #8ee3cc;
+  --bg: #DBD6C3;
+  --bg-2: #EEE8D7;
+  --bg-3: #C9BFA5;
+  --surface: rgba(247, 242, 226, 0.82);
+  --surface-strong: rgba(239, 231, 211, 0.94);
+  --text: #30210C;
+  --muted: rgba(48, 33, 12, 0.72);
+  --muted-2: rgba(48, 33, 12, 0.56);
+  --line: rgba(143, 119, 87, 0.24);
+  --line-strong: rgba(143, 119, 87, 0.46);
+  --accent: #8F7757;
+  --accent-strong: #DBD6C3;
+  --success: #B8AF8C;
   --max: 1180px;
   --radius: 8px;
-  --shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
-  --shadow-soft: 0 18px 50px rgba(0, 0, 0, 0.24);
+  --shadow: 0 24px 70px rgba(48, 33, 12, 0.18);
+  --shadow-soft: 0 18px 50px rgba(48, 33, 12, 0.12);
   --header-height: 76px;
 }
 * { box-sizing: border-box; }
@@ -831,7 +831,7 @@ body #services .service-card h3::after {
   left: 1.03rem;
   width: 1.05rem;
   height: 1.05rem;
-  border: 2px solid #77d9ff;
+  border: 2px solid #0B383D;
   border-top: 0;
   border-left: 0;
   transform: rotate(45deg);
@@ -870,7 +870,7 @@ body #services .service-card li::before {
   width: 1rem;
   height: 1rem;
   border-radius: 999px;
-  background: linear-gradient(135deg, #7edfff, #4aa7ee);
+  background: linear-gradient(135deg, #4E6B45, #8F7757);
   box-shadow: 0 0 0 0.22rem rgba(98, 183, 238, 0.12);
 }
 
@@ -893,7 +893,7 @@ body #services .service-card a {
   width: fit-content;
   margin-top: auto;
   padding-top: 2rem;
-  color: #72d6ff;
+  color: #0B383D;
   font-weight: 800;
   text-decoration: none;
 }
@@ -902,7 +902,7 @@ body #services .service-card a::after {
   content: "";
   width: 1.1rem;
   height: 0.7rem;
-  background: linear-gradient(#72d6ff, #72d6ff) left 50% / 100% 2px no-repeat;
+  background: linear-gradient(#0B383D, #0B383D) left 50% / 100% 2px no-repeat;
   clip-path: polygon(0 42%, 72% 42%, 72% 0, 100% 50%, 72% 100%, 72% 58%, 0 58%);
   transition: transform 180ms ease;
 }
@@ -930,6 +930,2283 @@ body #services .service-card a:focus-visible::after {
   body #services .service-card img {
     height: 180px;
   }
+}
+
+/* Final minimalist boutique design lock */
+:root {
+  --final-paper: #F8F2E4;
+  --final-cream: #DBD6C3;
+  --final-sand: #E9DFC8;
+  --final-taupe: #8F7757;
+  --final-espresso: #30210C;
+  --final-teal: #0B383D;
+  --final-leaf: #4E6B45;
+  --final-line: rgba(48, 33, 12, 0.14);
+  --final-line-strong: rgba(48, 33, 12, 0.26);
+  --max: 1160px;
+  --radius: 0;
+}
+
+html,
+body {
+  background: var(--final-paper) !important;
+}
+
+body {
+  color: var(--final-espresso) !important;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif !important;
+}
+
+body::before,
+.section-transition,
+.hero::before,
+.about-hero::before,
+.founder-section::before,
+.about-cta::before,
+.glass-card::before,
+.hero-media::before,
+.image-frame::after {
+  display: none !important;
+}
+
+.container,
+body #services > .container {
+  width: min(100% - 2.25rem, 1160px) !important;
+  max-width: 1160px !important;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--final-espresso) !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+}
+
+h1,
+.hero-copy h1,
+.about-hero-copy h1,
+body .about-page .about-hero-copy h1 {
+  max-width: 920px !important;
+  margin-inline: auto !important;
+  font-size: clamp(3.1rem, 7vw, 5.4rem) !important;
+  line-height: 0.98 !important;
+}
+
+h2,
+.booking-card h2,
+.contact-card h2 {
+  max-width: 820px !important;
+  font-size: clamp(2.15rem, 4.8vw, 3.25rem) !important;
+  line-height: 1.04 !important;
+}
+
+h3 {
+  font-size: 1.35rem !important;
+  line-height: 1.18 !important;
+}
+
+p,
+li,
+.muted,
+.small-note,
+.hero-copy .lead,
+.section-heading p,
+.about-hero-copy .lead,
+.about-hero-copy p:not(.lead),
+.section-heading-left p,
+.founder-story-copy p,
+.about-fit-grid p,
+.about-cta-panel p,
+.privacy-section p,
+.privacy-section li,
+.privacy-hero p {
+  color: rgba(48, 33, 12, 0.68) !important;
+}
+
+.skip-link {
+  background: var(--final-espresso) !important;
+  color: var(--final-paper) !important;
+}
+
+.top-strip,
+.topbar {
+  display: none !important;
+}
+
+.site-header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+  border-bottom: 1px solid var(--final-line) !important;
+  background: rgba(248, 242, 228, 0.90) !important;
+  box-shadow: none !important;
+  backdrop-filter: blur(18px) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
+}
+
+.nav,
+.nav-inner {
+  min-height: 82px !important;
+  display: grid !important;
+  grid-template-columns: auto 1fr !important;
+  align-items: center !important;
+  gap: 2rem !important;
+}
+
+.logo-img,
+.site-header .brand img,
+.site-header img[src="logo.png"] {
+  width: auto !important;
+  max-width: 150px !important;
+  height: 44px !important;
+  max-height: 44px !important;
+  object-fit: contain !important;
+  filter: none !important;
+  mix-blend-mode: multiply !important;
+}
+
+.nav-links,
+.nav-actions {
+  justify-content: flex-end !important;
+  gap: 1rem !important;
+}
+
+.nav-links a:not(.btn),
+.nav-actions a:not(.btn),
+.language-link,
+.lang-switch {
+  color: rgba(48, 33, 12, 0.72) !important;
+  font-size: 0.78rem !important;
+  font-weight: 760 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0 !important;
+}
+
+.nav-links a:not(.btn)::after {
+  background: var(--final-taupe) !important;
+}
+
+a:hover,
+a:focus-visible,
+.nav-links a:not(.btn):hover,
+.nav-actions a:not(.btn):hover {
+  color: var(--final-teal) !important;
+}
+
+.btn {
+  min-height: 46px !important;
+  border-radius: 999px !important;
+  padding: 0.86rem 1.15rem !important;
+  box-shadow: none !important;
+  font-size: 0.86rem !important;
+  font-weight: 780 !important;
+  letter-spacing: 0 !important;
+}
+
+.btn-primary {
+  color: var(--final-paper) !important;
+  border: 1px solid var(--final-espresso) !important;
+  background: var(--final-espresso) !important;
+}
+
+.btn-primary:hover {
+  color: var(--final-paper) !important;
+  border-color: var(--final-teal) !important;
+  background: var(--final-teal) !important;
+  box-shadow: none !important;
+}
+
+.btn-secondary,
+.btn-outline {
+  color: var(--final-espresso) !important;
+  border: 1px solid var(--final-line-strong) !important;
+  background: transparent !important;
+}
+
+.btn-secondary:hover,
+.btn-outline:hover {
+  border-color: var(--final-espresso) !important;
+  background: rgba(219, 214, 195, 0.42) !important;
+}
+
+.btn:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: 3px solid rgba(11, 56, 61, 0.34) !important;
+  outline-offset: 3px !important;
+}
+
+.eyebrow,
+.section-kicker,
+.service-meta,
+.founder-card figcaption span,
+.principle-card span,
+.process-card strong {
+  border: 0 !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  color: var(--final-taupe) !important;
+  background: transparent !important;
+  font-size: 0.76rem !important;
+  font-weight: 820 !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase !important;
+}
+
+.section,
+.hero,
+.hero.compact,
+.about-page .section {
+  position: relative !important;
+  overflow: visible !important;
+  padding: 7rem 0 !important;
+}
+
+.section-solid,
+.section-soft,
+body #services,
+.privacy-page {
+  background:
+    linear-gradient(180deg, var(--final-paper), var(--final-cream)) !important;
+}
+
+.hero,
+.hero.compact,
+.about-hero {
+  min-height: auto !important;
+  padding: 8.6rem 0 6.2rem !important;
+  background:
+    linear-gradient(180deg, rgba(248, 242, 228, 0.97), rgba(219, 214, 195, 0.54)),
+    url("bg-luxury-texture.png") center / cover no-repeat !important;
+}
+
+.hero-grid,
+.about-hero-grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 3rem !important;
+  align-items: start !important;
+}
+
+.hero-copy,
+.about-hero-copy {
+  max-width: 900px !important;
+  margin-inline: auto !important;
+  text-align: center !important;
+}
+
+.hero-copy .lead,
+.about-hero-copy .lead {
+  max-width: 680px !important;
+  margin: 0 auto 1.6rem !important;
+  font-size: 1.08rem !important;
+  line-height: 1.78 !important;
+}
+
+.hero-actions,
+.about-hero-actions,
+.card-actions {
+  justify-content: center !important;
+  margin: 1.7rem 0 1.35rem !important;
+}
+
+.hero-proof,
+.micro-trust {
+  justify-content: center !important;
+  gap: 1rem !important;
+}
+
+.hero-proof span,
+.micro-trust span,
+.booking-benefits li,
+.fit-list li {
+  border: 0 !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  color: rgba(48, 33, 12, 0.66) !important;
+  background: transparent !important;
+}
+
+.hero-proof span::before,
+.booking-benefits li::before,
+.feature-list li::before,
+.fit-list li::before,
+body #services .service-card li::before {
+  background: var(--final-leaf) !important;
+  box-shadow: none !important;
+}
+
+.hero-media {
+  width: 100% !important;
+  max-width: 1040px !important;
+  margin: 1.2rem auto 0 !important;
+}
+
+.image-frame,
+.founder-card {
+  overflow: hidden !important;
+  border: 1px solid var(--final-line) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.image-frame img {
+  height: 430px !important;
+  object-fit: cover !important;
+}
+
+.floating-badge {
+  position: static !important;
+  border: 0 !important;
+  border-top: 1px solid var(--final-line) !important;
+  border-radius: 0 !important;
+  padding: 1.15rem 0 0 !important;
+  margin: 1.15rem 1.2rem 1.2rem !important;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.floating-badge strong,
+.floating-badge span {
+  color: var(--final-espresso) !important;
+}
+
+.floating-badge span {
+  display: block !important;
+  margin-top: 0.25rem !important;
+  color: rgba(48, 33, 12, 0.62) !important;
+}
+
+.section-heading {
+  max-width: 820px !important;
+  margin: 0 auto 3rem !important;
+  text-align: center !important;
+}
+
+.section-heading p {
+  max-width: 650px !important;
+  margin-inline: auto !important;
+  font-size: 1.02rem !important;
+  line-height: 1.75 !important;
+}
+
+.glass-card,
+.service-card,
+.info-card,
+.process-card,
+.faq-card,
+.cta-card,
+.booking-card,
+.contact-card,
+.principle-card,
+.about-service-card,
+.experience-panel,
+.about-cta-panel,
+.privacy-card,
+.privacy-contact-box {
+  border: 1px solid var(--final-line) !important;
+  border-radius: 0 !important;
+  background: rgba(248, 242, 228, 0.58) !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.service-card:hover,
+.info-card:hover,
+.principle-card:hover,
+.about-service-card:hover,
+body #services .service-card:hover {
+  transform: none !important;
+  border-color: var(--final-line-strong) !important;
+  box-shadow: none !important;
+}
+
+.services-grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 0 !important;
+  max-width: 1080px !important;
+  margin-inline: auto !important;
+}
+
+body #services .service-card {
+  display: grid !important;
+  grid-template-columns: minmax(220px, 0.36fr) minmax(0, 1fr) !important;
+  min-height: 0 !important;
+  border: 0 !important;
+  border-top: 1px solid var(--final-line) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body #services .service-card:last-child {
+  border-bottom: 1px solid var(--final-line) !important;
+}
+
+body #services .service-card img {
+  width: 100% !important;
+  height: 260px !important;
+  border: 0 !important;
+  object-fit: cover !important;
+}
+
+body #services .service-card > div,
+body #services .service-card .service-card-body,
+body #services .service-content {
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 2.2rem 0 2.2rem 2.4rem !important;
+}
+
+body #services .service-card span,
+body #services .service-card [class*="tag"],
+body #services .service-card [class*="badge"],
+body #services .service-card [class*="label"],
+body #services .service-card [class*="eyebrow"] {
+  display: inline-flex !important;
+}
+
+body #services .service-card h3 {
+  margin: 0 0 0.7rem !important;
+  color: var(--final-espresso) !important;
+  font-size: 1.72rem !important;
+}
+
+body #services .service-card h3::before,
+body #services .service-card h3::after {
+  display: none !important;
+  content: none !important;
+}
+
+body #services .service-card p,
+body #services .service-card .service-summary,
+body #services .service-card ul::before {
+  max-width: 46rem !important;
+  margin: 0 0 1.05rem !important;
+  padding: 0 !important;
+  border: 0 !important;
+  color: rgba(48, 33, 12, 0.68) !important;
+  font-size: 1rem !important;
+  line-height: 1.68 !important;
+}
+
+body #services .service-card ul {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 0.62rem 1.2rem !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+body #services .service-card li {
+  padding-left: 1.05rem !important;
+  color: rgba(48, 33, 12, 0.64) !important;
+  font-size: 0.94rem !important;
+  line-height: 1.45 !important;
+}
+
+body #services .service-card li::before {
+  top: 0.62em !important;
+  width: 0.36rem !important;
+  height: 0.36rem !important;
+}
+
+body #services .service-card li::after,
+.service-link::after,
+body #services .service-card a::after {
+  display: none !important;
+}
+
+.service-link,
+body #services .service-card a,
+.about-service-card a,
+.founder-linkedin,
+.form-consent a {
+  color: var(--final-teal) !important;
+  font-weight: 780 !important;
+  text-decoration: underline !important;
+  text-decoration-color: rgba(11, 56, 61, 0.28) !important;
+  text-underline-offset: 0.24rem !important;
+}
+
+.card-grid,
+.process-grid,
+.faq-grid,
+.about-principles-grid,
+.about-services-grid {
+  display: grid !important;
+  gap: 1px !important;
+  border: 1px solid var(--final-line) !important;
+  background: var(--final-line) !important;
+}
+
+.card-grid.three,
+.process-grid,
+.about-principles-grid {
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+
+.card-grid.two,
+.faq-grid {
+  grid-template-columns: repeat(2, 1fr) !important;
+}
+
+.about-services-grid {
+  grid-template-columns: repeat(4, 1fr) !important;
+}
+
+.info-card,
+.process-card,
+.faq-card,
+.principle-card,
+.about-service-card {
+  min-height: 100% !important;
+  border: 0 !important;
+  padding: 1.75rem !important;
+  background: rgba(248, 242, 228, 0.86) !important;
+}
+
+.process-card {
+  min-height: 250px !important;
+}
+
+.process-card::after {
+  right: 1.2rem !important;
+  bottom: 0.85rem !important;
+  color: rgba(143, 119, 87, 0.12) !important;
+  font-size: 5.4rem !important;
+}
+
+.split-grid,
+.booking-layout,
+.founder-story-grid,
+.about-fit-grid {
+  display: grid !important;
+  grid-template-columns: minmax(0, 0.92fr) minmax(360px, 1.08fr) !important;
+  gap: 4.5rem !important;
+  align-items: start !important;
+}
+
+.cta-card,
+.booking-card,
+.contact-card,
+.about-cta-panel {
+  padding: 2.4rem !important;
+}
+
+.booking-benefits {
+  grid-template-columns: 1fr !important;
+  gap: 0.7rem !important;
+  margin: 1.45rem 0 !important;
+}
+
+.booking-benefits li {
+  min-height: 0 !important;
+  padding-left: 1rem !important;
+}
+
+label {
+  color: var(--final-espresso) !important;
+  font-size: 0.86rem !important;
+}
+
+input,
+textarea {
+  border: 0 !important;
+  border-bottom: 1px solid var(--final-line-strong) !important;
+  border-radius: 0 !important;
+  padding: 0.9rem 0 !important;
+  background: transparent !important;
+  color: var(--final-espresso) !important;
+  box-shadow: none !important;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--final-teal) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.about-page .section-heading-left {
+  max-width: 760px !important;
+  margin: 0 0 2.6rem !important;
+  text-align: left !important;
+}
+
+.founder-card {
+  max-width: 430px !important;
+  justify-self: center !important;
+}
+
+.experience-panel {
+  display: grid !important;
+  background: transparent !important;
+}
+
+.experience-panel div,
+.fit-list li {
+  border-color: var(--final-line) !important;
+}
+
+.experience-panel strong {
+  color: var(--final-espresso) !important;
+  font-size: 2.2rem !important;
+}
+
+.fit-list {
+  gap: 0 !important;
+  border-top: 1px solid var(--final-line) !important;
+}
+
+.fit-list li {
+  border-bottom: 1px solid var(--final-line) !important;
+  padding: 1rem 0 1rem 1.3rem !important;
+}
+
+.about-cta-panel {
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  background: rgba(48, 33, 12, 0.04) !important;
+}
+
+.privacy-hero {
+  padding: 7rem 0 3.5rem !important;
+}
+
+.privacy-card {
+  max-width: 920px !important;
+  background: rgba(248, 242, 228, 0.78) !important;
+}
+
+.site-footer,
+.compact-footer {
+  border-top: 1px solid rgba(219, 214, 195, 0.16) !important;
+  background: var(--final-espresso) !important;
+}
+
+.footer-inner,
+.about-footer-inner,
+.compact-footer-inner {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  gap: 2rem !important;
+  align-items: start !important;
+  padding: 2.3rem 0 !important;
+}
+
+.site-footer,
+.site-footer p,
+.site-footer span,
+.footer-brand span,
+.compact-footer p,
+.site-footer a,
+.footer-links a,
+.footer-nav a,
+.footer-legal a {
+  color: rgba(248, 242, 228, 0.78) !important;
+}
+
+.footer-brand strong,
+.compact-footer strong {
+  color: var(--final-paper) !important;
+}
+
+.footer-links,
+.footer-nav,
+.about-footer-links {
+  justify-content: flex-end !important;
+  gap: 1rem !important;
+}
+
+.footer-socials a {
+  border-color: rgba(248, 242, 228, 0.22) !important;
+  color: var(--final-paper) !important;
+  background: transparent !important;
+}
+
+@media (max-width: 1120px) {
+  .split-grid,
+  .booking-layout,
+  .founder-story-grid,
+  .about-fit-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.6rem !important;
+  }
+
+  body #services .service-card {
+    grid-template-columns: minmax(180px, 0.34fr) minmax(0, 1fr) !important;
+  }
+}
+
+@media (max-width: 860px) {
+  .nav,
+  .nav-inner {
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    gap: 1rem !important;
+    padding: 1rem 0 !important;
+  }
+
+  .nav-links,
+  .nav-actions {
+    justify-content: center !important;
+  }
+
+  .section,
+  .hero,
+  .hero.compact,
+  .about-page .section {
+    padding: 5rem 0 !important;
+  }
+
+  .hero,
+  .hero.compact,
+  .about-hero {
+    padding-top: 6rem !important;
+  }
+
+  body #services .service-card,
+  .card-grid.three,
+  .card-grid.two,
+  .process-grid,
+  .faq-grid,
+  .about-principles-grid,
+  .about-services-grid,
+  .footer-inner,
+  .about-footer-inner,
+  .compact-footer-inner,
+  .about-cta-panel {
+    grid-template-columns: 1fr !important;
+  }
+
+  body #services .service-card > div,
+  body #services .service-card .service-card-body,
+  body #services .service-content {
+    padding: 1.45rem 0 2rem !important;
+  }
+
+  body #services .service-card img,
+  .image-frame img {
+    height: 300px !important;
+  }
+
+  .footer-links,
+  .footer-nav,
+  .about-footer-links {
+    justify-content: flex-start !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .container,
+  body #services > .container {
+    width: min(100% - 1.35rem, 1160px) !important;
+  }
+
+  .hero-actions,
+  .about-hero-actions,
+  .card-actions,
+  .hero-actions .btn,
+  .about-hero-actions .btn,
+  .booking-card .btn,
+  .contact-card .btn,
+  .cta-card .btn {
+    width: 100% !important;
+  }
+
+  .hero-proof,
+  .micro-trust {
+    display: grid !important;
+    gap: 0.55rem !important;
+  }
+
+  body #services .service-card ul {
+    grid-template-columns: 1fr !important;
+  }
+
+  .info-card,
+  .process-card,
+  .faq-card,
+  .principle-card,
+  .about-service-card,
+  .cta-card,
+  .booking-card,
+  .contact-card,
+  .about-cta-panel {
+    padding: 1.25rem !important;
+  }
+}
+
+/* Final boho lock for late service overrides */
+body #services {
+  background:
+    radial-gradient(circle at 10% 0%, rgba(161, 102, 63, 0.12), transparent 28rem),
+    linear-gradient(180deg, #F6F0DF 0%, #DBD6C3 100%) !important;
+}
+
+body #services .section-heading p {
+  color: rgba(48, 33, 12, 0.72) !important;
+}
+
+body #services .service-card {
+  min-height: 0 !important;
+  border-color: rgba(143, 119, 87, 0.22) !important;
+  background:
+    linear-gradient(150deg, rgba(255, 250, 235, 0.90), rgba(231, 222, 199, 0.80)),
+    rgba(247, 241, 227, 0.86) !important;
+  box-shadow: 0 22px 54px rgba(48, 33, 12, 0.14) !important;
+}
+
+body #services .service-card:hover {
+  border-color: rgba(143, 119, 87, 0.38) !important;
+  box-shadow: 0 28px 68px rgba(48, 33, 12, 0.18) !important;
+}
+
+body #services .service-card h3 {
+  margin: 0 0 0.75rem !important;
+  color: #30210C !important;
+}
+
+body #services .service-card h3::before,
+body #services .service-card h3::after {
+  display: none !important;
+  content: none !important;
+}
+
+body #services .service-card p,
+body #services .service-card .service-summary,
+body #services .service-card ul::before {
+  color: rgba(48, 33, 12, 0.78) !important;
+}
+
+body #services .service-card ul,
+body #services .service-card .service-summary {
+  border-color: rgba(143, 119, 87, 0.18) !important;
+}
+
+body #services .service-card li {
+  color: rgba(48, 33, 12, 0.70) !important;
+}
+
+body #services .service-card li::before {
+  background: #4E6B45 !important;
+  box-shadow: 0 0 0 0.22rem rgba(78, 107, 69, 0.12) !important;
+}
+
+body #services .service-card li::after {
+  border-color: #F7F1E3 !important;
+}
+
+body #services .service-card a {
+  color: #0B383D !important;
+}
+
+body #services .service-card a::after {
+  background:
+    linear-gradient(#0B383D, #0B383D) left 50% / 100% 2px no-repeat !important;
+}
+
+/* Minimal boutique luxury rebuild */
+:root {
+  --lux-cream: #DBD6C3;
+  --lux-paper: #F8F2E4;
+  --lux-paper-2: #EFE7D4;
+  --lux-sand: #C8BDA4;
+  --lux-taupe: #8F7757;
+  --lux-wood: #A1663F;
+  --lux-espresso: #30210C;
+  --lux-teal: #0B383D;
+  --lux-leaf: #4E6B45;
+  --lux-line: rgba(48, 33, 12, 0.14);
+  --lux-line-strong: rgba(48, 33, 12, 0.24);
+  --max: 1160px;
+  --radius: 6px;
+  --shadow: none;
+  --shadow-soft: none;
+}
+
+html {
+  background: var(--lux-paper) !important;
+}
+
+body {
+  background:
+    linear-gradient(180deg, var(--lux-paper) 0%, var(--lux-cream) 54%, var(--lux-paper-2) 100%) !important;
+  color: var(--lux-espresso) !important;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif !important;
+}
+
+body::before {
+  display: none !important;
+}
+
+.container {
+  width: min(100% - 2.25rem, var(--max)) !important;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--lux-espresso) !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+}
+
+h1 {
+  max-width: 880px !important;
+  font-size: 5rem !important;
+  line-height: 0.98 !important;
+}
+
+h2 {
+  max-width: 820px !important;
+  font-size: 3.05rem !important;
+  line-height: 1.04 !important;
+}
+
+h3 {
+  font-size: 1.45rem !important;
+  line-height: 1.18 !important;
+}
+
+p,
+li,
+.muted,
+.small-note,
+.hero-copy .lead,
+.section-heading p,
+.about-hero-copy .lead,
+.about-hero-copy p:not(.lead),
+.section-heading-left p,
+.founder-story-copy p,
+.about-fit-grid p,
+.about-cta-panel p,
+.privacy-section p,
+.privacy-section li,
+.privacy-hero p {
+  color: rgba(48, 33, 12, 0.68) !important;
+}
+
+.skip-link {
+  background: var(--lux-espresso) !important;
+  color: var(--lux-paper) !important;
+}
+
+.top-strip,
+.topbar {
+  display: none !important;
+}
+
+.site-header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+  border-bottom: 1px solid var(--lux-line) !important;
+  background: rgba(248, 242, 228, 0.88) !important;
+  box-shadow: none !important;
+  backdrop-filter: blur(18px) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
+}
+
+.nav,
+.nav-inner {
+  min-height: 82px !important;
+  display: grid !important;
+  grid-template-columns: auto 1fr !important;
+  align-items: center !important;
+  gap: 2rem !important;
+}
+
+.brand-logo,
+.site-header .brand {
+  align-items: center !important;
+  max-width: none !important;
+}
+
+.logo-img,
+.site-header .brand img,
+.site-header img[src="logo.png"] {
+  width: auto !important;
+  max-width: 150px !important;
+  height: 44px !important;
+  max-height: 44px !important;
+  object-fit: contain !important;
+  filter: none !important;
+  mix-blend-mode: multiply !important;
+}
+
+.nav-links,
+.nav-actions {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 1.05rem !important;
+}
+
+.nav-links a:not(.btn),
+.nav-actions a:not(.btn),
+.language-link,
+.lang-switch {
+  color: rgba(48, 33, 12, 0.72) !important;
+  font-size: 0.78rem !important;
+  font-weight: 760 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0 !important;
+}
+
+.nav-links a:not(.btn)::after {
+  bottom: -0.35rem !important;
+  height: 1px !important;
+  background: var(--lux-wood) !important;
+}
+
+.nav-links a:not(.btn):hover,
+.nav-actions a:not(.btn):hover,
+a:hover,
+a:focus-visible {
+  color: var(--lux-teal) !important;
+}
+
+.btn {
+  min-height: 46px !important;
+  border-radius: 999px !important;
+  padding: 0.86rem 1.15rem !important;
+  font-size: 0.86rem !important;
+  font-weight: 780 !important;
+  letter-spacing: 0 !important;
+  box-shadow: none !important;
+}
+
+.btn-primary {
+  color: var(--lux-paper) !important;
+  border: 1px solid var(--lux-espresso) !important;
+  background: var(--lux-espresso) !important;
+}
+
+.btn-primary:hover {
+  color: var(--lux-paper) !important;
+  background: var(--lux-teal) !important;
+  border-color: var(--lux-teal) !important;
+  box-shadow: none !important;
+}
+
+.btn-secondary,
+.btn-outline {
+  color: var(--lux-espresso) !important;
+  border: 1px solid var(--lux-line-strong) !important;
+  background: transparent !important;
+}
+
+.btn-secondary:hover,
+.btn-outline:hover {
+  color: var(--lux-espresso) !important;
+  border-color: var(--lux-espresso) !important;
+  background: rgba(219, 214, 195, 0.42) !important;
+}
+
+.btn:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: 3px solid rgba(11, 56, 61, 0.34) !important;
+  outline-offset: 3px !important;
+}
+
+.eyebrow,
+.section-kicker,
+.service-meta,
+.founder-card figcaption span,
+.principle-card span,
+.process-card strong {
+  border: 0 !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  color: var(--lux-taupe) !important;
+  background: transparent !important;
+  font-size: 0.76rem !important;
+  font-weight: 820 !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase !important;
+}
+
+.section,
+.hero,
+.hero.compact,
+.about-page .section {
+  position: relative !important;
+  overflow: visible !important;
+  padding: 7.2rem 0 !important;
+}
+
+.section-solid,
+.section-soft,
+body #services,
+.privacy-page {
+  background: transparent !important;
+}
+
+.section-transition {
+  display: none !important;
+}
+
+.hero,
+.hero.compact,
+.about-hero {
+  min-height: auto !important;
+  padding: 8.8rem 0 6.4rem !important;
+  background:
+    linear-gradient(180deg, rgba(248, 242, 228, 0.96), rgba(219, 214, 195, 0.52)),
+    url("bg-hero.jpg") center / cover no-repeat !important;
+}
+
+.hero::before,
+.about-hero::before,
+.founder-section::before,
+.about-cta::before {
+  display: none !important;
+}
+
+.hero-grid,
+.about-hero-grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 3.1rem !important;
+  align-items: start !important;
+}
+
+.hero-copy,
+.about-hero-copy {
+  max-width: 880px !important;
+  margin-inline: auto !important;
+  text-align: center !important;
+}
+
+.hero-copy h1,
+.about-hero-copy h1,
+body .about-page .about-hero-copy h1 {
+  margin-inline: auto !important;
+}
+
+.hero-copy .lead,
+.about-hero-copy .lead {
+  max-width: 680px !important;
+  margin: 0 auto 1.6rem !important;
+  font-size: 1.08rem !important;
+  line-height: 1.78 !important;
+}
+
+.hero-actions,
+.about-hero-actions,
+.card-actions {
+  justify-content: center !important;
+  margin: 1.7rem 0 1.35rem !important;
+}
+
+.hero-proof,
+.micro-trust {
+  justify-content: center !important;
+  gap: 1rem !important;
+}
+
+.hero-proof span,
+.micro-trust span,
+.booking-benefits li,
+.fit-list li {
+  border: 0 !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  color: rgba(48, 33, 12, 0.68) !important;
+  background: transparent !important;
+  font-size: 0.93rem !important;
+}
+
+.hero-proof span::before,
+.booking-benefits li::before,
+.feature-list li::before,
+.fit-list li::before {
+  background: var(--lux-leaf) !important;
+  box-shadow: none !important;
+}
+
+.hero-media {
+  max-width: 1040px !important;
+  width: 100% !important;
+  margin: 1.2rem auto 0 !important;
+}
+
+.hero-media::before {
+  display: none !important;
+}
+
+.image-frame,
+.founder-card {
+  overflow: hidden !important;
+  border: 1px solid var(--lux-line) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.image-frame img {
+  height: 430px !important;
+  object-fit: cover !important;
+}
+
+.image-frame::after {
+  display: none !important;
+}
+
+.floating-badge {
+  position: static !important;
+  display: block !important;
+  border: 0 !important;
+  border-top: 1px solid var(--lux-line) !important;
+  border-radius: 0 !important;
+  padding: 1.15rem 0 0 !important;
+  margin: 1.15rem 1.2rem 1.2rem !important;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.floating-badge strong,
+.floating-badge span {
+  color: var(--lux-espresso) !important;
+}
+
+.floating-badge span {
+  display: block !important;
+  margin-top: 0.25rem !important;
+  color: rgba(48, 33, 12, 0.62) !important;
+}
+
+.section-heading {
+  max-width: 820px !important;
+  margin: 0 auto 3rem !important;
+  text-align: center !important;
+}
+
+.section-heading.centered {
+  margin-inline: auto !important;
+}
+
+.section-heading p {
+  max-width: 650px !important;
+  margin-inline: auto !important;
+  font-size: 1.02rem !important;
+  line-height: 1.75 !important;
+}
+
+.glass-card,
+.service-card,
+.info-card,
+.process-card,
+.faq-card,
+.cta-card,
+.booking-card,
+.contact-card,
+.principle-card,
+.about-service-card,
+.experience-panel,
+.about-cta-panel,
+.privacy-card,
+.privacy-contact-box {
+  border: 1px solid var(--lux-line) !important;
+  border-radius: 0 !important;
+  background: rgba(248, 242, 228, 0.56) !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.glass-card::before {
+  display: none !important;
+}
+
+.service-card:hover,
+.info-card:hover,
+.principle-card:hover,
+.about-service-card:hover,
+body #services .service-card:hover {
+  transform: none !important;
+  border-color: var(--lux-line-strong) !important;
+  background: rgba(248, 242, 228, 0.74) !important;
+  box-shadow: none !important;
+}
+
+.services-grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 0 !important;
+  max-width: 1080px !important;
+  margin-inline: auto !important;
+}
+
+body #services > .container {
+  width: min(100% - 2.25rem, 1160px) !important;
+  max-width: 1160px !important;
+}
+
+body #services .service-card {
+  display: grid !important;
+  grid-template-columns: minmax(220px, 0.36fr) minmax(0, 1fr) !important;
+  min-height: 0 !important;
+  border: 0 !important;
+  border-top: 1px solid var(--lux-line) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body #services .service-card:last-child {
+  border-bottom: 1px solid var(--lux-line) !important;
+}
+
+body #services .service-card img {
+  width: 100% !important;
+  height: 260px !important;
+  border: 0 !important;
+  object-fit: cover !important;
+}
+
+body #services .service-card > div,
+body #services .service-card .service-card-body,
+body #services .service-content {
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 2.2rem 0 2.2rem 2.4rem !important;
+}
+
+body #services .service-card span,
+body #services .service-card [class*="tag"],
+body #services .service-card [class*="badge"],
+body #services .service-card [class*="label"],
+body #services .service-card [class*="eyebrow"] {
+  display: inline-flex !important;
+}
+
+body #services .service-card h3 {
+  margin: 0 0 0.7rem !important;
+  color: var(--lux-espresso) !important;
+  font-size: 1.72rem !important;
+}
+
+body #services .service-card h3::before,
+body #services .service-card h3::after {
+  display: none !important;
+  content: none !important;
+}
+
+body #services .service-card p,
+body #services .service-card .service-summary,
+body #services .service-card ul::before {
+  max-width: 46rem !important;
+  margin: 0 0 1.05rem !important;
+  padding: 0 !important;
+  border: 0 !important;
+  color: rgba(48, 33, 12, 0.68) !important;
+  font-size: 1rem !important;
+  line-height: 1.68 !important;
+}
+
+body #services .service-card ul {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 0.62rem 1.2rem !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+body #services .service-card li {
+  padding-left: 1.05rem !important;
+  color: rgba(48, 33, 12, 0.64) !important;
+  font-size: 0.94rem !important;
+  line-height: 1.45 !important;
+}
+
+body #services .service-card li::before {
+  top: 0.62em !important;
+  width: 0.36rem !important;
+  height: 0.36rem !important;
+  background: var(--lux-leaf) !important;
+  box-shadow: none !important;
+}
+
+body #services .service-card li::after {
+  display: none !important;
+}
+
+.service-link,
+body #services .service-card a,
+.about-service-card a,
+.founder-linkedin,
+.form-consent a {
+  color: var(--lux-teal) !important;
+  font-weight: 780 !important;
+  text-decoration: underline !important;
+  text-decoration-color: rgba(11, 56, 61, 0.28) !important;
+  text-underline-offset: 0.24rem !important;
+}
+
+.service-link::after,
+body #services .service-card a::after {
+  display: none !important;
+}
+
+.card-grid,
+.process-grid,
+.faq-grid,
+.about-principles-grid,
+.about-services-grid {
+  display: grid !important;
+  gap: 1px !important;
+  border: 1px solid var(--lux-line) !important;
+  background: var(--lux-line) !important;
+}
+
+.card-grid.three,
+.process-grid,
+.about-principles-grid {
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+
+.card-grid.two,
+.faq-grid {
+  grid-template-columns: repeat(2, 1fr) !important;
+}
+
+.about-services-grid {
+  grid-template-columns: repeat(4, 1fr) !important;
+}
+
+.info-card,
+.process-card,
+.faq-card,
+.principle-card,
+.about-service-card {
+  min-height: 100% !important;
+  border: 0 !important;
+  padding: 1.75rem !important;
+  background: rgba(248, 242, 228, 0.86) !important;
+}
+
+.process-card {
+  min-height: 250px !important;
+}
+
+.process-card::after {
+  right: 1.2rem !important;
+  bottom: 0.85rem !important;
+  color: rgba(143, 119, 87, 0.12) !important;
+  font-size: 5.4rem !important;
+}
+
+.split-grid,
+.booking-layout,
+.founder-story-grid,
+.about-fit-grid {
+  display: grid !important;
+  grid-template-columns: minmax(0, 0.92fr) minmax(360px, 1.08fr) !important;
+  gap: 4.5rem !important;
+  align-items: start !important;
+}
+
+.cta-card,
+.booking-card,
+.contact-card,
+.about-cta-panel {
+  padding: 2.4rem !important;
+}
+
+.booking-layout {
+  align-items: stretch !important;
+}
+
+.booking-benefits {
+  grid-template-columns: 1fr !important;
+  gap: 0.7rem !important;
+  margin: 1.45rem 0 !important;
+}
+
+.booking-benefits li {
+  min-height: 0 !important;
+  padding-left: 1rem !important;
+}
+
+.form-grid {
+  gap: 1rem !important;
+}
+
+label {
+  color: var(--lux-espresso) !important;
+  font-size: 0.86rem !important;
+}
+
+input,
+textarea {
+  border: 0 !important;
+  border-bottom: 1px solid var(--lux-line-strong) !important;
+  border-radius: 0 !important;
+  padding: 0.9rem 0 !important;
+  background: transparent !important;
+  color: var(--lux-espresso) !important;
+  box-shadow: none !important;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--lux-teal) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(48, 33, 12, 0.42) !important;
+}
+
+.about-page .section-heading-left {
+  max-width: 760px !important;
+  margin: 0 0 2.6rem !important;
+  text-align: left !important;
+}
+
+.founder-card {
+  max-width: 430px !important;
+  justify-self: center !important;
+}
+
+.founder-card figcaption {
+  padding: 1.4rem !important;
+}
+
+.founder-photo-shell {
+  background: var(--lux-cream) !important;
+}
+
+.experience-panel {
+  display: grid !important;
+  background: transparent !important;
+}
+
+.experience-panel div {
+  border-bottom: 1px solid var(--lux-line) !important;
+}
+
+.experience-panel strong {
+  color: var(--lux-espresso) !important;
+  font-size: 2.2rem !important;
+}
+
+.fit-list {
+  gap: 0 !important;
+  border-top: 1px solid var(--lux-line) !important;
+}
+
+.fit-list li {
+  border-bottom: 1px solid var(--lux-line) !important;
+  padding: 1rem 0 1rem 1.3rem !important;
+}
+
+.about-cta-panel {
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  border-color: var(--lux-line-strong) !important;
+  background: rgba(48, 33, 12, 0.04) !important;
+}
+
+.privacy-hero {
+  padding: 7rem 0 3.5rem !important;
+}
+
+.privacy-card {
+  max-width: 920px !important;
+  background: rgba(248, 242, 228, 0.78) !important;
+}
+
+.site-footer,
+.compact-footer {
+  border-top: 1px solid rgba(219, 214, 195, 0.16) !important;
+  background: var(--lux-espresso) !important;
+}
+
+.footer-inner,
+.about-footer-inner,
+.compact-footer-inner {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  gap: 2rem !important;
+  align-items: start !important;
+  padding: 2.3rem 0 !important;
+}
+
+.site-footer,
+.site-footer p,
+.site-footer span,
+.footer-brand span,
+.compact-footer p,
+.site-footer a,
+.footer-links a,
+.footer-nav a,
+.footer-legal a {
+  color: rgba(248, 242, 228, 0.78) !important;
+}
+
+.footer-brand strong,
+.compact-footer strong {
+  color: var(--lux-paper) !important;
+}
+
+.footer-links,
+.footer-nav,
+.about-footer-links {
+  justify-content: flex-end !important;
+  gap: 1rem !important;
+}
+
+.footer-socials a {
+  border-color: rgba(248, 242, 228, 0.22) !important;
+  color: var(--lux-paper) !important;
+  background: transparent !important;
+}
+
+@media (max-width: 1120px) {
+  h1 {
+    font-size: 4rem !important;
+  }
+
+  h2 {
+    font-size: 2.55rem !important;
+  }
+
+  .split-grid,
+  .booking-layout,
+  .founder-story-grid,
+  .about-fit-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.6rem !important;
+  }
+
+  body #services .service-card {
+    grid-template-columns: minmax(180px, 0.34fr) minmax(0, 1fr) !important;
+  }
+}
+
+@media (max-width: 860px) {
+  .nav,
+  .nav-inner {
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    gap: 1rem !important;
+    padding: 1rem 0 !important;
+  }
+
+  .nav-links,
+  .nav-actions {
+    justify-content: center !important;
+  }
+
+  .section,
+  .hero,
+  .hero.compact,
+  .about-page .section {
+    padding: 5rem 0 !important;
+  }
+
+  .hero,
+  .hero.compact,
+  .about-hero {
+    padding-top: 6rem !important;
+  }
+
+  body #services .service-card,
+  .card-grid.three,
+  .card-grid.two,
+  .process-grid,
+  .faq-grid,
+  .about-principles-grid,
+  .about-services-grid,
+  .footer-inner,
+  .about-footer-inner,
+  .compact-footer-inner,
+  .about-cta-panel {
+    grid-template-columns: 1fr !important;
+  }
+
+  body #services .service-card > div,
+  body #services .service-card .service-card-body,
+  body #services .service-content {
+    padding: 1.45rem 0 2rem !important;
+  }
+
+  body #services .service-card img,
+  .image-frame img {
+    height: 300px !important;
+  }
+
+  .footer-links,
+  .footer-nav,
+  .about-footer-links {
+    justify-content: flex-start !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: min(100% - 1.35rem, var(--max)) !important;
+  }
+
+  h1,
+  body .about-page .about-hero-copy h1 {
+    max-width: 100% !important;
+    font-size: 3rem !important;
+    line-height: 1.02 !important;
+  }
+
+  h2,
+  .booking-card h2,
+  .contact-card h2 {
+    font-size: 2.1rem !important;
+  }
+
+  .hero-copy .lead,
+  .about-hero-copy .lead {
+    font-size: 1rem !important;
+  }
+
+  .hero-actions,
+  .about-hero-actions,
+  .card-actions,
+  .hero-actions .btn,
+  .about-hero-actions .btn,
+  .booking-card .btn,
+  .contact-card .btn,
+  .cta-card .btn {
+    width: 100% !important;
+  }
+
+  .hero-proof,
+  .micro-trust {
+    display: grid !important;
+    gap: 0.55rem !important;
+  }
+
+  body #services .service-card ul {
+    grid-template-columns: 1fr !important;
+  }
+
+  .info-card,
+  .process-card,
+  .faq-card,
+  .principle-card,
+  .about-service-card,
+  .cta-card,
+  .booking-card,
+  .contact-card,
+  .about-cta-panel {
+    padding: 1.25rem !important;
+  }
+}
+
+/* Final boho lock for late service overrides */
+body #services {
+  background:
+    radial-gradient(circle at 10% 0%, rgba(161, 102, 63, 0.12), transparent 28rem),
+    linear-gradient(180deg, #F6F0DF 0%, #DBD6C3 100%) !important;
+}
+
+body #services .section-heading p {
+  color: rgba(48, 33, 12, 0.72) !important;
+}
+
+body #services .service-card {
+  min-height: 0 !important;
+  border-color: rgba(143, 119, 87, 0.22) !important;
+  background:
+    linear-gradient(150deg, rgba(255, 250, 235, 0.90), rgba(231, 222, 199, 0.80)),
+    rgba(247, 241, 227, 0.86) !important;
+  box-shadow: 0 22px 54px rgba(48, 33, 12, 0.14) !important;
+}
+
+body #services .service-card:hover {
+  border-color: rgba(143, 119, 87, 0.38) !important;
+  box-shadow: 0 28px 68px rgba(48, 33, 12, 0.18) !important;
+}
+
+body #services .service-card h3 {
+  margin: 0 0 0.75rem !important;
+  color: #30210C !important;
+}
+
+body #services .service-card h3::before,
+body #services .service-card h3::after {
+  display: none !important;
+  content: none !important;
+}
+
+body #services .service-card p,
+body #services .service-card .service-summary,
+body #services .service-card ul::before {
+  color: rgba(48, 33, 12, 0.78) !important;
+}
+
+body #services .service-card ul,
+body #services .service-card .service-summary {
+  border-color: rgba(143, 119, 87, 0.18) !important;
+}
+
+body #services .service-card li {
+  color: rgba(48, 33, 12, 0.70) !important;
+}
+
+body #services .service-card li::before {
+  background: #4E6B45 !important;
+  box-shadow: 0 0 0 0.22rem rgba(78, 107, 69, 0.12) !important;
+}
+
+body #services .service-card li::after {
+  border-color: #F7F1E3 !important;
+}
+
+body #services .service-card a {
+  color: #0B383D !important;
+}
+
+body #services .service-card a::after {
+  background:
+    linear-gradient(#0B383D, #0B383D) left 50% / 100% 2px no-repeat !important;
+}
+
+/* Warm luxury boutique palette refresh */
+:root {
+  --boutique-teal: #0B383D;
+  --boutique-cream: #DBD6C3;
+  --boutique-taupe: #8F7757;
+  --boutique-espresso: #30210C;
+  --boutique-cream-light: #F5F0E1;
+  --boutique-ink: #211607;
+}
+
+body {
+  background:
+    linear-gradient(135deg, rgba(48, 33, 12, 0.98) 0%, rgba(11, 56, 61, 0.94) 48%, rgba(48, 33, 12, 0.98) 100%),
+    linear-gradient(180deg, var(--boutique-espresso) 0%, var(--boutique-teal) 100%) !important;
+  color: var(--boutique-cream-light) !important;
+}
+
+body::before {
+  opacity: 0.22 !important;
+  background-image:
+    linear-gradient(rgba(219, 214, 195, 0.032) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(219, 214, 195, 0.032) 1px, transparent 1px) !important;
+  background-size: 96px 96px !important;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.46), transparent 86%) !important;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--boutique-cream-light) !important;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+}
+
+p,
+li,
+.muted,
+.small-note,
+.hero-copy .lead,
+.section-heading p,
+.about-hero-copy .lead,
+.about-hero-copy p:not(.lead),
+.section-heading-left p,
+.founder-story-copy p,
+.about-fit-grid p,
+.about-cta-panel p,
+.privacy-section p,
+.privacy-section li,
+.privacy-hero p {
+  color: rgba(219, 214, 195, 0.84) !important;
+}
+
+a:hover,
+a:focus-visible,
+.footer-links a:hover,
+.top-strip a:hover,
+.footer-nav a:hover,
+.footer-nav a:focus-visible,
+.footer-legal a:hover,
+.footer-legal a:focus-visible {
+  color: var(--boutique-cream) !important;
+}
+
+.skip-link {
+  background: var(--boutique-cream) !important;
+  color: var(--boutique-espresso) !important;
+}
+
+.eyebrow,
+.section-kicker,
+.service-meta,
+.founder-card figcaption span,
+.principle-card span {
+  border-color: rgba(143, 119, 87, 0.58) !important;
+  color: var(--boutique-cream) !important;
+  background: rgba(48, 33, 12, 0.58) !important;
+  letter-spacing: 0 !important;
+}
+
+.btn:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline-color: rgba(219, 214, 195, 0.76) !important;
+}
+
+.btn-primary {
+  color: var(--boutique-espresso) !important;
+  border-color: rgba(219, 214, 195, 0.68) !important;
+  background:
+    linear-gradient(135deg, #F7F1E3 0%, var(--boutique-cream) 48%, var(--boutique-taupe) 100%) !important;
+  box-shadow: 0 16px 42px rgba(48, 33, 12, 0.36), inset 0 1px 0 rgba(255, 255, 255, 0.32) !important;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 20px 54px rgba(48, 33, 12, 0.44), inset 0 1px 0 rgba(255, 255, 255, 0.38) !important;
+}
+
+.btn-secondary,
+.btn-outline {
+  color: var(--boutique-cream-light) !important;
+  border-color: rgba(219, 214, 195, 0.42) !important;
+  background: rgba(48, 33, 12, 0.38) !important;
+}
+
+.btn-secondary:hover,
+.btn-outline:hover {
+  border-color: rgba(219, 214, 195, 0.74) !important;
+  background: rgba(143, 119, 87, 0.20) !important;
+}
+
+.top-strip,
+.topbar {
+  border-bottom-color: rgba(219, 214, 195, 0.14) !important;
+  background: rgba(34, 23, 8, 0.92) !important;
+}
+
+.top-strip a,
+.top-strip span,
+.topbar a,
+.topbar span {
+  color: rgba(245, 240, 225, 0.88) !important;
+}
+
+.site-header {
+  border-bottom-color: rgba(219, 214, 195, 0.14) !important;
+  background: rgba(48, 33, 12, 0.86) !important;
+  box-shadow: 0 14px 36px rgba(18, 12, 4, 0.30) !important;
+}
+
+.logo-img,
+.site-header .brand img,
+.site-header img[src="logo.png"] {
+  mix-blend-mode: normal !important;
+  filter: drop-shadow(0 12px 22px rgba(18, 12, 4, 0.36)) !important;
+}
+
+.nav-links a:not(.btn),
+.nav-actions a:not(.btn),
+.footer-links,
+.footer-links a,
+.footer-nav a,
+.footer-legal a {
+  color: rgba(245, 240, 225, 0.86) !important;
+  letter-spacing: 0 !important;
+}
+
+.nav-links a:not(.btn)::after {
+  background: var(--boutique-cream) !important;
+}
+
+.nav-links a:not(.btn):hover,
+.nav-actions a:not(.btn):hover {
+  color: var(--boutique-cream-light) !important;
+}
+
+.section-solid,
+body #services {
+  background:
+    linear-gradient(180deg, rgba(48, 33, 12, 0.94), rgba(11, 56, 61, 0.92)),
+    linear-gradient(135deg, var(--boutique-espresso), var(--boutique-teal)) !important;
+}
+
+.section-soft {
+  background:
+    linear-gradient(180deg, rgba(48, 33, 12, 0.88), rgba(11, 56, 61, 0.86)),
+    url("bg-soft.jpg") center / cover no-repeat !important;
+}
+
+.section-transition {
+  background: linear-gradient(90deg, transparent, rgba(219, 214, 195, 0.32), transparent) !important;
+}
+
+.hero,
+.hero.compact,
+.about-hero {
+  background:
+    linear-gradient(90deg, rgba(48, 33, 12, 0.94) 0%, rgba(48, 33, 12, 0.68) 52%, rgba(11, 56, 61, 0.84) 100%),
+    linear-gradient(180deg, rgba(48, 33, 12, 0.46), rgba(48, 33, 12, 0.92)),
+    url("bg-hero.jpg") center / cover no-repeat !important;
+}
+
+.hero::before,
+.about-hero::before,
+.founder-section::before,
+.about-cta::before {
+  background:
+    linear-gradient(180deg, transparent 60%, rgba(48, 33, 12, 0.96) 100%),
+    linear-gradient(120deg, rgba(143, 119, 87, 0.16), transparent 52%) !important;
+  opacity: 1 !important;
+}
+
+.hero-media::before {
+  background: linear-gradient(135deg, rgba(143, 119, 87, 0.30), rgba(11, 56, 61, 0.12), transparent) !important;
+}
+
+.hero-proof span,
+.micro-trust span,
+.booking-benefits li,
+.fit-list li {
+  border-color: rgba(219, 214, 195, 0.16) !important;
+  color: rgba(245, 240, 225, 0.88) !important;
+  background: rgba(48, 33, 12, 0.34) !important;
+}
+
+.hero-proof span::before,
+.booking-benefits li::before,
+.feature-list li::before,
+.fit-list li::before {
+  background: var(--boutique-taupe) !important;
+  box-shadow: 0 0 0 0.22rem rgba(219, 214, 195, 0.10), 0 0 22px rgba(143, 119, 87, 0.34) !important;
+}
+
+.glass-card,
+.service-card,
+.info-card,
+.process-card,
+.faq-card,
+.cta-card,
+.booking-card,
+.contact-card,
+.founder-card,
+.principle-card,
+.about-service-card,
+.experience-panel,
+.about-cta-panel,
+.privacy-card,
+.privacy-contact-box {
+  border-color: rgba(219, 214, 195, 0.18) !important;
+  border-radius: var(--radius) !important;
+  background:
+    linear-gradient(150deg, rgba(48, 33, 12, 0.82), rgba(11, 56, 61, 0.70)),
+    rgba(48, 33, 12, 0.74) !important;
+  box-shadow: 0 24px 64px rgba(18, 12, 4, 0.34) !important;
+}
+
+.glass-card::before {
+  background: linear-gradient(135deg, rgba(219, 214, 195, 0.10), transparent 28%) !important;
+}
+
+.service-card:hover,
+.info-card:hover,
+.principle-card:hover,
+.about-service-card:hover,
+body #services .service-card:hover {
+  border-color: rgba(219, 214, 195, 0.36) !important;
+  background:
+    linear-gradient(150deg, rgba(58, 40, 15, 0.90), rgba(11, 56, 61, 0.76)),
+    rgba(48, 33, 12, 0.82) !important;
+  box-shadow: 0 30px 78px rgba(18, 12, 4, 0.42) !important;
+}
+
+.image-frame {
+  border-color: rgba(219, 214, 195, 0.20) !important;
+  background: var(--boutique-espresso) !important;
+  box-shadow: 0 28px 78px rgba(18, 12, 4, 0.44) !important;
+}
+
+.image-frame::after {
+  background:
+    linear-gradient(180deg, transparent 42%, rgba(48, 33, 12, 0.78) 100%),
+    linear-gradient(90deg, rgba(48, 33, 12, 0.24), transparent 48%) !important;
+}
+
+.floating-badge {
+  border-color: rgba(219, 214, 195, 0.18) !important;
+  background: rgba(48, 33, 12, 0.76) !important;
+}
+
+.floating-badge strong,
+.footer-brand strong,
+.compact-footer strong,
+.founder-card figcaption strong,
+.principle-card h3,
+.about-service-card h3,
+.privacy-section h2 {
+  color: var(--boutique-cream-light) !important;
+}
+
+.floating-badge span,
+.founder-card figcaption p,
+.principle-card p,
+.about-service-card p,
+.experience-panel span,
+.compact-footer p,
+.footer-brand span {
+  color: rgba(219, 214, 195, 0.78) !important;
+}
+
+.service-card-primary,
+.cta-card,
+.booking-card,
+body #services .service-card {
+  border-color: rgba(143, 119, 87, 0.42) !important;
+  background:
+    linear-gradient(180deg, rgba(69, 48, 18, 0.90), rgba(11, 56, 61, 0.86)),
+    rgba(48, 33, 12, 0.86) !important;
+}
+
+body #services .service-card h3,
+body #services .service-card p,
+body #services .service-card .service-summary,
+body #services .service-card ul::before {
+  color: rgba(245, 240, 225, 0.92) !important;
+}
+
+body #services .service-card h3 {
+  margin: 0 0 0.75rem !important;
+}
+
+body #services .service-card h3::before,
+body #services .service-card h3::after {
+  display: none !important;
+  content: none !important;
+}
+
+body #services .service-card ul,
+body #services .service-card .service-summary {
+  border-color: rgba(219, 214, 195, 0.16) !important;
+}
+
+body #services .service-card li {
+  color: rgba(219, 214, 195, 0.84) !important;
+}
+
+body #services .service-card li::before {
+  background: linear-gradient(135deg, var(--boutique-cream), var(--boutique-taupe)) !important;
+  box-shadow: 0 0 0 0.22rem rgba(219, 214, 195, 0.10) !important;
+}
+
+body #services .service-card li::after {
+  border-color: var(--boutique-espresso) !important;
+}
+
+.service-link,
+body #services .service-card a,
+.about-service-card a,
+.founder-linkedin,
+.form-consent a {
+  color: var(--boutique-cream) !important;
+  text-decoration-color: rgba(219, 214, 195, 0.44) !important;
+}
+
+.service-link::after,
+body #services .service-card a::after {
+  color: var(--boutique-cream) !important;
+  background:
+    linear-gradient(var(--boutique-cream), var(--boutique-cream)) left 50% / 100% 2px no-repeat !important;
+}
+
+.process-card::after {
+  color: rgba(219, 214, 195, 0.08) !important;
+}
+
+.process-card strong {
+  border-color: rgba(143, 119, 87, 0.42) !important;
+  color: var(--boutique-cream) !important;
+  background: rgba(48, 33, 12, 0.40) !important;
+  letter-spacing: 0 !important;
+}
+
+label {
+  color: var(--boutique-cream-light) !important;
+}
+
+input,
+textarea {
+  border-color: rgba(219, 214, 195, 0.18) !important;
+  background: rgba(48, 33, 12, 0.34) !important;
+  color: var(--boutique-cream-light) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(219, 214, 195, 0.54) !important;
+}
+
+input:focus,
+textarea:focus {
+  border-color: rgba(219, 214, 195, 0.58) !important;
+  background: rgba(48, 33, 12, 0.46) !important;
+  box-shadow: 0 0 0 4px rgba(219, 214, 195, 0.10) !important;
+}
+
+.site-footer,
+.compact-footer {
+  border-top-color: rgba(219, 214, 195, 0.14) !important;
+  background: rgba(34, 23, 8, 0.94) !important;
+}
+
+.footer-socials a {
+  border-color: rgba(219, 214, 195, 0.22) !important;
+  color: rgba(245, 240, 225, 0.90) !important;
+  background: rgba(48, 33, 12, 0.44) !important;
+}
+
+.footer-socials a:hover,
+.footer-socials a:focus-visible {
+  border-color: rgba(219, 214, 195, 0.58) !important;
+  color: var(--boutique-cream) !important;
+  background: rgba(143, 119, 87, 0.22) !important;
+}
+
+.privacy-page {
+  background:
+    linear-gradient(180deg, rgba(48, 33, 12, 0.94), rgba(11, 56, 61, 0.92)),
+    url("bg-soft.jpg") center / cover fixed !important;
+}
+
+.privacy-card,
+.privacy-section + .privacy-section,
+.privacy-contact-box,
+.experience-panel div {
+  border-color: rgba(219, 214, 195, 0.16) !important;
+}
+
+.form-consent,
+.footer-legal a {
+  color: rgba(219, 214, 195, 0.72) !important;
 }
 
 /* Services section final refinement */
@@ -988,9 +3265,9 @@ body #services .service-card h3::after {
   border: 0;
   transform: none;
   background:
-    linear-gradient(#72d6ff, #72d6ff) 0 0 / 70% 2px no-repeat,
-    linear-gradient(#72d6ff, #72d6ff) 0 50% / 100% 2px no-repeat,
-    linear-gradient(#72d6ff, #72d6ff) 0 100% / 55% 2px no-repeat;
+    linear-gradient(#0B383D, #0B383D) 0 0 / 70% 2px no-repeat,
+    linear-gradient(#0B383D, #0B383D) 0 50% / 100% 2px no-repeat,
+    linear-gradient(#0B383D, #0B383D) 0 100% / 55% 2px no-repeat;
 }
 
 body #services .service-card:nth-child(2) h3::after {
@@ -999,12 +3276,12 @@ body #services .service-card:nth-child(2) h3::after {
   width: 1.25rem;
   height: 1.25rem;
   background:
-    linear-gradient(#72d6ff, #72d6ff) 0 100% / 100% 2px no-repeat,
-    linear-gradient(#72d6ff, #72d6ff) 0 78% / 2px 22% no-repeat,
-    linear-gradient(#72d6ff, #72d6ff) 42% 55% / 2px 45% no-repeat,
-    linear-gradient(#72d6ff, #72d6ff) 84% 22% / 2px 78% no-repeat,
-    linear-gradient(#72d6ff, #72d6ff) 0 78% / 42% 2px no-repeat,
-    linear-gradient(#72d6ff, #72d6ff) 42% 55% / 42% 2px no-repeat;
+    linear-gradient(#0B383D, #0B383D) 0 100% / 100% 2px no-repeat,
+    linear-gradient(#0B383D, #0B383D) 0 78% / 2px 22% no-repeat,
+    linear-gradient(#0B383D, #0B383D) 42% 55% / 2px 45% no-repeat,
+    linear-gradient(#0B383D, #0B383D) 84% 22% / 2px 78% no-repeat,
+    linear-gradient(#0B383D, #0B383D) 0 78% / 42% 2px no-repeat,
+    linear-gradient(#0B383D, #0B383D) 42% 55% / 42% 2px no-repeat;
 }
 
 body #services .service-card:nth-child(3) h3::after {
@@ -1012,11 +3289,11 @@ body #services .service-card:nth-child(3) h3::after {
   left: 0.95rem;
   width: 1.45rem;
   height: 1.15rem;
-  border: 2px solid #72d6ff;
+  border: 2px solid #0B383D;
   border-top: 0;
   border-radius: 0 0 1rem 1rem;
   background:
-    radial-gradient(circle at 50% 0.05rem, #72d6ff 0 0.22rem, transparent 0.24rem);
+    radial-gradient(circle at 50% 0.05rem, #0B383D 0 0.22rem, transparent 0.24rem);
 }
 
 body #services .service-card:nth-child(4) h3::after {
@@ -1024,12 +3301,12 @@ body #services .service-card:nth-child(4) h3::after {
   left: 1.02rem;
   width: 1.25rem;
   height: 1.25rem;
-  border: 2px solid #72d6ff;
+  border: 2px solid #0B383D;
   border-radius: 0.15rem;
   transform: none;
   background:
-    linear-gradient(#72d6ff, #72d6ff) 50% 32% / 54% 2px no-repeat,
-    linear-gradient(#72d6ff, #72d6ff) 50% 58% / 54% 2px no-repeat;
+    linear-gradient(#0B383D, #0B383D) 50% 32% / 54% 2px no-repeat,
+    linear-gradient(#0B383D, #0B383D) 50% 58% / 54% 2px no-repeat;
 }
 
 body #services .service-card p {
@@ -1173,7 +3450,7 @@ body #services .service-card a:nth-of-type(n+2) {
 .footer-socials a:hover,
 .footer-socials a:focus-visible {
   border-color: rgba(126, 227, 255, 0.58);
-  color: #86e6ff;
+  color: #DBD6C3;
   background: rgba(28, 88, 128, 0.42);
 }
 
@@ -1187,7 +3464,7 @@ body #services .service-card a:nth-of-type(n+2) {
   display: inline-flex;
   width: fit-content;
   margin-top: 1rem;
-  color: #86e6ff;
+  color: #DBD6C3;
   font-weight: 800;
   text-decoration: none;
 }
@@ -1285,7 +3562,7 @@ body #services .service-card a:nth-of-type(n+2) {
 }
 
 .form-consent a {
-  color: #86e6ff;
+  color: #0B383D;
   font-weight: 800;
   text-decoration: underline;
   text-underline-offset: 0.2em;
@@ -1325,7 +3602,7 @@ body #services .service-card a:nth-of-type(n+2) {
 
 .footer-legal a:hover,
 .footer-legal a:focus-visible {
-  color: #86e6ff;
+  color: #0B383D;
   text-decoration: underline;
   text-underline-offset: 0.25em;
 }
@@ -1334,6 +3611,376 @@ body #services .service-card a:nth-of-type(n+2) {
   .footer-legal {
     justify-content: flex-start;
   }
+}
+
+/* Warm boho cream correction */
+:root {
+  --boho-cream: #DBD6C3;
+  --boho-cream-soft: #F1EAD8;
+  --boho-linen: #F7F1E3;
+  --boho-sand: #C9BFA5;
+  --boho-taupe: #8F7757;
+  --boho-wood: #A1663F;
+  --boho-espresso: #30210C;
+  --boho-teal: #0B383D;
+  --boho-leaf: #4E6B45;
+}
+
+body {
+  background:
+    radial-gradient(circle at 12% 4%, rgba(255, 250, 234, 0.72), transparent 28rem),
+    radial-gradient(circle at 92% 8%, rgba(161, 102, 63, 0.16), transparent 24rem),
+    linear-gradient(180deg, var(--boho-linen) 0%, var(--boho-cream) 46%, #D1C5AB 100%) !important;
+  color: var(--boho-espresso) !important;
+}
+
+body::before {
+  opacity: 0.24 !important;
+  background-image:
+    linear-gradient(rgba(48, 33, 12, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(48, 33, 12, 0.028) 1px, transparent 1px) !important;
+  background-size: 104px 104px !important;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.32), transparent 82%) !important;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--boho-espresso) !important;
+}
+
+p,
+li,
+.muted,
+.small-note,
+.hero-copy .lead,
+.section-heading p,
+.about-hero-copy .lead,
+.about-hero-copy p:not(.lead),
+.section-heading-left p,
+.founder-story-copy p,
+.about-fit-grid p,
+.about-cta-panel p,
+.privacy-section p,
+.privacy-section li,
+.privacy-hero p {
+  color: rgba(48, 33, 12, 0.72) !important;
+}
+
+.top-strip,
+.topbar {
+  border-bottom-color: rgba(143, 119, 87, 0.22) !important;
+  background: rgba(48, 33, 12, 0.92) !important;
+}
+
+.top-strip a,
+.top-strip span,
+.topbar a,
+.topbar span {
+  color: rgba(247, 241, 227, 0.9) !important;
+}
+
+.site-header {
+  border-bottom-color: rgba(143, 119, 87, 0.22) !important;
+  background: rgba(247, 241, 227, 0.88) !important;
+  box-shadow: 0 14px 34px rgba(48, 33, 12, 0.10) !important;
+}
+
+.nav-links a:not(.btn),
+.nav-actions a:not(.btn),
+.footer-links,
+.footer-links a,
+.footer-nav a,
+.footer-legal a {
+  color: rgba(48, 33, 12, 0.76) !important;
+}
+
+.nav-links a:not(.btn)::after {
+  background: var(--boho-wood) !important;
+}
+
+.nav-links a:not(.btn):hover,
+.nav-actions a:not(.btn):hover,
+a:hover,
+a:focus-visible {
+  color: var(--boho-teal) !important;
+}
+
+.eyebrow,
+.section-kicker,
+.service-meta,
+.founder-card figcaption span,
+.principle-card span,
+.process-card strong {
+  border-color: rgba(143, 119, 87, 0.36) !important;
+  color: var(--boho-espresso) !important;
+  background: rgba(219, 214, 195, 0.58) !important;
+}
+
+.btn-primary {
+  color: #FFF9EA !important;
+  border-color: rgba(48, 33, 12, 0.10) !important;
+  background: linear-gradient(135deg, #A66B42 0%, var(--boho-taupe) 58%, #6D5639 100%) !important;
+  box-shadow: 0 16px 34px rgba(143, 119, 87, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.22) !important;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 20px 44px rgba(143, 119, 87, 0.30), inset 0 1px 0 rgba(255, 255, 255, 0.28) !important;
+}
+
+.btn-secondary,
+.btn-outline {
+  color: var(--boho-espresso) !important;
+  border-color: rgba(143, 119, 87, 0.38) !important;
+  background: rgba(247, 241, 227, 0.62) !important;
+}
+
+.btn-secondary:hover,
+.btn-outline:hover {
+  border-color: rgba(48, 33, 12, 0.28) !important;
+  background: rgba(219, 214, 195, 0.82) !important;
+}
+
+.btn:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline-color: rgba(78, 107, 69, 0.62) !important;
+}
+
+.section-solid,
+body #services {
+  background:
+    radial-gradient(circle at 12% 0%, rgba(161, 102, 63, 0.12), transparent 28rem),
+    linear-gradient(180deg, #F6F0DF 0%, var(--boho-cream) 100%) !important;
+}
+
+.section-soft {
+  background:
+    linear-gradient(180deg, rgba(247, 241, 227, 0.90), rgba(219, 214, 195, 0.88)),
+    url("bg-soft.jpg") center / cover no-repeat !important;
+}
+
+.section-transition {
+  background: linear-gradient(90deg, transparent, rgba(143, 119, 87, 0.28), transparent) !important;
+}
+
+.hero,
+.hero.compact,
+.about-hero {
+  background:
+    linear-gradient(90deg, rgba(247, 241, 227, 0.96) 0%, rgba(247, 241, 227, 0.84) 52%, rgba(219, 214, 195, 0.70) 100%),
+    linear-gradient(180deg, rgba(247, 241, 227, 0.74), rgba(219, 214, 195, 0.90)),
+    url("bg-hero.jpg") center / cover no-repeat !important;
+}
+
+.hero::before,
+.about-hero::before,
+.founder-section::before,
+.about-cta::before {
+  background:
+    linear-gradient(180deg, transparent 68%, rgba(246, 240, 223, 0.96) 100%),
+    linear-gradient(120deg, rgba(161, 102, 63, 0.14), transparent 48%) !important;
+  opacity: 1 !important;
+}
+
+.hero-media::before {
+  background: radial-gradient(circle at 70% 18%, rgba(161, 102, 63, 0.20), transparent 20rem) !important;
+}
+
+.glass-card,
+.service-card,
+.info-card,
+.process-card,
+.faq-card,
+.cta-card,
+.booking-card,
+.contact-card,
+.founder-card,
+.principle-card,
+.about-service-card,
+.experience-panel,
+.about-cta-panel,
+.privacy-card,
+.privacy-contact-box,
+body #services .service-card {
+  border-color: rgba(143, 119, 87, 0.22) !important;
+  background:
+    linear-gradient(150deg, rgba(255, 250, 235, 0.88), rgba(231, 222, 199, 0.78)),
+    rgba(247, 241, 227, 0.82) !important;
+  box-shadow: 0 22px 54px rgba(48, 33, 12, 0.14) !important;
+}
+
+.glass-card::before {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.44), transparent 30%) !important;
+}
+
+.service-card:hover,
+.info-card:hover,
+.principle-card:hover,
+.about-service-card:hover,
+body #services .service-card:hover {
+  border-color: rgba(143, 119, 87, 0.38) !important;
+  background:
+    linear-gradient(150deg, rgba(255, 250, 235, 0.94), rgba(226, 213, 187, 0.86)),
+    rgba(247, 241, 227, 0.90) !important;
+  box-shadow: 0 28px 68px rgba(48, 33, 12, 0.18) !important;
+}
+
+.image-frame {
+  border-color: rgba(143, 119, 87, 0.26) !important;
+  background: var(--boho-sand) !important;
+  box-shadow: 0 24px 58px rgba(48, 33, 12, 0.18) !important;
+}
+
+.image-frame::after {
+  background:
+    linear-gradient(180deg, transparent 56%, rgba(48, 33, 12, 0.32) 100%),
+    linear-gradient(90deg, rgba(247, 241, 227, 0.08), transparent 46%) !important;
+}
+
+.floating-badge {
+  border-color: rgba(143, 119, 87, 0.20) !important;
+  background: rgba(247, 241, 227, 0.84) !important;
+}
+
+.floating-badge strong,
+.footer-brand strong,
+.compact-footer strong,
+.founder-card figcaption strong,
+.principle-card h3,
+.about-service-card h3,
+.privacy-section h2,
+body #services .service-card h3,
+body #services .service-card p,
+body #services .service-card .service-summary,
+body #services .service-card ul::before {
+  color: var(--boho-espresso) !important;
+}
+
+.floating-badge span,
+.founder-card figcaption p,
+.principle-card p,
+.about-service-card p,
+.experience-panel span,
+body #services .service-card li {
+  color: rgba(48, 33, 12, 0.70) !important;
+}
+
+.hero-proof span,
+.micro-trust span,
+.booking-benefits li,
+.fit-list li {
+  border-color: rgba(143, 119, 87, 0.22) !important;
+  color: rgba(48, 33, 12, 0.76) !important;
+  background: rgba(247, 241, 227, 0.66) !important;
+}
+
+.hero-proof span::before,
+.booking-benefits li::before,
+.feature-list li::before,
+.fit-list li::before,
+body #services .service-card li::before {
+  background: var(--boho-leaf) !important;
+  box-shadow: 0 0 0 0.22rem rgba(78, 107, 69, 0.12) !important;
+}
+
+body #services .service-card li::after {
+  border-color: var(--boho-linen) !important;
+}
+
+.service-link,
+body #services .service-card a,
+.about-service-card a,
+.founder-linkedin,
+.form-consent a {
+  color: var(--boho-teal) !important;
+  text-decoration-color: rgba(11, 56, 61, 0.32) !important;
+}
+
+.service-link::after,
+body #services .service-card a::after {
+  color: var(--boho-teal) !important;
+  background:
+    linear-gradient(var(--boho-teal), var(--boho-teal)) left 50% / 100% 2px no-repeat !important;
+}
+
+.process-card::after {
+  color: rgba(143, 119, 87, 0.12) !important;
+}
+
+label {
+  color: var(--boho-espresso) !important;
+}
+
+input,
+textarea {
+  border-color: rgba(143, 119, 87, 0.26) !important;
+  background: rgba(255, 250, 235, 0.72) !important;
+  color: var(--boho-espresso) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(48, 33, 12, 0.46) !important;
+}
+
+input:focus,
+textarea:focus {
+  border-color: rgba(78, 107, 69, 0.48) !important;
+  background: rgba(255, 250, 235, 0.88) !important;
+  box-shadow: 0 0 0 4px rgba(78, 107, 69, 0.10) !important;
+}
+
+.site-footer,
+.compact-footer {
+  border-top-color: rgba(48, 33, 12, 0.16) !important;
+  background: var(--boho-espresso) !important;
+}
+
+.site-footer,
+.site-footer p,
+.site-footer span,
+.footer-brand span,
+.compact-footer p,
+.site-footer a,
+.footer-links a,
+.footer-nav a,
+.footer-legal a {
+  color: rgba(247, 241, 227, 0.82) !important;
+}
+
+.footer-socials a {
+  border-color: rgba(219, 214, 195, 0.24) !important;
+  color: rgba(247, 241, 227, 0.90) !important;
+  background: rgba(219, 214, 195, 0.10) !important;
+}
+
+.footer-socials a:hover,
+.footer-socials a:focus-visible {
+  border-color: rgba(219, 214, 195, 0.56) !important;
+  color: var(--boho-linen) !important;
+  background: rgba(219, 214, 195, 0.16) !important;
+}
+
+.privacy-page {
+  background:
+    linear-gradient(180deg, rgba(247, 241, 227, 0.94), rgba(219, 214, 195, 0.94)),
+    url("bg-soft.jpg") center / cover fixed !important;
+}
+
+.privacy-card,
+.privacy-section + .privacy-section,
+.privacy-contact-box,
+.experience-panel div,
+body #services .service-card ul,
+body #services .service-card .service-summary {
+  border-color: rgba(143, 119, 87, 0.18) !important;
+}
+
+.form-consent {
+  color: rgba(48, 33, 12, 0.58) !important;
 }
 
 /* Stable homepage services copy fallback for GitHub Pages */
@@ -1502,12 +4149,12 @@ body #services .service-card a {
     min-height: 0 !important;
   }
 }
-/* Premium services grid refresh */
+/* Warm boho services grid refresh */
 body #services {
   overflow: hidden;
   background:
-    radial-gradient(circle at 50% 0%, rgba(86, 178, 218, 0.12), transparent 36%),
-    linear-gradient(180deg, rgba(4, 18, 32, 0.98), rgba(7, 30, 50, 0.98));
+    radial-gradient(circle at 10% 0%, rgba(161, 102, 63, 0.12), transparent 28rem),
+    linear-gradient(180deg, #F6F0DF 0%, #DBD6C3 100%);
 }
 
 body #services .section-heading {
@@ -1532,7 +4179,7 @@ body #services .section-heading h2 {
 body #services .section-heading p {
   max-width: 720px;
   margin-inline: auto;
-  color: rgba(222, 238, 247, 0.9);
+  color: rgba(48, 33, 12, 0.72);
   font-size: clamp(1rem, 1.7vw, 1.2rem);
   line-height: 1.65;
 }
@@ -1550,20 +4197,20 @@ body #services .service-card {
   min-height: 0;
   overflow: hidden;
   flex-direction: column;
-  border: 1px solid rgba(125, 202, 226, 0.32);
+  border: 1px solid rgba(143, 119, 87, 0.22);
   border-radius: 8px;
   background:
-    linear-gradient(180deg, rgba(14, 47, 76, 0.9), rgba(6, 26, 45, 0.92)),
-    rgba(7, 28, 48, 0.92);
-  box-shadow: 0 20px 58px rgba(0, 0, 0, 0.24);
+    linear-gradient(150deg, rgba(255, 250, 235, 0.90), rgba(231, 222, 199, 0.80)),
+    rgba(247, 241, 227, 0.86);
+  box-shadow: 0 22px 54px rgba(48, 33, 12, 0.14);
   transform: translateZ(0);
   transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
 
 body #services .service-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(126, 216, 244, 0.55);
-  box-shadow: 0 26px 72px rgba(0, 0, 0, 0.32);
+  border-color: rgba(143, 119, 87, 0.38);
+  box-shadow: 0 28px 68px rgba(48, 33, 12, 0.18);
 }
 
 body #services .service-card img {
@@ -1590,14 +4237,15 @@ body #services .service-card .pill {
 
 body #services .service-card h3 {
   position: relative;
-  margin: 3.6rem 0 0.7rem;
-  color: #f6fbff;
+  margin: 0 0 0.75rem;
+  color: #30210C;
   font-size: clamp(1.25rem, 1.7vw, 1.55rem);
   line-height: 1.15;
 }
 
 body #services .service-card h3::before {
-  content: "";
+  content: none;
+  display: none;
   position: absolute;
   top: -3.95rem;
   left: 0;
@@ -1612,13 +4260,14 @@ body #services .service-card h3::before {
 }
 
 body #services .service-card h3::after {
-  content: "";
+  content: none;
+  display: none;
   position: absolute;
   top: -2.98rem;
   left: 1.03rem;
   width: 1.05rem;
   height: 1.05rem;
-  border: 2px solid #77d9ff;
+  border: 2px solid #0B383D;
   border-top: 0;
   border-left: 0;
   transform: rotate(45deg);
@@ -1627,7 +4276,7 @@ body #services .service-card h3::after {
 
 body #services .service-card p {
   margin: 0 0 1.25rem;
-  color: rgba(230, 242, 249, 0.92);
+  color: rgba(48, 33, 12, 0.78);
   font-size: clamp(1rem, 1.15vw, 1.08rem);
   line-height: 1.55;
 }
@@ -1637,7 +4286,7 @@ body #services .service-card ul {
   gap: 0.85rem;
   margin: 0;
   padding: 1.25rem 0 0;
-  border-top: 1px solid rgba(156, 214, 234, 0.18);
+  border-top: 1px solid rgba(143, 119, 87, 0.18);
   list-style: none;
 }
 
@@ -1645,7 +4294,7 @@ body #services .service-card li {
   position: relative;
   margin: 0;
   padding-left: 2rem;
-  color: rgba(226, 239, 247, 0.88);
+  color: rgba(48, 33, 12, 0.70);
   font-size: 0.98rem;
   line-height: 1.45;
 }
@@ -1658,9 +4307,8 @@ body #services .service-card li::before {
   width: 1rem;
   height: 1rem;
   border-radius: 999px;
-  background:
-    linear-gradient(135deg, #7edfff, #4aa7ee);
-  box-shadow: 0 0 0 0.22rem rgba(98, 183, 238, 0.12);
+  background: #4E6B45;
+  box-shadow: 0 0 0 0.22rem rgba(78, 107, 69, 0.12);
 }
 
 body #services .service-card li::after {
@@ -1670,7 +4318,7 @@ body #services .service-card li::after {
   left: 0.36rem;
   width: 0.22rem;
   height: 0.43rem;
-  border: solid #06243b;
+  border: solid #F7F1E3;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
@@ -1682,7 +4330,7 @@ body #services .service-card a {
   width: fit-content;
   margin-top: auto;
   padding-top: 2rem;
-  color: #72d6ff;
+  color: #0B383D;
   font-weight: 800;
   text-decoration: none;
 }
@@ -1692,7 +4340,7 @@ body #services .service-card a::after {
   width: 1.1rem;
   height: 0.7rem;
   background:
-    linear-gradient(#72d6ff, #72d6ff) left 50% / 100% 2px no-repeat;
+    linear-gradient(#0B383D, #0B383D) left 50% / 100% 2px no-repeat;
   clip-path: polygon(0 42%, 72% 42%, 72% 0, 100% 50%, 72% 100%, 72% 58%, 0 58%);
   transition: transform 180ms ease;
 }
@@ -1719,5 +4367,1266 @@ body #services .service-card a:focus-visible::after {
 
   body #services .service-card img {
     height: 180px;
+  }
+}
+
+/* True final minimalist boutique design lock */
+:root {
+  --true-paper: #F8F2E4;
+  --true-cream: #DBD6C3;
+  --true-taupe: #8F7757;
+  --true-espresso: #30210C;
+  --true-teal: #0B383D;
+  --true-leaf: #4E6B45;
+  --true-line: rgba(48, 33, 12, 0.14);
+  --true-line-strong: rgba(48, 33, 12, 0.26);
+  --max: 1160px;
+  --radius: 0;
+}
+
+html,
+body {
+  background: var(--true-paper) !important;
+}
+
+body {
+  color: var(--true-espresso) !important;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif !important;
+}
+
+body::before,
+.top-strip,
+.topbar,
+.section-transition,
+.hero::before,
+.about-hero::before,
+.founder-section::before,
+.about-cta::before,
+.glass-card::before,
+.hero-media::before,
+.image-frame::after,
+body #services .service-card h3::before,
+body #services .service-card h3::after,
+body #services .service-card li::after,
+.service-link::after,
+body #services .service-card a::after {
+  display: none !important;
+  content: none !important;
+}
+
+.container,
+body #services > .container {
+  width: min(100% - 2.25rem, 1160px) !important;
+  max-width: 1160px !important;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--true-espresso) !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+}
+
+h1,
+.hero-copy h1,
+.about-hero-copy h1,
+body .about-page .about-hero-copy h1 {
+  max-width: 920px !important;
+  margin-inline: auto !important;
+  font-size: clamp(3.1rem, 7vw, 5.4rem) !important;
+  line-height: 0.98 !important;
+}
+
+h2,
+.booking-card h2,
+.contact-card h2 {
+  max-width: 820px !important;
+  font-size: clamp(2.15rem, 4.8vw, 3.25rem) !important;
+  line-height: 1.04 !important;
+}
+
+p,
+li,
+.muted,
+.small-note,
+.hero-copy .lead,
+.section-heading p,
+.about-hero-copy .lead,
+.about-hero-copy p:not(.lead),
+.section-heading-left p,
+.founder-story-copy p,
+.about-fit-grid p,
+.about-cta-panel p,
+.privacy-section p,
+.privacy-section li,
+.privacy-hero p {
+  color: rgba(48, 33, 12, 0.68) !important;
+}
+
+.site-header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+  border-bottom: 1px solid var(--true-line) !important;
+  background: rgba(248, 242, 228, 0.90) !important;
+  box-shadow: none !important;
+  backdrop-filter: blur(18px) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
+}
+
+.nav,
+.nav-inner {
+  min-height: 82px !important;
+  display: grid !important;
+  grid-template-columns: auto 1fr !important;
+  align-items: center !important;
+  gap: 2rem !important;
+}
+
+.logo-img,
+.site-header .brand img,
+.site-header img[src="logo.png"] {
+  width: auto !important;
+  max-width: 150px !important;
+  height: 44px !important;
+  max-height: 44px !important;
+  object-fit: contain !important;
+  filter: none !important;
+  mix-blend-mode: multiply !important;
+}
+
+.nav-links,
+.nav-actions {
+  justify-content: flex-end !important;
+  gap: 1rem !important;
+}
+
+.nav-links a:not(.btn),
+.nav-actions a:not(.btn),
+.language-link,
+.lang-switch {
+  color: rgba(48, 33, 12, 0.72) !important;
+  font-size: 0.78rem !important;
+  font-weight: 760 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0 !important;
+}
+
+a:hover,
+a:focus-visible,
+.nav-links a:not(.btn):hover,
+.nav-actions a:not(.btn):hover,
+.service-link,
+body #services .service-card a,
+.about-service-card a,
+.founder-linkedin,
+.form-consent a {
+  color: var(--true-teal) !important;
+}
+
+.btn {
+  min-height: 46px !important;
+  border-radius: 999px !important;
+  padding: 0.86rem 1.15rem !important;
+  box-shadow: none !important;
+  font-size: 0.86rem !important;
+  font-weight: 780 !important;
+  letter-spacing: 0 !important;
+}
+
+.btn-primary {
+  color: var(--true-paper) !important;
+  border: 1px solid var(--true-espresso) !important;
+  background: var(--true-espresso) !important;
+}
+
+.btn-primary:hover {
+  border-color: var(--true-teal) !important;
+  background: var(--true-teal) !important;
+}
+
+.btn-secondary,
+.btn-outline {
+  color: var(--true-espresso) !important;
+  border: 1px solid var(--true-line-strong) !important;
+  background: transparent !important;
+}
+
+.eyebrow,
+.section-kicker,
+.service-meta,
+.founder-card figcaption span,
+.principle-card span,
+.process-card strong {
+  border: 0 !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  color: var(--true-taupe) !important;
+  background: transparent !important;
+  font-size: 0.76rem !important;
+  font-weight: 820 !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase !important;
+}
+
+.section,
+.hero,
+.hero.compact,
+.about-page .section {
+  position: relative !important;
+  overflow: visible !important;
+  padding: 7rem 0 !important;
+}
+
+.section-solid,
+.section-soft,
+body #services,
+.privacy-page {
+  background: linear-gradient(180deg, var(--true-paper), var(--true-cream)) !important;
+}
+
+.hero,
+.hero.compact,
+.about-hero {
+  min-height: auto !important;
+  padding: 8.6rem 0 6.2rem !important;
+  background:
+    linear-gradient(180deg, rgba(248, 242, 228, 0.97), rgba(219, 214, 195, 0.54)),
+    url("bg-hero.jpg") center / cover no-repeat !important;
+}
+
+.hero-grid,
+.about-hero-grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 3rem !important;
+  align-items: start !important;
+}
+
+.hero-copy,
+.about-hero-copy {
+  max-width: 900px !important;
+  margin-inline: auto !important;
+  text-align: center !important;
+}
+
+.hero-copy .lead,
+.about-hero-copy .lead {
+  max-width: 680px !important;
+  margin: 0 auto 1.6rem !important;
+  font-size: 1.08rem !important;
+  line-height: 1.78 !important;
+}
+
+.hero-actions,
+.about-hero-actions,
+.card-actions,
+.hero-proof,
+.micro-trust {
+  justify-content: center !important;
+}
+
+.hero-proof span,
+.micro-trust span,
+.booking-benefits li,
+.fit-list li {
+  border: 0 !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  color: rgba(48, 33, 12, 0.66) !important;
+  background: transparent !important;
+}
+
+.hero-proof span::before,
+.booking-benefits li::before,
+.feature-list li::before,
+.fit-list li::before,
+body #services .service-card li::before {
+  background: var(--true-leaf) !important;
+  box-shadow: none !important;
+}
+
+.hero-media {
+  width: 100% !important;
+  max-width: 1040px !important;
+  margin: 1.2rem auto 0 !important;
+}
+
+.image-frame,
+.founder-card {
+  overflow: hidden !important;
+  border: 1px solid var(--true-line) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.image-frame img {
+  height: 430px !important;
+  object-fit: cover !important;
+}
+
+.floating-badge {
+  position: static !important;
+  border: 0 !important;
+  border-top: 1px solid var(--true-line) !important;
+  border-radius: 0 !important;
+  padding: 1.15rem 0 0 !important;
+  margin: 1.15rem 1.2rem 1.2rem !important;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.section-heading {
+  max-width: 820px !important;
+  margin: 0 auto 3rem !important;
+  text-align: center !important;
+}
+
+.glass-card,
+.service-card,
+.info-card,
+.process-card,
+.faq-card,
+.cta-card,
+.booking-card,
+.contact-card,
+.principle-card,
+.about-service-card,
+.experience-panel,
+.about-cta-panel,
+.privacy-card,
+.privacy-contact-box {
+  border: 1px solid var(--true-line) !important;
+  border-radius: 0 !important;
+  background: rgba(248, 242, 228, 0.58) !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.service-card:hover,
+.info-card:hover,
+.principle-card:hover,
+.about-service-card:hover,
+body #services .service-card:hover {
+  transform: none !important;
+  border-color: var(--true-line-strong) !important;
+  box-shadow: none !important;
+}
+
+.services-grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 0 !important;
+  max-width: 1080px !important;
+  margin-inline: auto !important;
+}
+
+body #services .service-card {
+  display: grid !important;
+  grid-template-columns: minmax(220px, 0.36fr) minmax(0, 1fr) !important;
+  min-height: 0 !important;
+  border: 0 !important;
+  border-top: 1px solid var(--true-line) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body #services .service-card:last-child {
+  border-bottom: 1px solid var(--true-line) !important;
+}
+
+body #services .service-card img {
+  width: 100% !important;
+  height: 260px !important;
+  border: 0 !important;
+  object-fit: cover !important;
+}
+
+body #services .service-card > div,
+body #services .service-card .service-card-body,
+body #services .service-content {
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 2.2rem 0 2.2rem 2.4rem !important;
+}
+
+body #services .service-card h3 {
+  margin: 0 0 0.7rem !important;
+  color: var(--true-espresso) !important;
+  font-size: 1.72rem !important;
+}
+
+body #services .service-card p,
+body #services .service-card .service-summary,
+body #services .service-card ul::before {
+  max-width: 46rem !important;
+  margin: 0 0 1.05rem !important;
+  padding: 0 !important;
+  border: 0 !important;
+  color: rgba(48, 33, 12, 0.68) !important;
+  font-size: 1rem !important;
+  line-height: 1.68 !important;
+}
+
+body #services .service-card ul {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 0.62rem 1.2rem !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+body #services .service-card li {
+  padding-left: 1.05rem !important;
+  color: rgba(48, 33, 12, 0.64) !important;
+  font-size: 0.94rem !important;
+  line-height: 1.45 !important;
+}
+
+body #services .service-card li::before {
+  top: 0.62em !important;
+  width: 0.36rem !important;
+  height: 0.36rem !important;
+}
+
+.card-grid,
+.process-grid,
+.faq-grid,
+.about-principles-grid,
+.about-services-grid {
+  display: grid !important;
+  gap: 1px !important;
+  border: 1px solid var(--true-line) !important;
+  background: var(--true-line) !important;
+}
+
+.card-grid.three,
+.process-grid,
+.about-principles-grid {
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+
+.card-grid.two,
+.faq-grid {
+  grid-template-columns: repeat(2, 1fr) !important;
+}
+
+.about-services-grid {
+  grid-template-columns: repeat(4, 1fr) !important;
+}
+
+.info-card,
+.process-card,
+.faq-card,
+.principle-card,
+.about-service-card {
+  border: 0 !important;
+  padding: 1.75rem !important;
+  background: rgba(248, 242, 228, 0.86) !important;
+}
+
+.split-grid,
+.booking-layout,
+.founder-story-grid,
+.about-fit-grid {
+  display: grid !important;
+  grid-template-columns: minmax(0, 0.92fr) minmax(360px, 1.08fr) !important;
+  gap: 4.5rem !important;
+  align-items: start !important;
+}
+
+.cta-card,
+.booking-card,
+.contact-card,
+.about-cta-panel {
+  padding: 2.4rem !important;
+}
+
+input,
+textarea {
+  border: 0 !important;
+  border-bottom: 1px solid var(--true-line-strong) !important;
+  border-radius: 0 !important;
+  padding: 0.9rem 0 !important;
+  background: transparent !important;
+  color: var(--true-espresso) !important;
+  box-shadow: none !important;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--true-teal) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.site-footer,
+.compact-footer {
+  border-top: 1px solid rgba(219, 214, 195, 0.16) !important;
+  background: var(--true-espresso) !important;
+}
+
+.footer-inner,
+.about-footer-inner,
+.compact-footer-inner {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  gap: 2rem !important;
+  align-items: start !important;
+  padding: 2.3rem 0 !important;
+}
+
+.site-footer,
+.site-footer p,
+.site-footer span,
+.footer-brand span,
+.compact-footer p,
+.site-footer a,
+.footer-links a,
+.footer-nav a,
+.footer-legal a {
+  color: rgba(248, 242, 228, 0.78) !important;
+}
+
+.footer-brand strong,
+.compact-footer strong {
+  color: var(--true-paper) !important;
+}
+
+@media (max-width: 1120px) {
+  .split-grid,
+  .booking-layout,
+  .founder-story-grid,
+  .about-fit-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.6rem !important;
+  }
+
+  body #services .service-card {
+    grid-template-columns: minmax(180px, 0.34fr) minmax(0, 1fr) !important;
+  }
+}
+
+@media (max-width: 860px) {
+  .nav,
+  .nav-inner,
+  body #services .service-card,
+  .card-grid.three,
+  .card-grid.two,
+  .process-grid,
+  .faq-grid,
+  .about-principles-grid,
+  .about-services-grid,
+  .footer-inner,
+  .about-footer-inner,
+  .compact-footer-inner,
+  .about-cta-panel {
+    grid-template-columns: 1fr !important;
+  }
+
+  .nav,
+  .nav-inner {
+    justify-items: center !important;
+    gap: 1rem !important;
+    padding: 1rem 0 !important;
+  }
+
+  .nav-links,
+  .nav-actions {
+    justify-content: center !important;
+  }
+
+  body #services .service-card > div,
+  body #services .service-card .service-card-body,
+  body #services .service-content {
+    padding: 1.45rem 0 2rem !important;
+  }
+
+  body #services .service-card img,
+  .image-frame img {
+    height: 300px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .container,
+  body #services > .container {
+    width: min(100% - 1.35rem, 1160px) !important;
+  }
+
+  .hero-actions,
+  .about-hero-actions,
+  .card-actions,
+  .hero-actions .btn,
+  .about-hero-actions .btn,
+  .booking-card .btn,
+  .contact-card .btn,
+  .cta-card .btn {
+    width: 100% !important;
+  }
+
+  body #services .service-card ul {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Ultra-premium private-client refinement */
+:root {
+  --private-paper: #F9F4E8;
+  --private-cream: #DBD6C3;
+  --private-ink: #30210C;
+  --private-muted: rgba(48, 33, 12, 0.58);
+  --private-faint: rgba(48, 33, 12, 0.10);
+  --private-rule: rgba(48, 33, 12, 0.18);
+  --private-taupe: #8F7757;
+  --private-teal: #0B383D;
+  --private-leaf: #4E6B45;
+  --max: 1080px;
+}
+
+body {
+  background:
+    linear-gradient(180deg, var(--private-paper) 0%, #F2EBD9 50%, var(--private-cream) 100%) !important;
+}
+
+.container,
+body #services > .container {
+  width: min(100% - 3rem, 1080px) !important;
+  max-width: 1080px !important;
+}
+
+.site-header {
+  background: rgba(249, 244, 232, 0.92) !important;
+}
+
+.nav,
+.nav-inner {
+  min-height: 76px !important;
+}
+
+.nav-links a[href*="#process"],
+.nav-links .btn,
+.hero-actions .btn-secondary,
+.about-hero-actions .btn-secondary,
+.card-actions .btn-secondary,
+.service-card .btn-secondary,
+.cta-card .btn-secondary {
+  display: none !important;
+}
+
+.nav-links,
+.nav-actions {
+  gap: 1.25rem !important;
+}
+
+.logo-img,
+.site-header .brand img,
+.site-header img[src="logo.png"] {
+  max-width: 132px !important;
+  height: 38px !important;
+  max-height: 38px !important;
+}
+
+h1,
+.hero-copy h1,
+.about-hero-copy h1,
+body .about-page .about-hero-copy h1 {
+  max-width: 780px !important;
+  font-size: clamp(3.2rem, 6.6vw, 5.75rem) !important;
+  font-weight: 460 !important;
+  line-height: 0.96 !important;
+}
+
+h2,
+.booking-card h2,
+.contact-card h2 {
+  max-width: 740px !important;
+  font-size: clamp(2.05rem, 4.4vw, 3rem) !important;
+  font-weight: 460 !important;
+}
+
+h3 {
+  font-weight: 500 !important;
+}
+
+.hero-copy .lead,
+.about-hero-copy .lead,
+.section-heading p,
+.founder-story-copy p,
+.cta-card p,
+.booking-card p,
+.contact-card p {
+  color: var(--private-muted) !important;
+  font-size: 1rem !important;
+  line-height: 1.86 !important;
+}
+
+.eyebrow,
+.section-kicker,
+.service-meta {
+  color: var(--private-taupe) !important;
+  font-size: 0.68rem !important;
+  letter-spacing: 0.08em !important;
+}
+
+.btn {
+  min-height: 43px !important;
+  padding: 0.78rem 1.05rem !important;
+  font-size: 0.8rem !important;
+}
+
+.btn-primary {
+  background: var(--private-ink) !important;
+}
+
+.hero,
+.hero.compact,
+.about-hero {
+  padding: 9rem 0 5.5rem !important;
+  background:
+    linear-gradient(180deg, rgba(249, 244, 232, 0.98), rgba(219, 214, 195, 0.46)),
+    url("bg-luxury-texture.png") center / cover no-repeat !important;
+}
+
+.hero-grid,
+.about-hero-grid {
+  gap: 2.4rem !important;
+}
+
+.hero-copy,
+.about-hero-copy {
+  max-width: 820px !important;
+}
+
+.hero-actions {
+  margin-top: 1.25rem !important;
+  margin-bottom: 1.1rem !important;
+}
+
+.hero-proof {
+  margin-top: 1.6rem !important;
+  gap: 1.35rem !important;
+}
+
+.hero-proof span,
+.micro-trust span {
+  font-size: 0.82rem !important;
+}
+
+.hero-media {
+  max-width: 880px !important;
+  margin-top: 2.2rem !important;
+}
+
+.image-frame img {
+  height: 390px !important;
+  filter: saturate(0.88) contrast(0.96) !important;
+}
+
+.floating-badge {
+  max-width: 720px !important;
+  margin: 1rem auto 1.1rem !important;
+  padding-top: 0.95rem !important;
+  text-align: center !important;
+}
+
+.section,
+.about-page .section {
+  padding: 6.4rem 0 !important;
+}
+
+.section-heading {
+  margin-bottom: 3.2rem !important;
+}
+
+.home-founder {
+  background: linear-gradient(180deg, #F4EDDC 0%, var(--private-paper) 100%) !important;
+}
+
+.home-founder .founder-story-grid {
+  grid-template-columns: minmax(240px, 0.64fr) minmax(0, 1.36fr) !important;
+  gap: clamp(2.6rem, 7vw, 6rem) !important;
+  align-items: center !important;
+}
+
+.home-founder-card {
+  max-width: 340px !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+.home-founder-card .founder-photo-shell {
+  aspect-ratio: 4 / 5.35 !important;
+  border: 1px solid var(--private-rule) !important;
+}
+
+.home-founder-card figcaption {
+  padding: 1rem 0 0 !important;
+}
+
+.home-founder-card figcaption strong {
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: 1.1rem !important;
+  font-weight: 500 !important;
+}
+
+.home-founder .founder-story-copy h2 {
+  max-width: 720px !important;
+}
+
+.home-founder-proof {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  margin-top: 2rem !important;
+  border-top: 1px solid var(--private-rule) !important;
+  border-bottom: 1px solid var(--private-rule) !important;
+}
+
+.home-founder-proof div {
+  border: 0 !important;
+  padding: 1.25rem 1.25rem 1.25rem 0 !important;
+}
+
+.home-founder-proof div + div {
+  border-left: 1px solid var(--private-rule) !important;
+  padding-left: 1.25rem !important;
+}
+
+.services-grid {
+  max-width: 980px !important;
+}
+
+body #services .service-card {
+  grid-template-columns: minmax(190px, 0.30fr) minmax(0, 1fr) !important;
+}
+
+body #services .service-card img {
+  height: 220px !important;
+  filter: saturate(0.82) contrast(0.94) !important;
+}
+
+body #services .service-card > div,
+body #services .service-card .service-card-body,
+body #services .service-content {
+  padding: 2rem 0 2rem 2.8rem !important;
+}
+
+body #services .service-card h3 {
+  font-size: 1.45rem !important;
+}
+
+body #services .service-card ul {
+  grid-template-columns: 1fr !important;
+  max-width: 560px !important;
+}
+
+.card-grid,
+.process-grid,
+.faq-grid,
+.about-principles-grid,
+.about-services-grid {
+  border-color: var(--private-faint) !important;
+  background: var(--private-faint) !important;
+}
+
+.info-card,
+.process-card,
+.faq-card,
+.principle-card,
+.about-service-card {
+  background: rgba(249, 244, 232, 0.72) !important;
+}
+
+.split-grid,
+.booking-layout,
+.founder-story-grid,
+.about-fit-grid {
+  gap: clamp(2.8rem, 7vw, 6rem) !important;
+}
+
+.booking-layout {
+  grid-template-columns: minmax(0, 0.92fr) minmax(340px, 0.9fr) !important;
+}
+
+.booking-card,
+.contact-card,
+.cta-card,
+.about-cta-panel {
+  padding: 2rem !important;
+}
+
+.booking-card {
+  background: rgba(48, 33, 12, 0.035) !important;
+}
+
+.contact-card {
+  background: transparent !important;
+}
+
+.site-footer {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 860px) {
+  .container,
+  body #services > .container {
+    width: min(100% - 1.5rem, 1080px) !important;
+  }
+
+  .home-founder .founder-story-grid,
+  body #services .service-card,
+  .booking-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .home-founder-card {
+    max-width: 420px !important;
+    justify-self: center !important;
+  }
+
+  .home-founder-proof {
+    grid-template-columns: 1fr !important;
+  }
+
+  .home-founder-proof div + div {
+    border-left: 0 !important;
+    border-top: 1px solid var(--private-rule) !important;
+    padding-left: 0 !important;
+  }
+
+  body #services .service-card > div,
+  body #services .service-card .service-card-body,
+  body #services .service-content {
+    padding: 1.4rem 0 2rem !important;
+  }
+}
+
+/* Final image system integration */
+body {
+  background:
+    linear-gradient(180deg, rgba(249, 244, 232, 0.94), rgba(219, 214, 195, 0.88)),
+    url("bg-luxury-texture.png") center top / cover fixed no-repeat !important;
+}
+
+.section-solid,
+.section-soft,
+body #services,
+.privacy-page,
+.home-founder {
+  background:
+    linear-gradient(180deg, rgba(249, 244, 232, 0.92), rgba(219, 214, 195, 0.82)),
+    url("bg-luxury-texture.png") center / cover no-repeat !important;
+}
+
+.hero,
+.hero.compact,
+.about-hero {
+  background:
+    linear-gradient(180deg, rgba(249, 244, 232, 0.95), rgba(219, 214, 195, 0.58)),
+    url("bg-luxury-texture.png") center / cover no-repeat !important;
+}
+
+.image-frame img,
+body #services .service-card img,
+.brand-photo {
+  filter: saturate(0.78) contrast(0.94) brightness(1.02) !important;
+}
+
+.hero-media .image-frame img {
+  height: clamp(340px, 40vw, 500px) !important;
+}
+
+body #services .service-card img {
+  height: clamp(190px, 22vw, 245px) !important;
+}
+
+.home-founder-card .founder-photo,
+.founder-card .founder-photo {
+  filter: saturate(0.88) contrast(0.96) brightness(1.02) !important;
+}
+
+/* Whole-site private boutique direction */
+:root {
+  --private-teal: #0B383D;
+  --private-cream: #DBD6C3;
+  --private-taupe: #8F7757;
+  --private-espresso: #30210C;
+  --private-paper: #F7F1E2;
+  --private-teal-soft: rgba(11, 56, 61, 0.14);
+  --private-teal-line: rgba(11, 56, 61, 0.22);
+}
+
+body.boutique-luxury {
+  background:
+    linear-gradient(115deg, rgba(11, 56, 61, 0.085), transparent 34%),
+    linear-gradient(180deg, rgba(247, 241, 226, 0.92), rgba(219, 214, 195, 0.9)),
+    url("bg-luxury-texture.png") center top / cover fixed no-repeat !important;
+  color: var(--private-espresso) !important;
+}
+
+body.boutique-luxury .topbar {
+  display: none !important;
+}
+
+body.boutique-luxury .site-header {
+  background: rgba(219, 214, 195, 0.88) !important;
+  border-bottom: 1px solid var(--private-teal-line) !important;
+  box-shadow: 0 14px 42px rgba(48, 33, 12, 0.08) !important;
+  backdrop-filter: blur(18px) saturate(1.08) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(1.08) !important;
+}
+
+body.boutique-luxury .nav,
+body.boutique-luxury .nav-inner {
+  min-height: 74px !important;
+  gap: clamp(1rem, 3vw, 2.2rem) !important;
+}
+
+body.boutique-luxury .logo-img,
+body.boutique-luxury .brand img,
+body.boutique-luxury .brand-logo img {
+  width: clamp(116px, 12vw, 148px) !important;
+  max-height: 58px !important;
+  object-fit: contain !important;
+}
+
+body.boutique-luxury .nav-links,
+body.boutique-luxury .nav-actions {
+  gap: clamp(0.85rem, 2vw, 1.45rem) !important;
+}
+
+body.boutique-luxury .nav-links a,
+body.boutique-luxury .nav-actions a,
+body.boutique-luxury .language-link {
+  color: var(--private-teal) !important;
+  font-size: 0.76rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+}
+
+body.boutique-luxury .nav-links a:not(.btn)::after {
+  background: var(--private-teal) !important;
+}
+
+body.boutique-luxury .nav-links .btn,
+body.boutique-luxury .nav-actions .btn {
+  display: none !important;
+}
+
+body.boutique-luxury .lang-switch,
+body.boutique-luxury .language-link {
+  border: 1px solid var(--private-teal-line) !important;
+  border-radius: 999px !important;
+  padding: 0.42rem 0.68rem !important;
+  background: rgba(247, 241, 226, 0.42) !important;
+}
+
+body.boutique-luxury .hero,
+body.boutique-luxury .hero.compact,
+body.boutique-luxury .about-hero,
+body.boutique-luxury .privacy-hero {
+  background:
+    linear-gradient(118deg, rgba(11, 56, 61, 0.13), transparent 40%),
+    linear-gradient(180deg, rgba(247, 241, 226, 0.96), rgba(219, 214, 195, 0.78)),
+    url("bg-luxury-texture.png") center / cover no-repeat !important;
+  color: var(--private-espresso) !important;
+}
+
+body.boutique-luxury .hero {
+  min-height: auto !important;
+  padding: clamp(5.25rem, 9vw, 8rem) 0 clamp(4rem, 7vw, 6rem) !important;
+}
+
+body.boutique-luxury .hero.compact,
+body.boutique-luxury .about-hero,
+body.boutique-luxury .privacy-hero {
+  padding: clamp(4.5rem, 8vw, 6.75rem) 0 clamp(3.8rem, 7vw, 5.75rem) !important;
+}
+
+body.boutique-luxury .hero-grid,
+body.boutique-luxury .about-hero-grid {
+  align-items: center !important;
+  gap: clamp(2.2rem, 6vw, 5.6rem) !important;
+}
+
+body.boutique-luxury .eyebrow,
+body.boutique-luxury .section-kicker {
+  color: var(--private-teal) !important;
+  letter-spacing: 0.15em !important;
+}
+
+body.boutique-luxury h1,
+body.boutique-luxury h2,
+body.boutique-luxury h3,
+body.boutique-luxury .about-hero-copy h1 {
+  color: var(--private-espresso) !important;
+  letter-spacing: 0 !important;
+}
+
+body.boutique-luxury h1,
+body.boutique-luxury .about-hero-copy h1 {
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-weight: 500 !important;
+  line-height: 0.98 !important;
+}
+
+body.boutique-luxury .lead,
+body.boutique-luxury .muted,
+body.boutique-luxury .about-hero-copy .lead,
+body.boutique-luxury .about-hero-copy p:not(.lead),
+body.boutique-luxury .section-heading-left p,
+body.boutique-luxury .founder-story-copy p,
+body.boutique-luxury .about-fit-grid p,
+body.boutique-luxury .about-cta-panel p {
+  color: rgba(48, 33, 12, 0.68) !important;
+}
+
+body.boutique-luxury .hero-actions .btn-secondary,
+body.boutique-luxury .about-hero-actions .btn-secondary,
+body.boutique-luxury .card-actions .btn-secondary {
+  display: none !important;
+}
+
+body.boutique-luxury .btn-primary,
+body.boutique-luxury button.btn-primary {
+  background: var(--private-teal) !important;
+  border-color: rgba(11, 56, 61, 0.95) !important;
+  color: var(--private-paper) !important;
+  box-shadow: 0 18px 44px rgba(11, 56, 61, 0.18) !important;
+}
+
+body.boutique-luxury .btn-primary:hover,
+body.boutique-luxury button.btn-primary:hover {
+  background: #082f34 !important;
+  box-shadow: 0 22px 52px rgba(11, 56, 61, 0.24) !important;
+}
+
+body.boutique-luxury .btn-secondary,
+body.boutique-luxury .btn-outline {
+  background: rgba(247, 241, 226, 0.34) !important;
+  border-color: var(--private-teal-line) !important;
+  color: var(--private-teal) !important;
+}
+
+body.boutique-luxury .hero-proof span,
+body.boutique-luxury .micro-trust span,
+body.boutique-luxury .booking-benefits li::marker {
+  color: var(--private-teal) !important;
+}
+
+body.boutique-luxury .hero-proof span,
+body.boutique-luxury .micro-trust span {
+  border-color: var(--private-teal-line) !important;
+  background: rgba(247, 241, 226, 0.34) !important;
+}
+
+body.boutique-luxury .image-frame,
+body.boutique-luxury .founder-card,
+body.boutique-luxury .home-founder-card,
+body.boutique-luxury .glass-card,
+body.boutique-luxury .privacy-card,
+body.boutique-luxury .service-card,
+body.boutique-luxury .about-cta-panel,
+body.boutique-luxury .value-card,
+body.boutique-luxury .process-card,
+body.boutique-luxury .fit-card {
+  background: rgba(247, 241, 226, 0.66) !important;
+  border: 1px solid var(--private-teal-line) !important;
+  box-shadow: 0 20px 54px rgba(48, 33, 12, 0.10) !important;
+}
+
+body.boutique-luxury .floating-badge,
+body.boutique-luxury .stat-card,
+body.boutique-luxury .mini-card {
+  background: rgba(11, 56, 61, 0.92) !important;
+  border-color: rgba(219, 214, 195, 0.24) !important;
+  color: var(--private-paper) !important;
+}
+
+body.boutique-luxury .floating-badge span,
+body.boutique-luxury .stat-card span,
+body.boutique-luxury .mini-card span {
+  color: rgba(247, 241, 226, 0.78) !important;
+}
+
+body.boutique-luxury .section-solid,
+body.boutique-luxury .section-soft,
+body.boutique-luxury #services,
+body.boutique-luxury .home-founder,
+body.boutique-luxury .privacy-page {
+  background:
+    linear-gradient(120deg, rgba(11, 56, 61, 0.07), transparent 34%),
+    linear-gradient(180deg, rgba(247, 241, 226, 0.86), rgba(219, 214, 195, 0.76)),
+    url("bg-luxury-texture.png") center / cover no-repeat !important;
+}
+
+body.boutique-luxury .service-card {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+body.boutique-luxury .service-card::before,
+body.boutique-luxury .privacy-card::before,
+body.boutique-luxury .cta-card::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 auto auto 0 !important;
+  width: 100% !important;
+  height: 3px !important;
+  background: linear-gradient(90deg, var(--private-teal), rgba(143, 119, 87, 0.42), transparent) !important;
+  pointer-events: none !important;
+}
+
+body.boutique-luxury .home-founder-proof,
+body.boutique-luxury .booking-benefits {
+  border-color: var(--private-teal-line) !important;
+}
+
+body.boutique-luxury .founder-signature {
+  color: var(--private-teal) !important;
+}
+
+body.boutique-luxury .site-footer {
+  background:
+    linear-gradient(180deg, rgba(11, 56, 61, 0.96), rgba(8, 47, 52, 0.98)) !important;
+  color: var(--private-paper) !important;
+  border-top: 1px solid rgba(219, 214, 195, 0.24) !important;
+}
+
+body.boutique-luxury .site-footer a,
+body.boutique-luxury .site-footer p,
+body.boutique-luxury .site-footer span {
+  color: rgba(247, 241, 226, 0.78) !important;
+}
+
+body.boutique-luxury .site-footer strong {
+  color: var(--private-paper) !important;
+}
+
+body.boutique-luxury .footer-legal {
+  border-top-color: rgba(219, 214, 195, 0.18) !important;
+}
+
+@media (max-width: 820px) {
+  body.boutique-luxury .nav,
+  body.boutique-luxury .nav-inner {
+    align-items: flex-start !important;
+  }
+
+  body.boutique-luxury .nav-links,
+  body.boutique-luxury .nav-actions {
+    justify-content: flex-start !important;
+    gap: 0.72rem !important;
+  }
+
+  body.boutique-luxury .nav-links a,
+  body.boutique-luxury .nav-actions a {
+    font-size: 0.7rem !important;
   }
 }
