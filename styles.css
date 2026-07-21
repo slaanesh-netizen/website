@@ -6064,7 +6064,7 @@ body.botanical-scroll-bg {
   --olive-bg-opacity: 0.17;
   background:
     linear-gradient(180deg, rgba(248, 242, 228, var(--olive-wash)) 0%, rgba(219, 214, 195, var(--olive-wash)) 100%),
-    url("assets/bg-olive-frame-test.png") 64% top / cover no-repeat fixed,
+    url("assets/bg-olive-frame-test.png") 64% top / cover no-repeat scroll,
     #f7f1e2 !important;
 }
 
@@ -6093,9 +6093,7 @@ body.boutique-luxury .privacy-page,
 body.boutique-luxury .privacy-hero,
 body.boutique-luxury .privacy-section,
 body.botanical-scroll-bg .test-page {
-  background:
-    linear-gradient(180deg, rgba(248, 242, 228, var(--olive-wash)), rgba(219, 214, 195, var(--olive-wash))),
-    url("assets/bg-olive-frame-test.png") 64% top / cover no-repeat fixed !important;
+  background: linear-gradient(180deg, rgba(248, 242, 228, var(--olive-wash)), rgba(219, 214, 195, var(--olive-wash))) !important;
 }
 
 body.boutique-luxury .hero::before,
@@ -6106,8 +6104,9 @@ body.boutique-luxury .about-cta::before {
   background: none !important;
 }
 
+.site-header,
 body.boutique-luxury .site-header {
-  background: rgba(248, 242, 228, 0.86) !important;
+  background: #DCD3C2 !important;
 }
 
 @media (max-width: 760px) {
@@ -6136,8 +6135,6 @@ body.boutique-luxury .site-header {
   body.boutique-luxury .privacy-hero,
   body.boutique-luxury .privacy-section,
   body.botanical-scroll-bg .test-page {
-    background:
-      linear-gradient(180deg, rgba(248, 242, 228, var(--olive-wash)), rgba(219, 214, 195, var(--olive-wash))),
-      url("assets/bg-olive-frame-test.png") 56% top / auto 100vh no-repeat scroll !important;
+    background: linear-gradient(180deg, rgba(248, 242, 228, var(--olive-wash)), rgba(219, 214, 195, var(--olive-wash))) !important;
   }
 }
