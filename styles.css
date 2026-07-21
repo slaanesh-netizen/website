@@ -6057,15 +6057,11 @@ body.boutique-luxury .refined-footer .footer-links a {
   }
 }
 
-/* Shared botanical background fade */
+/* Shared top-section botanical background */
 body.boutique-luxury,
 body.botanical-scroll-bg {
-  --olive-wash: 0.83;
-  --olive-bg-opacity: 0.17;
-  background:
-    linear-gradient(180deg, rgba(248, 242, 228, var(--olive-wash)) 0%, rgba(219, 214, 195, var(--olive-wash)) 100%),
-    url("assets/bg-olive-frame-test.png") 64% top / cover no-repeat scroll,
-    #f7f1e2 !important;
+  --hero-olive-wash: 0.76;
+  background: linear-gradient(180deg, #f8f2e4 0%, #dbd6c3 100%) !important;
 }
 
 body.boutique-luxury::before,
@@ -6076,24 +6072,38 @@ body.botanical-scroll-bg::after {
   display: none !important;
 }
 
-body.boutique-luxury .hero,
-body.boutique-luxury .hero.compact,
-body.boutique-luxury .section-solid,
-body.boutique-luxury .section-soft,
-body.boutique-luxury #services,
-body.boutique-luxury .home-founder,
-body.boutique-luxury .about-page,
-body.boutique-luxury .about-hero,
-body.boutique-luxury .about-intent,
-body.boutique-luxury .founder-section,
-body.boutique-luxury .about-services,
-body.boutique-luxury .about-fit,
-body.boutique-luxury .about-cta,
-body.boutique-luxury .privacy-page,
-body.boutique-luxury .privacy-hero,
+body.boutique-luxury .section,
+body.boutique-luxury .about-page > section,
 body.boutique-luxury .privacy-section,
 body.botanical-scroll-bg .test-page {
-  background: linear-gradient(180deg, rgba(248, 242, 228, var(--olive-wash)), rgba(219, 214, 195, var(--olive-wash))) !important;
+  border-top: 1px solid rgba(143, 119, 87, 0.12) !important;
+}
+
+body.boutique-luxury .section-solid,
+body.boutique-luxury #services,
+body.boutique-luxury .private-why,
+body.boutique-luxury .about-intent,
+body.boutique-luxury .about-fit,
+body.boutique-luxury .section-soft,
+body.boutique-luxury .home-founder,
+body.boutique-luxury #process,
+body.boutique-luxury .founder-section,
+body.boutique-luxury .about-services,
+body.boutique-luxury .about-cta,
+body.boutique-luxury .privacy-page,
+body.boutique-luxury .privacy-section,
+body.botanical-scroll-bg .test-page {
+  background: linear-gradient(180deg, rgba(248, 242, 228, 0.96), rgba(219, 214, 195, 0.92)) !important;
+}
+
+body.boutique-luxury .hero,
+body.boutique-luxury .hero.compact,
+body.boutique-luxury .about-hero,
+body.boutique-luxury .privacy-hero {
+  background:
+    linear-gradient(180deg, rgba(248, 242, 228, var(--hero-olive-wash)), rgba(219, 214, 195, 0.88)),
+    url("assets/bg-olive-frame-test.png") center top / min(1500px, 90vw) auto no-repeat scroll !important;
+  border-bottom: 1px solid rgba(143, 119, 87, 0.16) !important;
 }
 
 body.boutique-luxury .hero::before,
@@ -6110,31 +6120,12 @@ body.boutique-luxury .site-header {
 }
 
 @media (max-width: 760px) {
-  body.boutique-luxury,
-  body.botanical-scroll-bg {
-    background:
-      linear-gradient(180deg, rgba(248, 242, 228, var(--olive-wash)) 0%, rgba(219, 214, 195, var(--olive-wash)) 100%),
-      url("assets/bg-olive-frame-test.png") 56% top / auto 100vh no-repeat scroll,
-      #f7f1e2 !important;
-  }
-
   body.boutique-luxury .hero,
   body.boutique-luxury .hero.compact,
-  body.boutique-luxury .section-solid,
-  body.boutique-luxury .section-soft,
-  body.boutique-luxury #services,
-  body.boutique-luxury .home-founder,
-  body.boutique-luxury .about-page,
   body.boutique-luxury .about-hero,
-  body.boutique-luxury .about-intent,
-  body.boutique-luxury .founder-section,
-  body.boutique-luxury .about-services,
-  body.boutique-luxury .about-fit,
-  body.boutique-luxury .about-cta,
-  body.boutique-luxury .privacy-page,
-  body.boutique-luxury .privacy-hero,
-  body.boutique-luxury .privacy-section,
-  body.botanical-scroll-bg .test-page {
-    background: linear-gradient(180deg, rgba(248, 242, 228, var(--olive-wash)), rgba(219, 214, 195, var(--olive-wash))) !important;
+  body.boutique-luxury .privacy-hero {
+    background:
+      linear-gradient(180deg, rgba(248, 242, 228, var(--hero-olive-wash)), rgba(219, 214, 195, 0.90)),
+      url("assets/bg-olive-frame-test.png") 52% top / 980px auto no-repeat scroll !important;
   }
 }
