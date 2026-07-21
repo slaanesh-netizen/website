@@ -6056,3 +6056,88 @@ body.boutique-luxury .refined-footer .footer-links a {
     padding: 1.35rem !important;
   }
 }
+
+/* Shared botanical background fade */
+body.boutique-luxury,
+body.botanical-scroll-bg {
+  --olive-wash: 0.83;
+  --olive-bg-opacity: 0.17;
+  background:
+    linear-gradient(180deg, rgba(248, 242, 228, var(--olive-wash)) 0%, rgba(219, 214, 195, var(--olive-wash)) 100%),
+    url("assets/bg-olive-frame-test.png") 64% top / cover no-repeat fixed,
+    #f7f1e2 !important;
+}
+
+body.boutique-luxury::before,
+body.boutique-luxury::after,
+body.botanical-scroll-bg::before,
+body.botanical-scroll-bg::after {
+  content: none !important;
+  display: none !important;
+}
+
+body.boutique-luxury .hero,
+body.boutique-luxury .hero.compact,
+body.boutique-luxury .section-solid,
+body.boutique-luxury .section-soft,
+body.boutique-luxury #services,
+body.boutique-luxury .home-founder,
+body.boutique-luxury .about-page,
+body.boutique-luxury .about-hero,
+body.boutique-luxury .about-intent,
+body.boutique-luxury .founder-section,
+body.boutique-luxury .about-services,
+body.boutique-luxury .about-fit,
+body.boutique-luxury .about-cta,
+body.boutique-luxury .privacy-page,
+body.boutique-luxury .privacy-hero,
+body.boutique-luxury .privacy-section,
+body.botanical-scroll-bg .test-page {
+  background:
+    linear-gradient(180deg, rgba(248, 242, 228, var(--olive-wash)), rgba(219, 214, 195, var(--olive-wash))),
+    url("assets/bg-olive-frame-test.png") 64% top / cover no-repeat fixed !important;
+}
+
+body.boutique-luxury .hero::before,
+body.boutique-luxury .about-hero::before,
+body.boutique-luxury .founder-section::before,
+body.boutique-luxury .about-cta::before {
+  opacity: 0 !important;
+  background: none !important;
+}
+
+body.boutique-luxury .site-header {
+  background: rgba(248, 242, 228, 0.86) !important;
+}
+
+@media (max-width: 760px) {
+  body.boutique-luxury,
+  body.botanical-scroll-bg {
+    background:
+      linear-gradient(180deg, rgba(248, 242, 228, var(--olive-wash)) 0%, rgba(219, 214, 195, var(--olive-wash)) 100%),
+      url("assets/bg-olive-frame-test.png") 56% top / auto 100vh no-repeat scroll,
+      #f7f1e2 !important;
+  }
+
+  body.boutique-luxury .hero,
+  body.boutique-luxury .hero.compact,
+  body.boutique-luxury .section-solid,
+  body.boutique-luxury .section-soft,
+  body.boutique-luxury #services,
+  body.boutique-luxury .home-founder,
+  body.boutique-luxury .about-page,
+  body.boutique-luxury .about-hero,
+  body.boutique-luxury .about-intent,
+  body.boutique-luxury .founder-section,
+  body.boutique-luxury .about-services,
+  body.boutique-luxury .about-fit,
+  body.boutique-luxury .about-cta,
+  body.boutique-luxury .privacy-page,
+  body.boutique-luxury .privacy-hero,
+  body.boutique-luxury .privacy-section,
+  body.botanical-scroll-bg .test-page {
+    background:
+      linear-gradient(180deg, rgba(248, 242, 228, var(--olive-wash)), rgba(219, 214, 195, var(--olive-wash))),
+      url("assets/bg-olive-frame-test.png") 56% top / auto 100vh no-repeat scroll !important;
+  }
+}
