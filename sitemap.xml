@@ -69,9 +69,19 @@
   </url>
   <url>
     <loc>https://booksmr.ca/about.html</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://booksmr.ca/about.html" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://booksmr.ca/a-propos.html" />
+  </url>
+  <url>
+    <loc>https://booksmr.ca/a-propos.html</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://booksmr.ca/about.html" />
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://booksmr.ca/a-propos.html" />
   </url>
   <url>
     <loc>https://booksmr.ca/privacy.html</loc>
